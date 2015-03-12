@@ -1,0 +1,99 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="plonesocial.activitystream">
+
+  <include package="plone.tiles" file="meta.zcml" />
+  <include package=".prototype" />
+
+  <include  zcml:condition="installed plonesocial.microblog"
+            file="permissions.zcml"
+            package="plonesocial.microblog"
+            />
+
+  <browser:viewlet zcml:condition="installed plonesocial.microblog"
+      name="plonesocial.suite.navigation"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".navigation.PloneSocialNavigation"
+      permission="plonesocial.microblog.ViewStatusUpdate"
+      layer=".interfaces.IPlonesocialActivitystreamLayer"
+      />
+
+  <adapter zcml:condition="installed plonesocial.microblog"
+      factory=".activity_provider.StatusActivityProvider"
+      />
+
+  <adapter zcml:condition="installed plonesocial.microblog"
+      factory=".activity_provider.StatusActivityReplyProvider"
+      />
+
+  <adapter zcml:condition="installed plonesocial.microblog"
+      factory=".activity_provider.StatusActivityInlineReplyProvider"
+      name="plonesocial.activitystream.statusactivityinlinereply_provider"
+      />
+
+  <adapter
+      factory=".activity_provider.ContentActivityProvider"
+      />
+
+  <adapter
+      factory=".activity_provider.DiscussionActivityProvider"
+      />
+
+  <adapter
+      name="plonesocial.core.stream_provider"
+      factory=".stream_provider.StreamProvider"
+      />
+
+  <adapter zcml:condition="installed plonesocial.microblog"
+      name="plonesocial.activitystream.statusconversation_provider"
+      factory=".statusconversation_provider.StatusConversationProvider"
+      />
+
+  <plone:tile
+      name="activitystream.tile"
+      title="Activity stream tile"
+      description="Provides an activity stream as a tile"
+      add_permission="cmf.ManagePortal"
+      class=".stream.StreamTile"
+      permission="zope.Public"
+      for="*"
+      layer=".interfaces.IPlonesocialActivitystreamLayer"
+      />
+
+  <browser:page zcml:condition="installed plonesocial.microblog"
+      name="status"
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      class=".statusconversation.StatusConversationView"
+      permission="zope2.View"
+      layer=".interfaces.IPlonesocialActivitystreamLayer"
+      />
+
+  <browser:page zcml:condition="installed plonesocial.microblog"
+      name="stream"
+      for="plonesocial.microblog.interfaces.IMicroblogContext"
+      class="plonesocial.core.browser.stream.StreamView"
+      permission="zope2.View"
+      layer=".interfaces.IPlonesocialActivitystreamLayer"
+      />
+
+  <!-- complex portlet-based view separated out for clear config -->
+  <include file="activitystream_portal.zcml" />
+
+
+  <browser:resourceDirectory
+      name="plonesocial.activitystream.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IPlonesocialActivitystreamLayer"
+      />
+
+  <browser:resourceDirectory
+      name="plonesocial.activitystream.javascripts"
+      directory="javascripts"
+      layer=".interfaces.IPlonesocialActivitystreamLayer"
+      />
+
+</configure>
