@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<componentregistry>
+ <utilities>
+  <utility
+      interface="plonesocial.network.interfaces.INetworkTool"
+      object="plonesocial_network"
+      />
+  <utility
+      interface="plonesocial.network.interfaces.ILikesTool"
+      object="plonesocial_likes"
+      />
+ </utilities>
+</componentregistry>
