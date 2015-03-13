@@ -1,5 +1,0 @@
-<layers>
-  <layer  name="ploneintranet.network.browser"
-          interface="ploneintranet.network.browser.interfaces.IPloneIntranetNetworkLayer"
-          />
-</layers>
