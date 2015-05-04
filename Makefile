@@ -41,7 +41,7 @@ stamp-bower: stamp-npm
 	touch stamp-bower
 
 stamp-bundler:
-	mkdir -p .bundle
+	mkdir -p .bundle/bin
 	gem install --user bundler --bindir .bundle/bin
 	$(BUNDLE) install --path .bundle --binstubs .bundle/bin
 	touch stamp-bundler
