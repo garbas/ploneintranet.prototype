@@ -53,9 +53,7 @@ stamp-bundler:
 	touch stamp-bundler
 
 clean::
-	rm -f stamp-npm stamp-bower stamp-bundler
-	rm -rf node_modules src/bower_components 
-	rm -f bundle.js bundles/*
+	rm -rf stamp-npm stamp-bower stamp-bundler node_modules src/bower_components bundles/*
 
 extra-clean:: clean
 	rm -rf ~/.cache/bower
@@ -121,7 +119,7 @@ fetchrelease:
 	@echo Done. See the new Javascript bundles in prototype/bundles
 
 designerhappy: fetchrelease
-	echo "The latest js bundle has been downloaded to ./bundles. You might want to run jekyll. Designer, you can be happy now."
+	@echo "The latest js bundle has been downloaded to ./bundles. You might want to run jekyll. Designer, you can be happy now."
 
 jekyll: fetchrelease stamp-bundler
 	$(BUNDLE) exec jekyll build
