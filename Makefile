@@ -20,7 +20,8 @@ RELEASE         = $(shell git describe --tags)
 RELEASE_DIR		= release/prototype
 RELEASE_TARBALL = release/prototype-$(RELEASE).tar.gz
 
-DIAZO_DIR   = src/ploneintranet/theme/static
+# This directory is relative to ./prototype dir.
+DIAZO_DIR   = ../src/ploneintranet/theme/static
 
 LATEST          = $(shell cat LATEST)
 BUNDLENAME      = ploneintranet
