@@ -3,7 +3,9 @@ JSHINT 		?= node_modules/.bin/jshint
 PEGJS		?= node_modules/.bin/pegjs
 PHANTOMJS	?= node_modules/.bin/phantomjs
 BINDIR      ?= .bundle/bin
-BUNDLE      ?= $(BINDIR)/bundle
+# XXX: See stamp-bundler below.
+# BUNDLE      ?= $(BINDIR)/bundle
+BUNDLE      ?= bundle
 
 PATTERNS	= src/bower_components/patternslib
 SOURCES		= $(wildcard $(PATTERNS)/src/*.js) $(wildcard $(PATTERNS)/src/pat/*.js) $(wildcard $(PATTERNS)/src/lib/*.js)
@@ -43,10 +45,11 @@ stamp-bower: stamp-npm
 	touch stamp-bower
 
 stamp-bundler:
-	mkdir -p $(BINDIR)
-	echo $$(whoami)
-	gem install --install-dir=.gem bundler --bindir=$(BINDIR) --no-wrappers
-	$(BUNDLE) install --path .bundle --binstubs $(BINDIR)
+	# XXX This can be used to install bundler but doesn't work on Jenkins :(
+	# mkdir -p $(BINDIR) && gem install --user-install bundler --bindir=$(BINDIR) --no-wrappers
+	# $(BUNDLE) install --path .bundle --binstubs $(BINDIR)
+	# Instead we now rely on Bundler being installed globally.
+	$(BUNDLE) install --path .bundle --binstubs
 	touch stamp-bundler
 
 clean::
