@@ -117,7 +117,7 @@ designerhappy: fetchrelease
 	echo "The latest js bundle has been downloaded to ./bundles. You might want to run jekyll. Designer, you can be happy now."
 
 jekyll: stamp-bundler
-	$(BUNDLE) exec jekyll build --baseurl ""
+	$(BUNDLE) exec jekyll build
 
 dev: jekyll
 	# Set up development environment
