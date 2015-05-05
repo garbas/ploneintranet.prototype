@@ -58,7 +58,7 @@ clean::
 	rm -f bundle.js bundles/*
 
 extra-clean:: clean
-	~/.cache/bower
+	rm -rf ~/.cache/bower
 
 check-clean:
 	test -z "$(shell git status --porcelain)" || (git status && echo && echo "Workdir not clean." && false) && echo "Workdir clean."
