@@ -45,7 +45,7 @@ stamp-bower: stamp-npm
 stamp-bundler:
 	mkdir -p $(BINDIR)
 	echo $$(whoami)
-	/usr/bin/gem install --install-dir=.gem bundler --bindir=$(BINDIR) --no-wrappers
+	gem install --install-dir=.gem bundler --bindir=$(BINDIR) --no-wrappers
 	$(BUNDLE) install --path .bundle --binstubs $(BINDIR)
 	touch stamp-bundler
 
