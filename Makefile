@@ -2,7 +2,8 @@ BOWER 		?= node_modules/.bin/bower
 JSHINT 		?= node_modules/.bin/jshint
 PEGJS		?= node_modules/.bin/pegjs
 PHANTOMJS	?= node_modules/.bin/phantomjs
-BUNDLE      ?= ./.bundle/bin/bundle
+BINDIR      ?= .bundle/bin
+BUNDLE      ?= $(BINDIR)/bundle
 
 PATTERNS	= src/bower_components/patternslib
 SOURCES		= $(wildcard $(PATTERNS)/src/*.js) $(wildcard $(PATTERNS)/src/pat/*.js) $(wildcard $(PATTERNS)/src/lib/*.js)
@@ -42,10 +43,10 @@ stamp-bower: stamp-npm
 	touch stamp-bower
 
 stamp-bundler:
-	mkdir -p .bundle/bin
+	mkdir -p $(BINDIR)
 	whoami
-	gem install --user bundler --bindir .bundle/bin
-	$(BUNDLE) install --path .bundle --binstubs .bundle/bin
+	gem install --user-install bundler --bindir $(BINDIR)
+	$(BUNDLE) install --path .bundle --binstubs $(BINDIR)
 	touch stamp-bundler
 
 clean::
