@@ -25,6 +25,11 @@ label.pat-select.bare:after {
   box-shadow: none !important;
 }
 
+label.pat-select.bare.workflow:after {
+  content: ' ▼';
+  box-shadow: none !important;
+}
+
 label.pat-select.bare select {
   opacity: 0;
   line-height: 1.5em;
