@@ -99,6 +99,7 @@ jsrelease: bundle.js
 	# version for Designers only
 	mkdir -p release
 	cp bundles/$(BUNDLENAME)-$(RELEASE).js release
+	cp bundles/$(BUNDLENAME)-$(RELEASE).min.js release
 	tar cfz release/$(BUNDLENAME)-$(RELEASE).js.tar.gz -C release $(BUNDLENAME)-$(RELEASE).js $(BUNDLENAME)-$(RELEASE).min.js
 	curl -X POST -F 'content=@release/$(BUNDLENAME)-$(RELEASE).js.tar.gz' 'https://products.syslab.com/?name=$(BUNDLENAME)&version=$(RELEASE)&:action=file_upload'
 	rm release/$(BUNDLENAME)-$(RELEASE).js.tar.gz
