@@ -64,13 +64,9 @@ check-clean:
 ########################################################################
 ## Tests
 
-check:: jshint test-bundle
 jshint: stamp-npm
 	$(JSHINT) --config jshintrc $(CHECKSOURCES) build.js
 
-
-check:: stamp-npm
-	$(PHANTOMJS) node_modules/phantom-jasmine/lib/run_jasmine_test.coffee tests/TestRunner.html
 
 ########################################################################
 ## Bundle generation
@@ -87,8 +83,12 @@ bundle bundle.js: stamp-bower $(GENERATED) $(SOURCES) build.js
 	ln -sf $(BUNDLENAME)-$(RELEASE).min.js bundles/$(BUNDLENAME).min.js
 	cp bundles/$(BUNDLENAME)-$(RELEASE).min.js _site/bundles/$(BUNDLENAME).min.js
 
-test-bundle test-bundle.js: stamp-bundler stamp-bower $(GENERATED) $(SOURCES) test-build.js
-	node_modules/.bin/r.js -o test-build.js
+dev-bundle bundle.js: stamp-bower $(SOURCES) build.js
+	@node_modules/.bin/r.js -o build.js optimize=none
+	@mkdir -p bundles
+	@cp bundle.js bundles/$(BUNDLENAME)-dev.js
+	@mv bundle.js bundles/$(BUNDLENAME).js
+	@echo "Done. See bundles/$(BUNDLENAME)-dev.js and bundles/$(BUNDLENAME).js"
 
 $(PATTERNS)/src/lib/depends_parse.js: $(PATTERNS)/src/lib/depends_parse.pegjs stamp-npm
 	$(PEGJS) $<
@@ -142,4 +142,4 @@ demo-run: stamp-bundler
 demo-build: stamp-bundler
 	bundle exec jekyll build
 
-.PHONY: all bundle extra-clean clean check jshint tests check-clean release serve
+.PHONY: all bundle extra-clean clean jshint check-clean release serve
