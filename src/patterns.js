@@ -10,7 +10,6 @@ define([
     "pat-registry", // Keep separate as first argument to callback
     "jquery",
     "jquery.browser",
-//    "modernizr", // replaced that by an inline reference to load it for speed
     "pat-ajax",
     "pat-autofocus",
     "pat-autoscale",
