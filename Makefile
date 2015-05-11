@@ -71,7 +71,7 @@ jshint: stamp-npm
 ########################################################################
 ## Bundle generation
 
-bundle bundle.js: stamp-bower $(GENERATED) $(SOURCES) build.js
+bundle: stamp-bower $(SOURCES) build.js
 	node_modules/.bin/r.js -o build.js optimize=none
 	node_modules/.bin/grunt uglify
 	mkdir -p bundles
@@ -90,11 +90,7 @@ dev-bundle bundle.js: stamp-bower $(SOURCES) build.js
 	@mv bundle.js bundles/$(BUNDLENAME).js
 	@echo "Done. See bundles/$(BUNDLENAME)-dev.js and bundles/$(BUNDLENAME).js"
 
-$(PATTERNS)/src/lib/depends_parse.js: $(PATTERNS)/src/lib/depends_parse.pegjs stamp-npm
-	$(PEGJS) $<
-	sed -i~ -e '1s/.*/define(function() {/' -e '$$s/()//' $@ || rm -f $@
-
-jsrelease: bundle.js
+jsrelease: bundle
 	# This one is used by developers only and can be used separately to do a
 	# version for Designers only
 	mkdir -p release
