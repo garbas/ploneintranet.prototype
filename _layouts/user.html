@@ -116,6 +116,7 @@ sidebar: closed
 					<a href="#person-bio">Biography</a>
 					<a href="#person-followers" class="link-followers">Followers <sup>12</sup></a>
 					<a href="#person-following" class="link-following">Following <sup>8</sup></a>
+					<a href="#person-groups" class="link-group">Groups <sup>3</sup></a>
 				</nav>
 				<div class="pat-stacks">
 					<div class="activity-stream" id="person-timeline">
@@ -133,6 +134,32 @@ sidebar: closed
 					<div id="person-following">
 						<!-- In this prototype, one or more user groups might be displayed in the following list, but only individual users may be listed. -->
 						{% include item-selector.html mode="users" toggle="false" listitems="follow" id="followees-list" %}
+					</div>
+					<div id="person-groups">
+						<article class="pat-rich">
+							<p>
+								{{ page.title }} is a member of the following &lt;number of groups&gt; groups 
+							</p>
+						</article>
+						<div class="row tiles workspaces pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;">
+							{% assign count = 1 %}
+							<div class="grid-sizer four columns"></div>
+							{% for workspace in site.posts %}
+								{% if workspace.layout == 'workspace-landing' and count < 4 %}
+								    <div class="tile workspace type-{{ workspace.type }} four columns {% if include.description %}has-description{% endif %} workspace-{{ workspace.id | remove: '/' }}">
+									    <a href="{{ workspace.url }}" class="link">
+									        <h3>{{ workspace.workspace_name }}</h3>
+									        {% if workspace.description %}
+										        <p class="description">
+										            {{ workspace.description | truncate: 100 }}
+										        </p>
+									        {% endif %}
+									    </a>
+									</div>
+									{% assign count = count | plus: 1 %}
+								{% endif %}
+							{% endfor %}
+						</div>
 					</div>
 				</div>
 			</div>
