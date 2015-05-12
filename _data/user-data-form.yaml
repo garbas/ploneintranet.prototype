@@ -1,0 +1,98 @@
+- label: Name
+  type: multi
+  layout: inline
+  help: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  items:
+    - type: text
+      placeholder: Title
+      name: title
+      value: Mrs
+      chars: 3
+    - type: text
+      placeholder: Voorletters
+      name: firstname
+      value: Liz
+      state: disabled
+      title: This field can only be edited by the HR Department
+    - type: text
+      placeholder: Achternaam
+      name: lastname
+      value: Baker
+      state: disabled
+      title: This field can only be edited by the HR Department
+
+- label: Biography
+  type: textarea
+  rows: 14
+  value: "Liz Baker combines an integral business perspective, with in-depth technical expertise. He is passionate about innovation, learning, networking and open source technology.
+
+After obtaining her MBA, cum laude, Liz founded a series of companies in the field of open source internet technology. As managing director of Plonastic she enhances our collective intelligence by improving knowledge flows in networked organizations.
+
+Liz has published peer-reviewed research on knowledge diffusion in the Plone ecosystem. She is the primary author of PloneSocial, an integrated suite of social business add-ons for the open source Plone CMS.
+
+In her spare time, Liz explores nature, travels the world, takes pictures, reads a lot and has a tendency of getting involved in social innovation initiatives."
+
+- label: E-mail address
+  type: email
+  chars: 50
+
+- label: Telephone number
+  type: text
+  chars: 50
+  value: "Liz Baker combines an integral business perspective, with in-depth technical expertise. He is passionate about innovation, learning, networking and open source technology.
+After obtaining her MBA, cum laude, Liz founded a series of companies in the field of open source internet technology. As managing director of Plonastic she enhances our collective intelligence by improving knowl"
+
+- label: Mobile number
+  type: text
+  chars: 50
+
+- label: Time zone
+  type: select
+  items: 
+    - label: "GMT: Greenwich Mean Time, GMT"
+    - label: "UTC: Universal Coordinated Time, GMT"
+    - label: "ECT: European Central Time, GMT+1:00"
+    - label: "EET: Eastern European Time, GMT+2:00"
+    - label: "ART: (Arabic) Egypt Standard Time  GMT+2:00"
+    - label: "EAT: Eastern African Time, GMT+3:00"
+    - label: "MET: Middle East Time  GMT+3:30"
+    - label: "NET: Near East Time, GMT+4:00"
+    - label: "PLT: Pakistan Lahore Time, GMT+5:00"
+    - label: "IST: India Standard Time, GMT+5:30"
+    - label: "BST: Bangladesh Standard Time,  GMT+6:00"
+    - label: "VST: Vietnam Standard Time, GMT+7:00"
+    - label: "CTT: China Taiwan Time GMT+8:00"
+    - label: "JST: Japan Standard Time, GMT+9:00"
+    - label: "ACT: Australia Central Time  GMT+9:30"
+    - label: "AET: Australia Eastern Time  GMT+10:00"
+    - label: "SST: Solomon Standard Time, GMT+11:00"
+    - label: "NST: New Zealand Standard Time, GMT+12:00"
+    - label: "MIT: Midway Islands Time, GMT-11:00"
+    - label: "HST: Hawaii Standard Time, GMT-10:00"
+    - label: "AST: Alaska Standard Time, GMT-9:00"
+    - label: "PST: Pacific Standard Time, GMT-8:00"
+    - label: "PNT: Phoenix Standard Time, GMT-7:00"
+    - label: "MST: Mountain Standard Time, GMT-7:00"
+    - label: "CST: Central Standard Time, GMT-6:00"
+    - label: "EST: Eastern Standard Time, GMT-5:00"
+    - label: "IET: Indiana Eastern Standard Time GMT-5:00"
+    - label: "PRT: Puerto Rico and US Virgin Islands Time, GMT-4:00"
+    - label: "CNT: Canada Newfoundland Time, GMT-3:30"
+    - label: "AGT: Argentina Standard Time GMT-3:00"
+    - label: "BET: Brazil Eastern Time, GMT-3:00"
+    - label: "CAT: Central African Time, GMT-1:00"
+
+- label: Primary location
+  type: select
+
+- label: Job title
+  type: text
+  chars: 50
+
+- label: Department
+  type: select
+  items:
+
+
+
+

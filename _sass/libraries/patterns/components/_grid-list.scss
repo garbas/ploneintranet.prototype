@@ -1,5 +1,5 @@
 .pat-grid-list {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   float: left;
   width: 100%;
   border-bottom: 1px solid $colour-base;
@@ -12,6 +12,9 @@
   clear: left;
   border-top: 1px solid $colour-base;
   padding-right: 5%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: rgba(0,0,0,0.5);
 }
 
 .pat-grid-list dd {
@@ -21,4 +24,6 @@
   display: inline-block;
   float: left;
   border-top: 1px solid $colour-base;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }

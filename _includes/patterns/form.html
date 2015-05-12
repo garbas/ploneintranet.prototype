@@ -1,6 +1,6 @@
 {% capture src %}{{ include.src }}{% endcapture %}
 
-<form action="{{ include.action }}">
+<form action="{{ include.action }}" {% if include.inject %}class="pat-inject" data-pat-inject="{{ include.inject }}"{% endif %}>
 	<fieldset class="section {% if include.layout == 'horizontal' %}horizontal{% else %}vertical{% endif %}">
 		{% for item in site.data.[src] %}
 			{% if item.type == "title" %}
@@ -42,7 +42,7 @@
 
 					{{ item.label }} {% if item.help %}{% include patterns/help-icon.html id="this" %}{% endif %}
 
-					<input type="text" size="{{ item.chars }}" placeholder="{{ item.placeholder }}" value="{{ item.value }}" /> 
+					<input {% if item.state == 'disabled' %}disabled{% endif %} type="text" size="{{ item.chars }}" placeholder="{{ item.placeholder }}" value="{{ item.value }}" /> 
 
 				</label>
 				<br/ class="{% if item.depends %}pat-depends{% endif %}" {% if item.depends %}data-pat-depends="{{ item.depends }}"{% endif %}>
@@ -139,19 +139,19 @@
 						{% if subitem.type == 'text' %}
 							<label>
 								{{ subitem.label }}
-								<input type="text" {% if subitem.chars %}size="{{ subitem.chars }}"{% endif %} placeholder="{{ subitem.placeholder }}" value="{{ subitem.value }}" />  
+								<input {% if subitem.state == 'disabled' %}disabled{% endif %} type="text" {% if subitem.chars %}size="{{ subitem.chars }}"{% endif %} placeholder="{{ subitem.placeholder }}" value="{{ subitem.value }}" />  
 							</label>
 						{% endif %}
 						{% if subitem.type == 'date' %}
 							<label>
 								{{ subitem.label }}
-								<input type="date" {% if subitem.chars %}size="{{ subitem.chars }}"{% endif %} placeholder="{{ subitem.placeholder }}" value="{{ subitem.value }}" />  
+								<input {% if subitem.state == 'disabled' %}disabled{% endif %} type="date" {% if subitem.chars %}size="{{ subitem.chars }}"{% endif %} placeholder="{{ subitem.placeholder }}" value="{{ subitem.value }}" />  
 							</label>
 						{% endif %}
 						{% if subitem.type == 'number' %}
 							<label>
 								{{ subitem.label }}
-								<input type="number" {% if subitem.chars %}size="{{ subitem.chars }}"{% endif %} placeholder="{{ subitem.placeholder }}" value="{{ subitem.value }}" />  
+								<input {% if subitem.state == 'disabled' %}disabled{% endif %} type="number" {% if subitem.chars %}size="{{ subitem.chars }}"{% endif %} placeholder="{{ subitem.placeholder }}" value="{{ subitem.value }}" />  
 							</label>
 						{% endif %}
 						{% if subitem.type == 'label' %}

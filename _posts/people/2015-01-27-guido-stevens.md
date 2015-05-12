@@ -2,6 +2,15 @@
 layout: user
 title: "Guido A. J. Stevens"
 user_role: Designer
+user_first_name: Guido
+user_surname: Stevens
+user_title: Mr.
+user_phone_number: "+31 43 364 09 33"
+user_phone_number_mobile: "+31 6 23 35 56 36"
+user_time_zone: "ECT: European Central Time, GMT+1:00"
+user_primary_location: Maastricht, NL
+user_job_title: Product owner
+user_department: Board
 application: profile
 application_name: Profile
 design_title: User "profile Guido A. J. Stevens"

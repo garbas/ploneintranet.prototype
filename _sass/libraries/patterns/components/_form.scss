@@ -21,7 +21,7 @@ select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.2em 0.5em;
+  padding: 0 0.5em;
   // margin: -0.2em 0;
   margin: 0;
   box-sizing: border-box;
@@ -36,6 +36,11 @@ select {
     opacity: 1;
     padding: 0;
     background-color: transparent;
+    -moz-appearance: normal; 
+    -webkit-appearance: normal; 
+    appearance: normal; 
+    white-space: normal;
+    text-overflow: ellipsis;
   }
 }
 

@@ -2,7 +2,7 @@
 
 .tabs {
   text-align: center;
-  line-height: 3em;
+  line-height: 3;
   height: 2.9em;
   overflow: hidden;
   border-bottom: silver 1px solid;
@@ -42,7 +42,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      border-bottom: 0.4em solid #0081be;
+      border-bottom: 0.4em solid $colour-accent;
     }
   }
 

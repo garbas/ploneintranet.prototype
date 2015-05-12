@@ -35,16 +35,19 @@ sidebar: closed
 				{% endunless %}
 				<div class="portlet contact" id="portlet-contact">	
 					<h2 class="portlet-title">
-						Contact
+						<a href="#person-info">Contact</a>
 					</h2>	
 					<ul class="menu">
 						<li class="mail">
-							<a class="icon-mail" title="Mail Mario at mario.minstreel@organisation.com" href="mailto:mario.minstreel@organisation.com">{{ page.email }}</a>
+							<a class="icon-mail" title="Mail {{ page.user_first_name }} via {{ page.email }}" href="mailto:{{ page.email }}">{{ page.email }}</a>
 						</li>
 						<li class="phone">
-							<a class="icon-phone" title="Call Mario at +31 628 343 096" href="tel:+34506948294">+31 628 343 096</a>
+							<a class="icon-phone" title="Call {{ page.user_first_name }} at {{ page.user_phone_number }}" href="tel:{{ page.user_phone_number_mobile | remove: ' ' }}">{{ page.user_phone_number_mobile }}</a>
 						</li>
 					</ul>
+					<p class="portlet-footer">
+						<a href="#person-info">More information about {{ page.title }}.</a>
+					</p>
 				</div>
 				<div class="portlet endorsements" id="portlet-endorsements">	
 					<h2 class="portlet-title">
@@ -100,7 +103,7 @@ sidebar: closed
 			</aside>
 			<div class="eight columns">
 				{% unless page.title == "Liz Baker" %}
-				    <!-- The following form is hidden when in case the profile page that is shown is the one of the currently logged in user. The form is also not printed when the currently logged in user has already once endorsed the currently displayed user. -->
+				    <!-- The following form is hidden in case the profile page that is shown is the one of the currently logged in user. The form is also not printed when the currently logged in user has already once endorsed the currently displayed user. -->
 					<form id="endorsements" class="endorsement-tagging pat-inject" action="/feedback/feedback-endorsement-tagging.html" data-pat-inject="source: #feedback-message; target: #endorsements && source: #portlet-endorsements; target: #portlet-endorsements">
 						<p class="introduction">
 							Please endorse {{ page.title }} for any skills of your choice.
@@ -113,7 +116,7 @@ sidebar: closed
 				{% endunless %}
 				<nav class="tabs">
 					<a href="#person-timeline">Timeline</a>
-					<a href="#person-bio">Biography</a>
+					<a href="#person-info">Info</a>
 					<a href="#person-followers" class="link-followers">Followers <sup>12</sup></a>
 					<a href="#person-following" class="link-following">Following <sup>8</sup></a>
 					<a href="#person-groups" class="link-group">Groups <sup>3</sup></a>
@@ -123,9 +126,77 @@ sidebar: closed
 						<!-- The posts and shares of the user of the currently displayed profile are shown below. -->
 						{% include activity-stream.html src="activity-stream-liz" %}
 					</div>
-					<article id="person-bio">
-						<h1>{{ page.title }}</h1>
-						{{ content }}
+					<article id="person-info">
+						{% if page.title == "Liz Baker" %}
+							<!-- The following form is hidden in case the profile page that is shown is the one of the currently logged in user. -->
+						    {% include /patterns/form.html src="user-data-form" layout="horizontal" %}
+						{% else %}
+							<!-- The following grid is shown in case the profile page that is shown is not the one of the currently logged in user. -->
+							<dl class="pat-grid-list">
+								<dt class="icon-user">
+									Name
+								</dt>
+								<dd>
+									<em class="title">{{ page.user_title }}</em> {{ page.user_first_name }} {{ page.user_surname }}
+								</dd>
+
+								<dt class="icon-mail">
+									E-mail
+								</dt>
+								<dd>
+									<a title="Mail {{ page.user_first_name }} via {{ page.email }}" href="mailto:{{ page.email }}">{{ page.email }}</a>
+								</dd>
+
+								<dt class="icon-phone">
+									Phone number
+								</dt>
+								<dd>
+									<a title="Call {{ page.user_first_name }} at {{ page.user_phone_number }}" href="tel:{{ page.user_phone_number | remove: ' ' }}">{{ page.user_phone_number }}</a>
+								</dd>
+
+								<dt class="icon-phone">
+									Mobile phone number
+								</dt>
+								<dd>
+									<a title="Call {{ page.user_first_name }} at {{ page.user_phone_number }}" href="tel:{{ page.user_phone_number_mobile | remove: ' ' }}">{{ page.user_phone_number_mobile }}</a>
+								</dd>
+
+								<dt class="icon-clock">
+									Time zone 
+								</dt>
+								<dd>
+									{{ page.user_time_zone }}
+								</dd>
+
+								<dt class="icon-globe">
+									Primary location 
+								</dt>
+								<dd>
+									<a target="new" href="https://www.google.com/maps/place/{{ page.user_primary_location }}">{{ page.user_primary_location }}</a>
+								</dd>
+
+								<dt class="icon-right-open">
+									Job title
+								</dt>
+								<dd>
+									{{ page.user_job_title }}
+								</dd>
+
+								<dt class="icon-building">
+									Department
+								</dt>
+								<dd>
+									{{ page.user_department }}
+								</dd>
+							</dl>
+
+							<article class="pat-rich">
+								{{ content }}
+							</article>
+						{% endif %}
+						
+						<!-- <h1>{{ page.title }}</h1>
+						{{ content }} -->
 					</article>
 					<div id="person-followers">
 						<!-- In this prototype, one or more user groups might be displayed in the following list, but only individual users may be listed. -->
