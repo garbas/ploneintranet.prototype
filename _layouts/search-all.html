@@ -8,6 +8,10 @@ layout: search
 			<!-- The hidden input below always gets the same value as the searchbox it self in each result. This is needed to make sure when the filters are changed within their subform, they are posted to the server also together with the search term. -->
 			<input type="hidden" name="lemma" value="min" />
 			<fieldset class="pat-checklist">
+				<span class="small button-cluster">
+					<button type="button" class="pat-button select-all">All</button>
+					<button type="button" class="pat-button deselect-all">None</button>
+				</span>
 				<legend>Content types</legend>
 				<!-- Only list content types in this list that are relevant for this search result. -->
 				<label><input checked type="checkbox"> PowerPoint</label>
@@ -46,6 +50,10 @@ layout: search
 				</select>
 			</label>
 			<fieldset class="pat-checklist">
+				<span class="small button-cluster">
+					<button type="button" class="pat-button select-all">All</button>
+					<button type="button" class="pat-button deselect-all">None</button>
+				</span>
 				<legend>Competences</legend>
 				<!-- Only list competence tags in this list that are relevant for this search result. Tags are ordered by occurance count. Should there be no objects (people) with competences in the search results, then this entire fieldset is not printed. The total amount of checkboxes is maximised to 8. Should there be more different tags in the search result, then those are bundled under 'All other competences' as a 9th item. -->
 				<label><input checked type="checkbox"> Design</label>
@@ -53,6 +61,10 @@ layout: search
 				<label><input checked type="checkbox"> Project management</label>
 			</fieldset>
 			<fieldset class="pat-checklist">
+				<span class="small button-cluster">
+					<button type="button" class="pat-button select-all">All</button>
+					<button type="button" class="pat-button deselect-all">None</button>
+				</span>
 				<legend>Tags</legend>
 				<!-- Only list tags in this list that are relevant for this search result. Tags are ordered by occurance count. Should there be no objects tags in the search results, then this entire fieldset is not printed. The total amount of checkboxes is maximised to 8. Should there be more different tags in the search result, then those are bundled under 'All other tags' as a 9th item. -->
 				<label><input checked type="checkbox"> Deliberable</label>

@@ -167,6 +167,12 @@ button {
   overflow: hidden;
   display: inline-block;
   margin: 0;
+
+  &.small {
+    .pat-button {
+      font-size: 0.7em;
+    }
+  }
 }
 
 .button-cluster {

@@ -72,9 +72,25 @@
 
     .filters {
       font-size: 0.9em;
+      padding-right: 3%;
 
       @include screen-size(small) {
         display: none;
+      }
+
+      .legend {
+        // float: left;
+        // margin-right: 0.5em;
+      }
+
+      .button-cluster {
+        margin-top: 0.3em;
+        float: right;
+        // font-size: 0.7em;
+      }
+
+      label {
+        clear: both;
       }
     }
 
