@@ -46,8 +46,15 @@ layout: search
 				</select>
 			</label>
 			<fieldset class="pat-checklist">
+				<legend>Competences</legend>
+				<!-- Only list competence tags in this list that are relevant for this search result. Tags are ordered by occurance count. Should there be no objects (people) with competences in the search results, then this entire fieldset is not printed. The total amount of checkboxes is maximised to 8. Should there be more different tags in the search result, then those are bundled under 'All other competences' as a 9th item. -->
+				<label><input checked type="checkbox"> Design</label>
+				<label><input checked type="checkbox"> Presenting</label>
+				<label><input checked type="checkbox"> Project management</label>
+			</fieldset>
+			<fieldset class="pat-checklist">
 				<legend>Tags</legend>
-				<!-- Only list tags in this list that are relevant for this search result. Tags are ordered by occurance count. -->
+				<!-- Only list tags in this list that are relevant for this search result. Tags are ordered by occurance count. Should there be no objects tags in the search results, then this entire fieldset is not printed. The total amount of checkboxes is maximised to 8. Should there be more different tags in the search result, then those are bundled under 'All other tags' as a 9th item. -->
 				<label><input checked type="checkbox"> Deliberable</label>
 				<label><input checked type="checkbox"> Minutes</label>
 				<label><input checked type="checkbox"> Meetings</label>
