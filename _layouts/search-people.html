@@ -2,10 +2,21 @@
 layout: search
 ---
 
-<p>
+<p class="introduction">
 	5 items matched your search.
 </p>
-<div class="row people results pat-equaliser">
+
+<fieldset class="top-filters pat-checklist cloud pat-subform pat-inject" data-pat-inject="source: #listing; target: #listing; url: /search-results-people.html">
+	<label><input checked type="checkbox"> Design</label>
+	<label><input checked type="checkbox"> Presenting</label>
+	<label><input checked type="checkbox"> Business analysis</label>
+	<label><input checked type="checkbox"> Project management</label>
+	<label><input checked type="checkbox"> Workshops</label>
+	<label><input checked type="checkbox"> Requirements gathering</label>
+	<button type="submit" formaction="/search-results-people.html" hidden>Refresh</button>
+</fieldset>
+
+<div class="row people results pat-equaliser" id="listing">
 	<div class="item">
 		<div href="" class="user-card">
 			<img src="/media/avatar-charlotte-holzer.jpg" class="pat-avatar" alt="Image of Charlotte Holzer">

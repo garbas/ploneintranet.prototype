@@ -64,6 +64,19 @@
     }
   }
 
+  .introduction {
+    margin-bottom: 1em;
+  }
+
+  .top-filters {
+    margin-bottom: 0;
+    text-align: center;
+    
+    label {
+      margin-bottom: 0.5em;
+    }
+  }
+
   div.results {
     background-color: white;
     padding-top: 2%;

@@ -32,6 +32,13 @@
 		}
 	}
 
+	&.cloud {
+		label {
+			display: inline-block;
+			margin-right: 1em;
+		}
+	}
+
 	&.radio label {
 		&:before {
 			content: '#{$glyph-radio-button}';
