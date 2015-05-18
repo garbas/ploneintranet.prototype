@@ -68,10 +68,16 @@
     margin-bottom: 1em;
   }
 
+  .did-you-mean {
+    border-bottom: 1px silver dotted;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+  }
+
   .top-filters {
     margin-bottom: 0;
     text-align: center;
-    
+
     label {
       margin-bottom: 0.5em;
     }
