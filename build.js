@@ -33,6 +33,9 @@
         "logging":                                "bower_components/logging/src/logging",
         "modernizr":                              "bower_components/modernizr/modernizr",
         "modernizr-csspositionsticky":            "bower_components/modernizr/feature-detects/css-positionsticky",
+        "picker":                                 "bower_components/pickadate/lib/picker",
+        "picker.date":                            "bower_components/pickadate/lib/picker.date",
+        "picker.time":                            "bower_components/pickadate/lib/picker.time",
         "parsley":                                "bower_components/parsleyjs/parsley",
         "parsley.extend":                         "bower_components/parsleyjs/parsley.extend",
         "photoswipe":                             "bower_components/patternslib/src/legacy/photoswipe",
@@ -52,9 +55,10 @@
         "underscore":                             "bower_components/underscore/underscore",
 
         // Core
-        "i18n":                     "bower_components/patternslib/src/core/i18n",
+        "i18n":                      "bower_components/patternslib/src/core/i18n",
         "pat-base":                  "bower_components/patternslib/src/core/base",
         "pat-compat":                "bower_components/patternslib/src/core/compat",
+        "pat-date-picker":           "bower_components/pat-date-picker/src/pat-date-picker",
         "pat-depends_parse":         "bower_components/patternslib/src/lib/depends_parse",
         "pat-dependshandler":        "bower_components/patternslib/src/lib/dependshandler",
         "pat-htmlparser":            "bower_components/patternslib/src/lib/htmlparser",

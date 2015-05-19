@@ -26,6 +26,7 @@ define([
     "pat-chosen",
     "pat-clone",
     "pat-collapsible",
+    "pat-date-picker",
     "pat-depends",
     "pat-depends_parse",
     "pat-dependshandler",
