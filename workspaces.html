@@ -5,7 +5,20 @@ design_title: Intranet homepage — Workspaces
 design_description: The homepage of the intranet with the workspaces tab active.
 ---
 
-<div class="tiles workspaces pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;">
+<form class="canvas-toolbar pat-inject pat-autosubmit" action="/workspaces.html#workspaces">
+	<!-- Sorting dropdown is out of scope. -->
+	<select class="bare pat-select">
+		<option>
+			Most active workspaces on top
+		</option>
+		<option>
+			Newest workspaces on top
+		</option>
+	</select>
+	<a href="#" title="Create a new workspace" class="icon create">Create workspace</a>
+</form>
+
+<div class="tiles workspaces pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;" id="workspaces">
 	<div class="grid-sizer four columns"></div>
 	{% for workspace in site.posts %}
 		{% if workspace.layout == 'workspace-landing' %}

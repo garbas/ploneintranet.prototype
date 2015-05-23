@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.canvas-toolbar {
+	margin-bottom: 1em;
+	@include clear-fix();
+
+	.icon {
+		font-family: fontello;
+		text-indent: -100em;
+		width: 2.5em;
+		height: 2.5em;
+		position: relative;
+		color: gray;
+		cursor: default;
+		margin-top: -0.5em;
+
+		&:before {
+			font-family: fontello;
+			text-indent: 0;
+			line-height: 2.5em;
+			text-align: center;
+			position: absolute;
+			margin: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 1px gray solid;
+			border-radius: 50%;
+		background: white;
+			display: inline-block;
+
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		&:hover {
+			color: black;
+
+			&:before {
+				border: black 1px solid;
+			}
+		}
+
+		&.create {
+			float: right;
+
+			&:before {
+				content: "\E825";
+			}
+		}
+	}
+}
