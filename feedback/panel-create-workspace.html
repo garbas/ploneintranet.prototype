@@ -1,0 +1,30 @@
+---
+layout: panel
+title: Create workspace
+action: "/workspaces/"
+buttons:
+  - label: Create workspace
+    type: submit
+    class: 'close-panel icon-ok-circle'
+  - label: Cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+inject: ""
+application: workspace
+design_title: Create workspace panel
+---
+
+<fieldset class="vertical">
+	<label>
+		<input placeholder="Workspace title" type="text" />
+	</label>
+	<label>
+		<textarea placeholder="Workspace description" rows="6"></textarea>
+	</label>
+	<fieldset class="pat-checklist radio">
+		<label><input type="radio" name="security-level" /> Locked down, secret workspace</label>
+		<label><input type="radio" checked name="security-level" /> Self-managed, private teamspace</label>
+		<label><input type="radio" name="security-level" /> Open community</label>
+	</fieldset>
+	
+</fieldset>
