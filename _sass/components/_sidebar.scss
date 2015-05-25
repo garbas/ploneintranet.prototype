@@ -30,7 +30,7 @@ aside.sidebar.left {
 
   @include screen-size(large) {  
     right: 70%;  
-    left: 50px;
+    left: 0;
     transition: all 0.2s;
     border-right: solid 1px silver;
   }
@@ -40,7 +40,6 @@ aside.sidebar.left {
     margin-bottom: 1em;
   }
 
-  .pat-collapsible.task-list,
   .pat-collapsible.object-list {
     border: 1px silver solid;
     background-color: #efefef;
@@ -64,17 +63,22 @@ aside.sidebar.left {
 
       cursor: default;
 
-      &:before {
-        content: "\e852";
-        display: inline-block;
-        margin-right: 0.3em;
-        font-family: fontello;
-      }
-
       &:after {
         font-family: fontello;
         content: "\e855";
         float: right;
+      }
+    }
+
+    &.tasks {
+      .collapsible-closed,
+      .collapsible-open {
+        &:before {
+          content: "\e852";
+          display: inline-block;
+          margin-right: 0.3em;
+          font-family: fontello;
+        }
       }
     }
 

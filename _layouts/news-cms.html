@@ -1,0 +1,45 @@
+---
+layout: shell
+template: generic
+application: news-cms
+---
+
+<div class="application-news-cms" id="content">
+    <div id="document-body">
+    	{{ content }}
+    </div>
+    <aside class="sidebar left" id="sidebar-news-cms">
+	    <div id="sidebar-content">
+	    	<div class="button-bar functions" id="-functions">
+	            <div class="contextual buttons float-before" id="-contextual-functions">
+	                <form action="./#-items" class="pat-inject pat-autosubmit">
+	                    <label class="pat-select bare" data-option="Milestone">Group by
+	                        <select name="browse-mode">
+	                            <option value="section">Section</option>
+	                            <option value="author">Author</option>
+	                        </select>
+	                    </label>
+	                </form>
+	            </div>
+
+	            <div class="quick-functions">
+	                <a title="Create new document" href="/panel-create-task.html#document-content" class="create-document pat-modal icon-doc-text" data-pat-modal="class: large">Create task</a>
+	            </div>
+        	</div>
+
+	        <div class="pat-collapsible object-list news">
+	            <h4 class="section-label">
+	                Hot topics
+	            </h4> 
+
+	            <ul>
+	            	<li>
+	            		<a href="">News item</a>
+	            	</li>
+	            </ul>
+	  		</div>
+	    </div>
+    </aside>
+</div>
+
+{% include global-header.html %}
