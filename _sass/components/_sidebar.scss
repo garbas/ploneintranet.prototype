@@ -40,7 +40,8 @@ aside.sidebar.left {
     margin-bottom: 1em;
   }
 
-  .pat-collapsible.task-list {
+  .pat-collapsible.task-list,
+  .pat-collapsible.object-list {
     border: 1px silver solid;
     background-color: #efefef;
     border-radius: 0.5em;
