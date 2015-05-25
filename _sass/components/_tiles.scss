@@ -6,6 +6,14 @@
 	opacity: 0;
 	transition: opacity 1s;
 
+	&.apps {
+		.grid-sizer {
+			width: 20%;
+			float: left;
+
+		}
+	}
+
 	&.masonry-ready {
 	  opacity: 1;
 	}
@@ -14,76 +22,49 @@
 		margin-bottom: 1em;
 
 	  &.app {
-	  	background-color: $colour-accent;
-	  	width: 220px;
+	  	width: 20%;
+		padding: 15px;
+		margin-bottom: 0;
 
-	  	.link {
-	  		color: white;
-	  		height: 220px;
-	    	padding: 1em;
-	  		-moz-box-sizing: border-box;
-	  		-webkit-box-sizing: border-box;
-	  		box-sizing: border-box;
+  		-moz-box-sizing: border-box;
+  		-webkit-box-sizing: border-box;
+  		box-sizing: border-box;
 
-	  		&:after {
-	  			font-family: fontello;
+	  	.icon {
+	  		width: 100%;
+	  		height: auto;
+	  	}
+
+	  	&.app-calendar {
+	  		time.date {
 	  			position: absolute;
-	  			left: 0;
 	  			top: 0;
-	  			width: 100%;
-	  			height: 220px;
-	  			line-height: 220px;
+	  			left: 0;
+	  			right: auto;
+	  			width: 200px;
+	  			padding-top: 101px;
+	  			font-size: 21px;
 	  			text-align: center;
-	  			font-size: 100px;
-	  		}
-
-	  		h3 {
-	  			font-size: 1em;
+	  			color: $colour-accent;
 	  			font-weight: bold;
 	  		}
 	  	}
 
-	  	&.app-contacts a:after {
-	  		content: "\e816"
-	  	}
+	  	.link {
+	  		color: white;
+	  		position: relative;
+	  		background-color: $colour-accent;
+	  		padding: 0;
 
-	  	&.app-calendar {
-
-			time.date {
-				position: absolute;
-				top: 105px;
-				left: 0;
-				right: 0;
-				text-align: center;
-
-				.date {
-					display: block;
-					font-size: 35px;
-					font-weight: bold;
-					line-height: 22px;
-				}
-				.month {
-					display: block;
-					font-size: 15px;
-				}
-			}
-
-	  		a:after {
-	  			content: "\E817"
+	  		h3 {
+	  			font-size: 0.9em;
+	  			font-weight: bold;
+	  			padding: 0.4em 0.5em;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
 	  		}
-	  	}
-
-	  	&.app-cms a:after {
-	  		content: "\E815"
-	  	}
-
-	  	&.app-slide-bank a:after {
-	  		content: "\E818"
-	  	}
-
-	  	&.app-image-bank a:after {
-	  		content: "\1f304";
-	  		font-size: 80px;
 	  	}
 	  }
 
@@ -102,11 +83,20 @@
 	    padding: 1.5em;
 	    color: white;
 	  	background-color: $colour-workspace-default;
+	  	cursor: hand;
 
-  		&:hover {
-	  		background-color: $colour-workspace-default;
-  			text-decoration: none;
-  		}
+	  		&:hover {
+	  			&:after {
+	  				position: absolute;
+	  				top: 0;
+	  				right: 0;
+	  				bottom: 0;
+	  				left: 0;
+	  				content: " ";
+	  				background-color: rgba(255,255,255,0.2);
+	  				display: block;
+	  			}
+	  		}
 
 	    h3 {
 	      font-weight: 100;
