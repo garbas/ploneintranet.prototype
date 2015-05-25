@@ -9,7 +9,10 @@
 	&.apps {
 		.grid-sizer {
 			width: 20%;
-			float: left;
+
+		  	@include screen-size(small) {
+		  		width: 50%;
+		  	}
 
 		}
 	}
@@ -23,6 +26,9 @@
 
 	  &.app {
 	  	width: 20%;
+	  	@include screen-size(small) {
+	  		width: 50%;
+	  	}
 		padding: 15px;
 		margin-bottom: 0;
 
