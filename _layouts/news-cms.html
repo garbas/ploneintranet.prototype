@@ -23,7 +23,7 @@ application: news-cms
 	            </div>
 
 	            <div class="quick-functions">
-	                <a title="Create new document" href="/panel-create-task.html#document-content" class="create-document pat-modal icon-doc-text" data-pat-modal="class: large">Create task</a>
+	                <a title="Create new document" href="/panel-create-news-item.html#document-content" class="create-document pat-modal icon-doc-text" data-pat-modal="class: large">Create news item</a>
 	            </div>
         	</div>
 
@@ -36,7 +36,7 @@ application: news-cms
 						{% if item.category == 'hot-topics' and item.layout == 'news-item' %}
 			                <label class="item document type-news has-description">
 			                    <input name="projection-material" type="checkbox">
-			                    <a href="{{ item.url }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+			                    <a href="/apps/news/edit.html#document-body" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
 			                        <strong class="title">{{ item.title }}</strong>
 			                        <p class="byline">
 			                        	{{ item.description | truncate: 160 }}
@@ -61,7 +61,7 @@ application: news-cms
 						{% if item.category == 'star-news' and item.layout == 'news-item' %}
 			                <label class="item document type-news has-description">
 			                    <input name="projection-material" type="checkbox">
-			                    <a href="{{ item.url }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+			                    <a href="/apps/news/edit.html#document-body" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
 			                        <strong class="title">{{ item.title }}</strong>
 			                        <p class="byline">
 			                        	{{ item.description | truncate: 160 }}
@@ -86,7 +86,7 @@ application: news-cms
 						{% if item.category == 'press-release' and item.layout == 'news-item' %}
 			                <label class="item document type-news has-description">
 			                    <input name="projection-material" type="checkbox">
-			                    <a href="{{ item.url }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+			                    <a href="/apps/news/edit.html#document-body" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
 			                        <strong class="title">{{ item.title }}</strong>
 			                        <p class="byline">
 			                        	{{ item.description | truncate: 160 }}

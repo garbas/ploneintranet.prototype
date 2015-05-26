@@ -1,0 +1,51 @@
+---
+layout: news-cms
+template: news-cms
+application: news-cms
+---
+
+<div id="document-content" class="news-edit">
+	<form class="document pat-inject" action="{{ page.url }}#document-form" id="document-form">
+	    <div class="metadata pat-bumper">
+	        <div class="meta-bar">
+	            <h1 class="doc-title" id="document-title">
+	                {{ page.title }}
+	            </h1>
+	            <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
+	            <input type="text" placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" value="{{ page.title }}" />
+	            <div class="quick-functions">
+	                <a href="/feedback/panel-delete.html#document-content" class="pat-modal icon-trash iconified" title="Delete this document">
+	                    Delete
+	                </a>
+	                <a href="" class="icon-copy iconified" title="Copy this document">
+	                    Copy
+	                </a>
+	                <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>       
+	                <button type="submit" class="icon-floppy" title="Save this document">Save</button>
+	            </div>
+	        </div>
+	        {% if page.editable == true %}
+	            <div id="editor-toolbar" class="bar">
+	                <p class="loader">Loading…</p>
+	            </div>
+	        {% endif %}
+	        <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
+	            <fieldset class="bar">
+	                <input type="text" class="pat-autosuggest" placeholder="Tags" />
+	            </fieldset>
+	            <fieldset class="bar description">
+	                <textarea name="description" rows="8" title="Description" placeholder="Description"></textarea>
+	             </fieldset>
+	        </fieldset>
+	    </div>
+	    <div id="document-content">
+            <article class="document rich">
+                <form id="rich-document-edit" class="pat-form-state" action="#" method="post" enctype="multipart/form-data" >
+                    <textarea class="pat-raptor" data-pat-raptor="toolbar-type: standard; toolbar-external: #editor-toolbar .loader; buttons: tagMenu, alignCenter, alignLeft, historyRedo, historyUndo, hrCreate, linkCreate, linkRemove, listOrdered, listUnordered, textBlockQuote, textBold, textItalic, textStrike, tableCreate, tableDeleteColumn, tableDeleteRow, tableInsertColumn, tableInsertRow">
+                        {{ content }}
+                    </textarea>
+                </form>
+            </article>
+	    </div>
+	</form>
+</div>
