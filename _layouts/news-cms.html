@@ -31,12 +31,75 @@ application: news-cms
 	            <h4 class="section-label">
 	                Hot topics
 	            </h4> 
+			    <fieldset class="checklist pat-checklist news">
+					{% for item in site.posts %}
+						{% if item.category == 'hot-topics' and item.layout == 'news-item' %}
+			                <label class="item document type-news has-description">
+			                    <input name="projection-material" type="checkbox">
+			                    <a href="{{ item.url }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+			                        <strong class="title">{{ item.title }}</strong>
+			                        <p class="byline">
+			                        	{{ item.description | truncate: 160 }}
+			                        </p>
+			                    </a>
+			                </label>
+						{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+		        </fieldset>
+				<p class="more">
+					<a href="/news-hot-topics/">More hot topics…</a>
+				</p>
+	  		</div>
 
-	            <ul>
-	            	<li>
-	            		<a href="">News item</a>
-	            	</li>
-	            </ul>
+	        <div class="pat-collapsible object-list news">
+	            <h4 class="section-label">
+	                Company news
+	            </h4> 
+			    <fieldset class="checklist pat-checklist news">
+					{% for item in site.posts %}
+						{% if item.category == 'star-news' and item.layout == 'news-item' %}
+			                <label class="item document type-news has-description">
+			                    <input name="projection-material" type="checkbox">
+			                    <a href="{{ item.url }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+			                        <strong class="title">{{ item.title }}</strong>
+			                        <p class="byline">
+			                        	{{ item.description | truncate: 160 }}
+			                        </p>
+			                    </a>
+			                </label>
+						{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+		        </fieldset>
+				<p class="more">
+					<a href="/news-hot-topics/">More hot topics…</a>
+				</p>
+	  		</div>
+
+	        <div class="pat-collapsible object-list news">
+	            <h4 class="section-label">
+	                Press releases
+	            </h4> 
+			    <fieldset class="checklist pat-checklist news">
+					{% for item in site.posts %}
+						{% if item.category == 'press-release' and item.layout == 'news-item' %}
+			                <label class="item document type-news has-description">
+			                    <input name="projection-material" type="checkbox">
+			                    <a href="{{ item.url }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+			                        <strong class="title">{{ item.title }}</strong>
+			                        <p class="byline">
+			                        	{{ item.description | truncate: 160 }}
+			                        </p>
+			                    </a>
+			                </label>
+						{% assign count = count | plus: 1 %}
+						{% endif %}
+					{% endfor %}
+		        </fieldset>
+				<p class="more">
+					<a href="/news-hot-topics/">More hot topics…</a>
+				</p>
 	  		</div>
 	    </div>
     </aside>

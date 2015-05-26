@@ -44,6 +44,7 @@ aside.sidebar.left {
     border: 1px silver solid;
     background-color: #efefef;
     border-radius: 0.5em;
+    margin-bottom: 1em;
 
     .panel-content {
       padding: 1em 4% 0 4%;
@@ -51,6 +52,10 @@ aside.sidebar.left {
 
     .button-bar {
       margin: 1em 0 1% 0;
+    }
+
+    .follow {
+      display: block;
     }
 
     .collapsible-closed,
