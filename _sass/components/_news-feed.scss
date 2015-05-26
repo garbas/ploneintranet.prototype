@@ -14,6 +14,26 @@
 		font-size: 1em;
 		overflow: hidden;
 
+		.edit-button {
+			position: absolute;
+			top: 0.5em;
+			right: 0.5em;
+			width: 2em;
+			height: 2em;
+
+
+			&:before {
+				content: "\270e";
+				border-radius: 50%;
+				width: 2em;
+				height: 2em;
+				line-height: 2em;
+				text-align: center;
+				background-color: rgba(0,0,0,0.5);
+				color: white;
+			}
+		}
+
 		&.four.columns {
 			font-size: 0.8em;
 			line-height: 150%;
@@ -32,7 +52,7 @@
 			right: 15px;
 		}
 
-		a {
+		.follow {
 			text-decoration: none;
 			color: $colour-header-elements;
 
@@ -74,7 +94,7 @@
 			 	right: 0;
 			}
 
-			a {
+			.follow {
 				padding: 1em 0;
 				float: left;
 				width: 100%;
