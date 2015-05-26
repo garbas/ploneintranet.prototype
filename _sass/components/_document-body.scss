@@ -46,11 +46,16 @@
     font-size: 1.2em;
     line-height: 130%;
 
+    &.news-feed {
+      padding: 8%;
+      font-size: 0.8em;
+    }
+
     article.rich,
     .content-container,
     div.document {
       background-color: white;
-      padding: 6% 6% 6% 6%;
+      padding: 10%;
 
       img {
         max-width: 90%;
