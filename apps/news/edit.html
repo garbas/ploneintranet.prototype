@@ -4,48 +4,77 @@ template: news-cms
 application: news-cms
 ---
 
-<div id="document-content" class="news-edit">
-	<form class="document pat-inject" action="{{ page.url }}#document-form" id="document-form">
-	    <div class="metadata pat-bumper">
-	        <div class="meta-bar">
-	            <h1 class="doc-title" id="document-title">
-	                {{ page.title }}
-	            </h1>
-	            <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
-	            <input type="text" placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" value="{{ page.title }}" />
-	            <div class="quick-functions">
-	                <a href="/feedback/panel-delete.html#document-content" class="pat-modal icon-trash iconified" title="Delete this document">
-	                    Delete
-	                </a>
-	                <a href="" class="icon-copy iconified" title="Copy this document">
-	                    Copy
-	                </a>
-	                <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>       
-	                <button type="submit" class="icon-floppy" title="Save this document">Save</button>
-	            </div>
-	        </div>
-	        {% if page.editable == true %}
-	            <div id="editor-toolbar" class="bar">
-	                <p class="loader">Loading…</p>
-	            </div>
-	        {% endif %}
-	        <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
-	            <fieldset class="bar">
-	                <input type="text" class="pat-autosuggest" placeholder="Tags" />
-	            </fieldset>
-	            <fieldset class="bar description">
-	                <textarea name="description" rows="8" title="Description" placeholder="Description"></textarea>
-	             </fieldset>
-	        </fieldset>
-	    </div>
-	    <div id="document-content">
-            <article class="document rich">
-                <form id="rich-document-edit" class="pat-form-state" action="#" method="post" enctype="multipart/form-data" >
-                    <textarea class="pat-raptor" data-pat-raptor="toolbar-type: standard; toolbar-external: #editor-toolbar .loader; buttons: tagMenu, alignCenter, alignLeft, historyRedo, historyUndo, hrCreate, linkCreate, linkRemove, listOrdered, listUnordered, textBlockQuote, textBold, textItalic, textStrike, tableCreate, tableDeleteColumn, tableDeleteRow, tableInsertColumn, tableInsertRow">
-                        {{ content }}
-                    </textarea>
-                </form>
-            </article>
-	    </div>
-	</form>
-</div>
+<form class="document pat-inject" action="{{ page.url }}#document-form" id="news-edit-form">
+    <div class="metadata pat-bumper">
+        <div class="meta-bar">
+            <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
+            <div class="quick-functions">
+                <a href="/feedback/panel-delete.html#document-content" class="pat-modal icon-trash iconified" title="Delete this document">
+                    Delete
+                </a>
+                <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>       
+                <button type="submit" class="icon-floppy" title="Save this document">Save</button>
+            </div>
+            <fieldset class="tags">
+            	<input type="text" class="pat-autosuggest" placeholder="Tags" />
+            </fieldset>
+        </div>
+        <div class="bar">
+	        <textarea name="description" rows="4" title="Description" placeholder="Summary"></textarea>
+        </div>
+<!--        	<div class="bar"> -->
+	        <label class="pat-select bare bar">
+	        	<select>
+	        		<option>Hot topics</option>
+	        		<option>Company news</option>
+	        		<option>Press releases</option>
+	        	</select>
+	        </label>
+	<!--     </div> -->
+        <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
+            <fieldset class="bar description">
+                <textarea name="description" rows="8" title="Description" placeholder="Summary"></textarea>
+             </fieldset>
+        </fieldset>
+        <div id="editor-toolbar" class="bar">
+            <p class="loader">Loading…</p>
+        </div>
+    </div>
+    <div id="document-content">
+        <article class="document rich">
+		    <hgroup id="title-block">
+	        	<h1 id="document-title">
+	        		Title of news item
+	        	</h1>
+		    	<textarea type="text" placeholder="Title of news item" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" value=""></textarea>
+		    </hgroup>
+            <textarea class="pat-raptor" data-pat-raptor="toolbar-type: standard; toolbar-external: #editor-toolbar .loader; buttons: tagMenu, alignCenter, alignLeft, historyRedo, historyUndo, hrCreate, linkCreate, linkRemove, listOrdered, listUnordered, textBlockQuote, textBold, textItalic, textStrike, tableCreate, tableDeleteColumn, tableDeleteRow, tableInsertColumn, tableInsertRow">
+            	<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+				<h2>Header Level 2</h2>
+					       
+				<ol>
+				   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				   <li>Aliquam tincidunt mauris eu risus.</li>
+				</ol>
+
+				<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+				<h3>Header Level 3</h3>
+
+				<ul>
+				   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				   <li>Aliquam tincidunt mauris eu risus.</li>
+				</ul>
+
+<pre><code>
+#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}
+</code></pre>
+            </textarea>
+        </article>
+    </div>
+</form>

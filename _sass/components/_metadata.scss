@@ -11,6 +11,10 @@
   transition: padding 0.5s;
   z-index: 1;
 
+  fieldset {
+    margin: 0;
+  }
+
   @include screen-size(small) {  
     position: static !important;
   }
@@ -34,6 +38,7 @@
     -webkit-transition: padding 0.5s;
     transition: padding 0.5s;
     margin-bottom: 0;
+    display: block;
 
     input[type="text"],
     textarea {
