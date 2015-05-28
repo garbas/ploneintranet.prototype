@@ -39,6 +39,8 @@
       color: transparent;
       background-color: transparent;
       resize: none;
+      // Width 100% is a patch required for Chrome
+      width: 100%;
     }
   }
 
