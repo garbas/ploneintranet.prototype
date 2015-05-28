@@ -20,21 +20,27 @@ application: news-cms
             </fieldset>
         </div>
         <div class="bar">
+        	<label>
+        		<input type="checkbox" /> Published,
+        	</label>
+	        in category 
+        	<select>
+        		<option>Hot topics</option>
+        		<option>Company news</option>
+        		<option>Press releases</option>
+        	</select>
+        </div>
+        <div class="bar">
 	        <textarea name="description" rows="4" title="Description" placeholder="Summary"></textarea>
         </div>
-<!--        	<div class="bar"> -->
-	        <label class="pat-select bare bar">
-	        	<select>
-	        		<option>Hot topics</option>
-	        		<option>Company news</option>
-	        		<option>Press releases</option>
-	        	</select>
-	        </label>
-	<!--     </div> -->
         <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
-            <fieldset class="bar description">
-                <textarea name="description" rows="8" title="Description" placeholder="Summary"></textarea>
-             </fieldset>
+
+                <label class="bar">
+                	Publication date <input type="date" />
+                </label>
+                <label class="bar">
+                	Termination date <input type="date" />
+                </label>
         </fieldset>
         <div id="editor-toolbar" class="bar">
             <p class="loader">Loading…</p>
