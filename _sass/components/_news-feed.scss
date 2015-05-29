@@ -2,16 +2,24 @@
 
 .news-feed {
 	clear: both;
+
+	&.pat-well {
+		background-color: white;
+		font-size: 0.8em;
+	}
 	
 	h2 {
-		margin-bottom: 1em;
+		margin-bottom: 0.7em;
 		font-weight: 800;
 		font-size: 1.5em;
+		line-height: 1.4em;
+		text-align: center;
 	}
 
 	.item {
 		position: relative;
-		font-size: 1em;
+		font-size: 0.9em;
+		line-height: 1.4em;
 		overflow: hidden;
 
 		.edit-button {
@@ -41,7 +49,7 @@
 
 		&:after {
 			content: " ";
-			border-bottom: 0.1rem solid $colour-header-elements;
+			// border-bottom: 0.1rem solid $colour-header-elements;
 			padding-bottom: 1em;
 			position: absolute;
 			bottom: 0;
@@ -69,8 +77,9 @@
 				margin-bottom: 0;
 				font-weight: 800;
 				font-size: 1em;
-				line-height: 1.5em;
+				line-height: 1.4em;
 				color: black;
+				text-transform: uppercase;
 			}
 
 			strong {
@@ -79,7 +88,7 @@
 			}
 
 			.description {
-				margin-bottom: 1em;
+				margin-bottom: 2em;
 			}
 		}
 
@@ -125,7 +134,7 @@
 		}
 
 		&.item-1 {
-			margin-bottom: 4em;
+			margin-bottom: 2em;
 
 			img {
 				width: 100%;
@@ -139,7 +148,7 @@
 				// bottom: 0;
 				// padding: 1.5em;
 				// background-color: rgba(255,255,255,0.9);
-				border-bottom: 0.1rem solid $colour-header-elements;
+				// border-bottom: 0.1rem solid $colour-header-elements;
 				padding-bottom: 2em;
 			}
 		}
