@@ -2,6 +2,7 @@
 
 .news-feed {
 	clear: both;
+	position: relative;
 
 	&.pat-well {
 		background-color: white;
@@ -42,6 +43,10 @@
 			}
 		}
 
+		&.columns .edit-button {
+			margin-right: 15px;
+		}
+
 		&.four.columns {
 			font-size: 0.8em;
 			line-height: 150%;
@@ -80,6 +85,20 @@
 				line-height: 1.4em;
 				color: black;
 				text-transform: uppercase;
+
+				.category {
+					float: right;
+					margin-top: 0.35em;
+					margin-left: 0.4em;
+					font-size: 0.7em;
+					display: inline-block;
+					background-color: $colour-accent;
+					color: white;
+					padding: 0 0.5em;
+					line-height: 153%;
+					font-weight: normal;
+					border-radius: 0.2em;
+				}
 			}
 
 			strong {
@@ -134,7 +153,7 @@
 		}
 
 		&.item-1 {
-			margin-bottom: 2em;
+			// margin-bottom: 2em;
 
 			img {
 				width: 100%;

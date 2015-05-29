@@ -6,10 +6,10 @@ design_description: General news page.
 ---
 
 <nav class="canvas-subnav">
-	<a href="/news.html" class="current">All news</a>
+	<a href="/news.html">All news</a>
 	<a href="/news-hot-topics.html">Hot topics</a>
-	<a href="/news-company-news.html">Company news</a>
+	<a href="/news-company-news.html" class="current">Company news</a>
 	<a href="/news-press-releases.html">Press releases</a>
 </nav>
 
-{% include news.html %}
+{% include news-feed.html filter="star-news" columns="four" leadsize="twelve" %}

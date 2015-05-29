@@ -1,0 +1,27 @@
+{% capture filter %}{{ include.filter }}{% endcapture %}
+
+{% assign count = 1 %}
+
+<div class="news-feed row pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .item;">
+	<div class="grid-sizer {{ include.columns }} columns"></div>
+	{% for item in site.posts %}
+		{% if item.category == {{filter}} and item.layout == 'news-item' %}
+			<article class="item item-{{ count }} {% if count > 1 %}{{ include.columns }}{% else %}{{ include.leadsize }}{% endif %} columns">
+				<a class="follow" href="{{item.url}}">
+					<img class="illustration" src="/media/{{ item.image }}" alt="" />
+					<div class="teaser">
+		    			<h3 class="title">
+		    				{{ item.title }}
+		    			</h3>
+		    			<p class="description">
+							{{ item.description | truncate: 160 }} <strong>Read more…</strong>
+						</p>
+					</div>
+				</a>
+				<a href="/apps/news/edit.html" class="edit-button iconified">[Edit]</a>
+			</article>
+			
+			{% assign count = count | plus: 1 %}
+		{% endif %}
+	{% endfor %}
+</div>

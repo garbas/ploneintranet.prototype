@@ -16,6 +16,10 @@
 		&.current {
 			background: rgba(0,0,0,0.1);
 			color: black;
+			cursor: default;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
