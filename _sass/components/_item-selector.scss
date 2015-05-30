@@ -2,15 +2,6 @@
 
 .item-selector {
 
-    &.mode-select {
-        .quick-functions .toggle-select {
-            &:before {
-                border: 1px solid $colour-accent;
-                color: $colour-accent;
-            }
-        }
-    }
-
     br {
         display: none;
     }

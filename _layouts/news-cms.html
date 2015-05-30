@@ -9,7 +9,7 @@ application: news-cms
     	{{ content }}
     </div>
     <aside class="sidebar left" id="sidebar-news-cms">
-	    <div id="sidebar-content">
+	    <div id="sidebar-content" class="mode-follow">
 	    	<div class="button-bar functions" id="-functions">
 	            <div class="contextual buttons float-before" id="-contextual-functions">
 	                <form action="./#-items" class="pat-inject pat-autosubmit">
@@ -25,14 +25,34 @@ application: news-cms
 
 	            <div class="quick-functions">
 	                <a title="Create new document" href="/feedback/panel-create-news.html#document-content" class="create-document pat-modal icon-doc-text" data-pat-modal="class: large">Create news item</a>
-	            	<a class="pat-toggle toggle-select" data-pat-toggle="selector: #selector; value: mode-select mode-follow">Select</a>
+	            	<a class="pat-toggle toggle-select" data-pat-toggle="selector: #sidebar-content; value: mode-select mode-follow">Select</a>
 	            </div>
         	</div>
 
 	        <div class="pat-collapsible object-list news">
 	            <h4 class="section-label">
 	                Hot topics
-	            </h4> 
+	            </h4>
+	            <p class="list-icons">
+	            	<a href="#options-hot-topics" class="iconified icon-cog pat-tooltip" data-pat-tooltip="source: ajax;">
+	            		Options
+	            	</a>
+	            </p>
+	            <div id="options-hot-topics" hidden>
+	            	<ul class="menu">
+						<li>
+							<a class="icon-edit pat-inject" href="/feedback/.html#content" data-pat-inject="target: body::after">Edit news section information</a>
+						</li>
+						<li>
+							<a class="pat-inject icon-trash" href="/feedback/.html#content" data-pat-inject="target: body::after">Delete news section "Hot Topics"</a>
+						</li>
+					</ul>
+	            </div>
+	            <article class="pat-rich section-description">
+	            	<p>
+	            		Lorem ipsum dolor sit amet consectetuer.
+	            	</p>
+	            </article>
 			    <fieldset class="checklist pat-checklist news">
 					{% for item in site.posts %}
 						{% if item.category == 'hot-topics' and item.layout == 'news-item' %}

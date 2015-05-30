@@ -40,11 +40,42 @@ aside.sidebar.left {
     margin-bottom: 1em;
   }
 
+  .mode-follow {
+    .pat-collapsible.object-list {
+
+      .item {
+        padding-left: 0;
+
+        &:before {    
+          left: -1em;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .mode-select {
+    &.mode-select {
+        .quick-functions .toggle-select {
+            &:before {
+                border: 1px solid $colour-accent;
+                color: $colour-accent;
+            }
+        }
+    }
+  }
+
   .pat-collapsible.object-list {
+    position: relative;
     border: 1px silver solid;
     background-color: #efefef;
     border-radius: 0.5em;
     margin-bottom: 1em;
+
+    .item,
+    .item:before {
+      transition: all 0.5s;
+    }
 
     .panel-content {
       padding: 1em 4% 0 4%;
@@ -123,6 +154,17 @@ aside.sidebar.left {
           // display: inline;
           margin: 0;
       }
+  }
+
+  .list-icons {
+    position: absolute;
+    top: 1em;
+    right: 2.8em;
+    color: black;
+
+    a {
+      color: black;
+    }
   }
 
   .quick-functions {
