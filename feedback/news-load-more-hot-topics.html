@@ -1,0 +1,21 @@
+---
+layout: generic
+application_name: hot topics
+design_title: All hot topics
+design_description: "Example code for a feedback page of a single comment (AJAXed into an activity feed)"
+---
+
+{% for item in site.posts %}
+	{% if item.category == 'hot-topics' and item.layout == 'news-item' %}
+        <label class="item document type-news has-description">
+            <input name="{{ item.id | remove: '/' }}" type="checkbox">
+            <a href="/apps/news/edit.html#document-body" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
+                <strong class="title">{{ item.title }}</strong>
+                <p class="byline">
+                	{{ item.description | truncate: 160 }}
+                </p>
+            </a>
+        </label>
+	{% assign count = count | plus: 1 %}
+	{% endif %}
+{% endfor %}

@@ -104,10 +104,11 @@ application: news-cms
 						{% assign count = count | plus: 1 %}
 						{% endif %}
 					{% endfor %}
+			        <!-- Five items are shown. Older items are ajaxed in with the link below: -->
+					<p class="more" id="load-more-hot-topics">
+						<a href="/feedback/news-load-more-hot-topics.html#content" class="pat-inject" data-pat-inject="target: #load-more-hot-topics::element">More Hot topics…</a>
+					</p>
 		        </fieldset>
-				<p class="more">
-					<a href="/news-hot-topics/">More hot topics…</a>
-				</p>
 	  		</form>
 
 	        <form id="listing-hot-topics" class="pat-collapsible object-list news pat-inject" data-pat-inject="target: body::after" data-pat-collapsible="store: local">
@@ -182,9 +183,6 @@ application: news-cms
 						{% endif %}
 					{% endfor %}
 		        </fieldset>
-				<p class="more">
-					<a href="/news-hot-topics/">More hot topics…</a>
-				</p>
 	  		</form>
 
 	        <div id="listing-press-releases" class="pat-collapsible object-list news" data-pat-collapsible="store: local">
@@ -258,9 +256,6 @@ application: news-cms
 						{% endif %}
 					{% endfor %}
 		        </fieldset>
-				<p class="more">
-					<a href="/news-hot-topics/">More hot topics…</a>
-				</p>
 	  		</div>
 	    </div>
     </aside>
