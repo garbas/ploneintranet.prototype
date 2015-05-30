@@ -1,0 +1,28 @@
+---
+layout: panel
+title: Edit news section
+action: "/workspaces.html#workspaces"
+buttons:
+  - label: Save
+    type: submit
+    class: 'close-panel icon-ok-circle'
+  - label: Cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+inject: ""
+application: News CMS
+design_title: Edit news section
+---
+
+<fieldset class="vertical">
+	<fieldset class="group">
+	    <input type="text" name="title" placeholder="News item title" autofocus />
+	    <textarea name="description" rows="6" placeholder="Section description (Optional)"></textarea>
+    </fieldset>
+    <label class="pat-checklist">
+    	<input type="checkbox" checked name="visible-section-description" /> Make the section description visable for visitors on the section page
+    </label>
+    <label class="pat-checklist">
+        <input type="checkbox" checked name="visible-section" /> Show this section in the news subnavigation
+    </label>
+</fieldset>
