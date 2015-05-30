@@ -1,0 +1,45 @@
+---
+layout: panel
+title: Create news
+action: "/workspaces.html#workspaces"
+buttons:
+  - label: Create
+    type: submit
+    class: 'close-panel icon-ok-circle'
+  - label: Cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+inject: ""
+application: workspace
+design_title: Create news panel
+---
+
+<fieldset class="icon-tabs">
+    <label class="icon-newspaper">
+        <input checked="checked" name="type" value="item" type="radio"> News item
+    </label>
+    <label class="icon-squares">
+        <input name="type" value="section" type="radio"> News section
+    </label>
+</fieldset>
+<fieldset class="vertical">
+	<fieldset class="group">
+	    <input type="text" name="title" placeholder="News item title" autofocus />
+	    <textarea name="description" rows="6" placeholder="Summary (Optional)" class="pat-depends" data-pat-depends="type=section"></textarea>
+	    <textarea name="summary" rows="6" placeholder="Summary (Optional)" class="pat-depends" data-pat-depends="type=item"></textarea>
+    </fieldset>
+    <label class="pat-depends pat-checklist" data-pat-depends="type=section">
+    	<input type="checkbox" name="visible-section" /> Show this section in the news subnavigation
+    </label>
+    <fieldset class="pat-depends pat-checklist radio" data-pat-depends="type=item">
+    	<label>
+    		<input type="radio" value="both" name="visibility" checked /> Show on both news landing page and section page
+    	</label>
+    	<label>
+    		<input type="radio" value="landing" name="visibility" /> Show on news landing page only
+    	</label>
+    	<label>
+    		<input type="radio" value="section" name="visibility" /> Show on section page only
+    	</label>
+    </fieldset>
+</fieldset>

@@ -791,6 +791,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "032bd8bbd70adf90ead98b6813bfe446",
+      "css": "newspaper-1",
+      "code": 59504,
+      "src": "fontawesome"
+    },
+    {
       "uid": "50fbbd926b2a64fcaf384788056c0e43",
       "css": "gwallet",
       "code": 59469,
@@ -923,6 +929,12 @@
       "src": "entypo"
     },
     {
+      "uid": "da0fd38d651815e3a12f6c030ff1fe5b",
+      "css": "newspaper",
+      "code": 59456,
+      "src": "entypo"
+    },
+    {
       "uid": "96ea1be71f597a5bdfc8f791ada4f651",
       "css": "archive",
       "code": 59407,
@@ -1010,6 +1022,12 @@
       "uid": "fhpup8jff2yw9kmuwavhyqxogczcbbhj",
       "css": "money",
       "code": 59475,
+      "src": "modernpics"
+    },
+    {
+      "uid": "a58a5236139282f6c7f906634233157a",
+      "css": "squares",
+      "code": 59503,
       "src": "modernpics"
     },
     {
