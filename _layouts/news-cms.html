@@ -29,7 +29,7 @@ application: news-cms
 	            </div>
         	</div>
 
-	        <div class="pat-collapsible object-list news">
+	        <form id="listing-hot-topics" class="pat-collapsible object-list news pat-inject" data-pat-inject="target: body::after" data-pat-collapsible="store: local">
 	            <h4 class="section-label">
 	                Hot topics
 	            </h4>
@@ -54,10 +54,46 @@ application: news-cms
 	            	</p>
 	            </article>
 			    <fieldset class="checklist pat-checklist news">
+
+                    <div class="button-bar batch-buttons">
+                        <span class="float-before button-cluster select-buttons">
+                            <button type="button" class="select-all" title="Select all">All</button>
+                            <button type="button" class="deselect-all" title="Deslect all">None</button>
+                        </span>
+                        <button formaction="/feedback/batch-delete.html#content"
+                                type="submit"
+                                name="batch-function"
+                                value="delete"
+                                class="float-before icon-trash no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'hot-topics' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Delete">Delete</button>
+                        <button type="submit"
+                                name="batch-function"
+                                value="rename"
+                                formaction="/feedback/batch-rename.html#content"
+                                class="float-before icon-rename no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'hot-topics' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Rename">Rename</button>
+                        <button type="submit"
+                                name="recategorise"
+                                value="rename"
+                                formaction="/feedback/batch-recategorise.html#content"
+                                class="float-before icon-squares no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'hot-topics' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Move items to a different section">Recategorise</button>
+                        <button formaction="/feedback/batch-tag.html#content"
+                                type="submit"
+                                name="batch-function"
+                                value="tag"
+                                class="float-before icon-tags no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'hot-topics' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Re-tag">Re-tag</button>
+                    </div>
+
 					{% for item in site.posts %}
 						{% if item.category == 'hot-topics' and item.layout == 'news-item' %}
 			                <label class="item document type-news has-description">
-			                    <input name="projection-material" type="checkbox">
+			                    <input name="{{ item.id | remove: '/' }}" type="checkbox">
 			                    <a href="/apps/news/edit.html#document-body" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
 			                        <strong class="title">{{ item.title }}</strong>
 			                        <p class="byline">
@@ -72,17 +108,69 @@ application: news-cms
 				<p class="more">
 					<a href="/news-hot-topics/">More hot topics…</a>
 				</p>
-	  		</div>
+	  		</form>
 
-	        <div class="pat-collapsible object-list news">
+	        <form id="listing-hot-topics" class="pat-collapsible object-list news pat-inject" data-pat-inject="target: body::after" data-pat-collapsible="store: local">
 	            <h4 class="section-label">
 	                Company news
 	            </h4> 
+	            <p class="list-icons">
+	            	<a href="#options-company-news" class="iconified icon-cog pat-tooltip" data-pat-tooltip="source: ajax;">
+	            		Options
+	            	</a>
+	            </p>
+	            <div id="options-company-news" hidden>
+	            	<ul class="menu">
+						<li>
+							<a class="icon-edit pat-inject" href="/feedback/.html#content" data-pat-inject="target: body::after">Edit news section information</a>
+						</li>
+						<li>
+							<a class="pat-inject icon-trash" href="/feedback/.html#content" data-pat-inject="target: body::after">Delete news section "Hot Topics"</a>
+						</li>
+					</ul>
+	            </div>
+
 			    <fieldset class="checklist pat-checklist news">
+
+                    <div class="button-bar batch-buttons">
+                        <span class="float-before button-cluster select-buttons">
+                            <button type="button" class="select-all" title="Select all">All</button>
+                            <button type="button" class="deselect-all" title="Deslect all">None</button>
+                        </span>
+                        <button formaction="/feedback/batch-delete.html#content"
+                                type="submit"
+                                name="batch-function"
+                                value="delete"
+                                class="float-before icon-trash no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'star-news' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Delete">Delete</button>
+                        <button type="submit"
+                                name="batch-function"
+                                value="rename"
+                                formaction="/feedback/batch-rename.html#content"
+                                class="float-before icon-rename no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'star-news' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Rename">Rename</button>
+                        <button type="submit"
+                                name="recategorise"
+                                value="rename"
+                                formaction="/feedback/batch-recategorise.html#content"
+                                class="float-before icon-squares no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'star-news' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Move items to a different section">Recategorise</button>
+                        <button formaction="/feedback/batch-tag.html#content"
+                                type="submit"
+                                name="batch-function"
+                                value="tag"
+                                class="float-before icon-tags no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'star-news' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Re-tag">Re-tag</button>
+                    </div>
+
 					{% for item in site.posts %}
 						{% if item.category == 'star-news' and item.layout == 'news-item' %}
 			                <label class="item document type-news has-description">
-			                    <input name="projection-material" type="checkbox">
+			                    <input name="{{ item.id | remove: '/'}}" type="checkbox">
 			                    <a href="/apps/news/edit.html#document-body" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document" data-pat-inject="target: #document-body; history: record">
 			                        <strong class="title">{{ item.title }}</strong>
 			                        <p class="byline">
@@ -97,13 +185,64 @@ application: news-cms
 				<p class="more">
 					<a href="/news-hot-topics/">More hot topics…</a>
 				</p>
-	  		</div>
+	  		</form>
 
-	        <div class="pat-collapsible object-list news">
+	        <div id="listing-press-releases" class="pat-collapsible object-list news" data-pat-collapsible="store: local">
 	            <h4 class="section-label">
 	                Press releases
-	            </h4> 
+	            </h4>
+	            <p class="list-icons">
+	            	<a href="#options-press-releases" class="iconified icon-cog pat-tooltip" data-pat-tooltip="source: ajax;">
+	            		Options
+	            	</a>
+	            </p>
+	            <div id="options-press-releases" hidden>
+	            	<ul class="menu">
+						<li>
+							<a class="icon-edit pat-inject" href="/feedback/.html#content" data-pat-inject="target: body::after">Edit news section information</a>
+						</li>
+						<li>
+							<a class="pat-inject icon-trash" href="/feedback/.html#content" data-pat-inject="target: body::after">Delete news section "Hot Topics"</a>
+						</li>
+					</ul>
+	            </div> 
 			    <fieldset class="checklist pat-checklist news">
+
+                    <div class="button-bar batch-buttons">
+                        <span class="float-before button-cluster select-buttons">
+                            <button type="button" class="select-all" title="Select all">All</button>
+                            <button type="button" class="deselect-all" title="Deslect all">None</button>
+                        </span>
+                        <button formaction="/feedback/batch-delete.html#content"
+                                type="submit"
+                                name="batch-function"
+                                value="delete"
+                                class="float-before icon-trash no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'press-release' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Delete">Delete</button>
+                        <button type="submit"
+                                name="batch-function"
+                                value="rename"
+                                formaction="/feedback/batch-rename.html#content"
+                                class="float-before icon-rename no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'press-release' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Rename">Rename</button>
+                        <button type="submit"
+                                name="recategorise"
+                                value="rename"
+                                formaction="/feedback/batch-recategorise.html#content"
+                                class="float-before icon-squares no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'press-release' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Move items to a different section">Recategorise</button>
+                        <button formaction="/feedback/batch-tag.html#content"
+                                type="submit"
+                                name="batch-function"
+                                value="tag"
+                                class="float-before icon-tags no-label pat-depends"
+                                data-pat-depends="condition: foo{% for item in site.posts %}{% if item.category == 'press-release' and item.layout == 'news-item' %} or {{ item.id | remove: '/'}}{% endif %}{% endfor %}; action: enable;"
+                                title="Re-tag">Re-tag</button>
+                    </div>
+
 					{% for item in site.posts %}
 						{% if item.category == 'press-release' and item.layout == 'news-item' %}
 			                <label class="item document type-news has-description">

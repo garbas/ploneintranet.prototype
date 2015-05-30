@@ -63,6 +63,13 @@ aside.sidebar.left {
             }
         }
     }
+
+    .pat-collapsible.object-list {
+      .button-bar.batch-buttons {
+        height: 1.6em;
+        margin: 0 0 1em 0;
+      }
+    }
   }
 
   .pat-collapsible.object-list {
@@ -81,8 +88,12 @@ aside.sidebar.left {
       padding: 1em 4% 0 4%;
     }
 
-    .button-bar {
-      margin: 1em 0 1% 0;
+    .button-bar.batch-buttons {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 0;
+      transition: all 0.5s;
     }
 
     .follow {

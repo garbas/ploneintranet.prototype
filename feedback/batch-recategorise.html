@@ -1,0 +1,30 @@
+---
+layout: panel
+title: Batch move to section
+action: "/apps/news/index.html/#listing-hot-topics"
+buttons:
+  - label: Move
+    type: submit
+    class: 'close-panel icon-ok-circle'
+  - label: Cancel
+    type: button
+    class: 'close-panel icon-cancel-circle'
+inject: ""
+application: workspace
+design_title: Batch move to section
+---
+
+<p class="pat-message">
+	Select the section to which you wish to move the selected news items.
+</p>
+
+<fieldset class="pat-checklist radio">
+	<label>
+		<input name="section" type="radio" /> Company news
+	</label>
+	<label>
+		<input name="section" type="radio" /> Press releases
+	</label>
+</fieldset>
+
+<!-- A set of hidden input fields need to go here that reflect the ticked sidebar objects in the previous screen. -->
