@@ -31,20 +31,24 @@ application: news-cms
         	</select>
         </div>
         <div class="bar">
-            <label class="pat-checklist">
-                <input type="checkbox" checked /> Allow comments
-            </label>
-        </div>
-        <div class="bar">
 	        <textarea name="description" rows="4" title="Description" placeholder="Summary"></textarea>
         </div>
         <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
-
+                <div class="bar">
+                    <label class="pat-checklist">
+                        <input type="checkbox" checked /> Allow comments
+                    </label>
+                </div>
+                <div class="bar">
+                    <label class="pat-checklist">
+                        <input type="checkbox" checked /> Visible on news landing page
+                    </label>
+                </div>
                 <label class="bar">
                 	Publication date <input type="date" />
                 </label>
                 <label class="bar">
-                	Termination date <input type="date" />
+                	Expiration date <input type="date" />
                 </label>
         </fieldset>
         <div id="editor-toolbar" class="bar">
