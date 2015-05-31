@@ -63,8 +63,11 @@
     }
 
     &.summary-hero {
+
       textarea,
       .image-uploader {
+        height: 8em;
+
         -moz-transition: all 0.5s;
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
@@ -88,11 +91,17 @@
     }
 
     .summary-hero {
-      height: 3em;
 
-      textarea, 
+      textarea,
       .image-uploader {
-        height: 3em;
+        height: 1.5em;
+      }
+
+      .focus {
+        textarea,
+        .image-uploader {
+          height: 8em;
+        }
       }
     }
   }
