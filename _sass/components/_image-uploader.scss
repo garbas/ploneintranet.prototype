@@ -2,9 +2,20 @@
 
 .image-uploader {
   position: relative;
+  overflow: hidden;
+  min-height: 1.4em;
 
   .upload-button {
     @include pat-button();
+    position: absolute;
+    left: 17px;;
+    top: 0.1em;
+    max-width: 75%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   input[type="file"] {
@@ -17,5 +28,16 @@
     left: 0;
     opacity: 0;
     z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    float: left;
+
+    &+.upload-button {
+      color: white;
+      border: 1px solid rgba(255,255,255,0.7);
+      background: rgba(0,0,0,0.3);
+    }
   }
 }

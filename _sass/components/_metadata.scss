@@ -46,9 +46,9 @@
 
   .bar {
     border-bottom: 1px solid silver;
-    -moz-transition: padding 0.5s;
-    -webkit-transition: padding 0.5s;
-    transition: padding 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     margin-bottom: 0;
     display: block;
 
@@ -60,6 +60,15 @@
       display: block;
       width: 100%;
       resize:none;
+    }
+
+    &.summary-hero {
+      textarea,
+      .image-uploader {
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
     }
   }
 
@@ -75,6 +84,15 @@
       .meta-bar,
       .bar {
         padding: 0 2%;
+      }
+    }
+
+    .summary-hero {
+      height: 3em;
+
+      textarea, 
+      .image-uploader {
+        height: 3em;
       }
     }
   }

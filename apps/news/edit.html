@@ -30,16 +30,17 @@ application: news-cms
         		<option>Press releases</option>
         	</select>
         </div>
-        <div class="bar">
-            <fieldset class="row" title="Upload a new hero image that may be displayed in the news overview pages.">
-                <label class="eight columns">
+        <div class="bar summary-hero">
+            <fieldset class="row" >
+                <label class="nine columns">
                     <textarea name="description" rows="4" title="Description" placeholder="Summary (Will be automatically filled upon save if no summary is provided)"></textarea>
                 </label>
-                <label class="four columns image-uploader">
-                    <input type="file" name="hero" /> <span class="pat-button upload-button">Upload image</span>
+                <label id="hero-upload" class="three columns image-uploader pat-subform pat-autosubmit pat-inject" data-pat-inject="url: /feedback/hero-upload.html#hero-upload" title="Upload a new hero image that may be displayed in the news overview pages.">
+                    <!-- Image goes on this line in the markup in the feedback -->
+                    <span class="pat-button upload-button">Upload image</span>
+                    <input type="file" name="hero" /> 
                 </label>
-            </fieldset>
-	        
+            </fieldset> 
         </div>
         <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
                 <div class="bar">
