@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@mixin button() {
+@mixin pat-button() {
   font-family: $body-font-family;
   margin: 0 0.5em 0 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -51,8 +51,9 @@
 }
 
 button,
-a.button {
-  @include button();
+a.button,
+.pat-button {
+  @include pat-button();
 }
 
 ::-webkit-search-cancel-button {

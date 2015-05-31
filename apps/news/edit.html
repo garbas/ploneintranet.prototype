@@ -13,7 +13,7 @@ application: news-cms
                     Delete
                 </a>
                 <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>       
-                <button type="submit" class="icon-floppy" title="Save this document">Save</button>
+                <button type="submit" class="pat-button icon-floppy" title="Save this document">Save</button>
             </div>
             <fieldset class="tags">
             	<input type="text" class="pat-autosuggest" placeholder="Tags" />
@@ -31,7 +31,15 @@ application: news-cms
         	</select>
         </div>
         <div class="bar">
-	        <textarea name="description" rows="4" title="Description" placeholder="Summary (Will be automatically filled upon save if no summary is provided)"></textarea>
+            <fieldset class="row" title="Upload a new hero image that may be displayed in the news overview pages.">
+                <label class="eight columns">
+                    <textarea name="description" rows="4" title="Description" placeholder="Summary (Will be automatically filled upon save if no summary is provided)"></textarea>
+                </label>
+                <label class="four columns image-uploader">
+                    <input type="file" name="hero" /> <span class="pat-button upload-button">Upload image</span>
+                </label>
+            </fieldset>
+	        
         </div>
         <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
                 <div class="bar">
@@ -44,6 +52,17 @@ application: news-cms
                         <input type="checkbox" checked /> Visible on news landing page
                     </label>
                 </div>
+                <fieldset class="bar pat-checklist radio">
+                    <label>
+                        <input name="hero-visibility" type="radio" checked /> Image visible on both news overview pages and as hero image on the news item page.
+                    </label>
+                    <label>
+                        <input name="hero-visibility" type="radio" /> Image visible on both news overview pages only.
+                    </label>
+                    <label>
+                        <input name="hero-visibility" type="radio" /> Image visible as hero image on the news item page only.
+                    </label>
+                </fieldset>
                 <label class="bar">
                 	Publication date <input type="date" />
                 </label>
