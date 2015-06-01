@@ -96,6 +96,15 @@ workspace_module: docs
                 {% for preview in page.previews %}
                     <img src="{{ preview.url }}" alt="" class="page" />
                 {% endfor %}
+                <!-- If a preview cannot be generated or the preview is being generated, output the code below. -->
+                {% unless page.previews %}
+                    <!-- If a preview CANNOT be generated due to a server error or an unsupported file format, add a class 'error' to the P element below. -->
+                    <p class="message no-preview">
+                        <strong class="title">projection-material.doc</strong>
+                        <!-- If a preview CANNOT be generated due to a server error or an unsupported file format, then display the following text in the below byline "No preview available". -->
+                        <em class="byline">Preview being generated</em>
+                    </p>            
+                {% endunless %}
             </article>
         {% elsif page.document_type == 'image' %}
             <article class="document preview">

@@ -92,10 +92,70 @@
     article.preview {
       background: white;
       padding-top: 3%;
+      @include clear-fix();
+
+      .message.no-preview {
+        border: 1px #dedede solid;
+        box-shadow: 0 0 0.1em silver;
+        padding: 1em 1em 1em 4.5em;
+        background-color: white;
+        position: relative;
+        width: 60%;
+        margin: 2em auto 4em;
+
+        .title {
+          color: black;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0.3em 0.5em 0 0;
+        }
+
+        .byline {
+          color: silver;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0 0.5em 0.3em 0;
+        }
+
+        &.error {
+          background-color: lighten($colour-error, 45);
+          color: $colour-error;
+          border: none;
+
+          .byline {
+            color: $colour-error;
+          }
+
+          .title,
+          &:before {
+            color: darken($colour-error, 30);
+          }
+        }
+
+        &:before {
+          font-family: fontello;
+          content: '\e811';
+          line-height: 1.85em;
+          width: 1.8em;
+          font-size: 2em;
+          position: absolute;
+          top: 0.4em;
+          left: 0.4em;
+          text-align: center;
+          color: silver;
+        }
+
+      }
 
       img {
         background-color: white;
       }
+
+
     }
   }
 
