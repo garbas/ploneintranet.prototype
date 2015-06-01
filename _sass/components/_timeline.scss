@@ -20,6 +20,28 @@
         border-right: 0.1em dotted silver;
         margin-right: -0.1em;
         position: relative;
+        // min-width: 11em;
+
+        &:after {
+            content: ' ';
+            display: block;
+            background-color: orange;
+            height: 0.8em;
+            margin-top: 0.45em;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: -2em;
+            margin-right: -2em;
+        }
+
+        &:first-of-type:after {
+            margin-left: 1.5em;
+        }
+
+        &:last-of-type:after {
+            display: none;
+        }
 
         &.actioned {
             padding-right: 2em;
@@ -194,7 +216,7 @@
                 width: 3em;
                 position: absolute;
                 right: 0.75em;
-                top: 0.55em;
+top: 0.45em;
                 z-index: 0;
             }
 
@@ -214,7 +236,7 @@
 
             .step-label {
                 position: absolute;
-                top: 0.05em;
+                top: 0;
                 border-radius: 50%;
                 width: 1.8em;
                 height: 1.8em;
@@ -293,6 +315,10 @@
                 &:before {
                     color: #23C27E;
                 }
+            }
+
+            &:after {
+                background-color: #23C27E;
             }
 
             .step-label {
