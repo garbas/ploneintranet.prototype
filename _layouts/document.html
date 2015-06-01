@@ -108,6 +108,11 @@ workspace_module: docs
 </form>
 <div class="comments" id="comments-document-comments">
     <div id="comment-trail">
+        {% if page.comments %}        
+            <p class="comment-sentinel pat-bumper">
+                <a href="#comments-document-comments">There are {{ page.comments.size }} comments to this document</a>
+            </p>
+        {% endif %}
         {% for comment in page.comments %}
             {% include comment.html %}
         {% endfor %}

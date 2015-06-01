@@ -147,6 +147,10 @@
 .icon-building { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86e;&nbsp;'); }
 .icon-squares { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe86f;&nbsp;'); }
 .icon-newspaper-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe870;&nbsp;'); }
+.icon-down-bold { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe871;&nbsp;'); }
+.icon-left-bold { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe872;&nbsp;'); }
+.icon-right-bold { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe873;&nbsp;'); }
+.icon-up-bold { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe874;&nbsp;'); }
 .icon-check-off { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf096;&nbsp;'); }
 .icon-paste { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0ea;&nbsp;'); }
 .icon-radio-off { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf10c;&nbsp;'); }

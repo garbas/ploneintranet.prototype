@@ -149,6 +149,10 @@
 .icon-building:before { content: '\e86e'; } /* '' */
 .icon-squares:before { content: '\e86f'; } /* '' */
 .icon-newspaper-1:before { content: '\e870'; } /* '' */
+.icon-down-bold:before { content: '\e871'; } /* '' */
+.icon-left-bold:before { content: '\e872'; } /* '' */
+.icon-right-bold:before { content: '\e873'; } /* '' */
+.icon-up-bold:before { content: '\e874'; } /* '' */
 .icon-check-off:before { content: '\f096'; } /* '' */
 .icon-paste:before { content: '\f0ea'; } /* '' */
 .icon-radio-off:before { content: '\f10c'; } /* '' */
