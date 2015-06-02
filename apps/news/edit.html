@@ -7,6 +7,17 @@ application: news-cms
 <form class="document pat-inject" action="{{ page.url }}#document-form" id="news-edit-form">
     <div class="metadata pat-bumper">
         <div class="meta-bar">
+            <fieldset class="float-before">
+                <label class="pat-checklist">
+                    <input type="checkbox" /> Published,
+                </label>
+                in category 
+                <select>
+                    <option>Hot topics</option>
+                    <option>Company news</option>
+                    <option>Press releases</option>
+                </select>
+            </fieldset>
             <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
             <div class="quick-functions">
                 <a href="/feedback/panel-delete.html#document-content" class="pat-modal icon-trash iconified" title="Delete this document">
@@ -18,20 +29,6 @@ application: news-cms
                 <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>       
                 <button type="submit" class="pat-button icon-floppy" title="Save this document">Save</button>
             </div>
-            <fieldset class="tags">
-            	<input type="text" class="pat-autosuggest" placeholder="Tags" />
-            </fieldset>
-        </div>
-        <div class="bar">
-        	<label class="pat-checklist">
-        		<input type="checkbox" /> Published,
-        	</label>
-	        in category 
-        	<select>
-        		<option>Hot topics</option>
-        		<option>Company news</option>
-        		<option>Press releases</option>
-        	</select>
         </div>
         <div class="bar summary-hero">
             <fieldset class="row" >
@@ -46,6 +43,9 @@ application: news-cms
             </fieldset> 
         </div>
         <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
+                <label class="bar tags">
+                    <input type="text" class="pat-autosuggest" placeholder="Tags" />
+                </label>
                 <div class="bar">
                     <label class="pat-checklist">
                         <input type="checkbox" checked /> Allow comments
