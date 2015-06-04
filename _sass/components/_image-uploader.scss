@@ -40,9 +40,11 @@
     @include pat-button();
     position: absolute;
     z-index: 2;
-    left: 17px;;
+    left: 50%;
+    left: 15%;
+    right: 15%;
     top: 0.1em;
-    max-width: 75%;
+    text-align: center;
     text-overflow: ellipsis;
     overflow: hidden;
     -moz-box-sizing: border-box;
@@ -71,7 +73,7 @@
     &+.upload-button {
       color: white;
       border: 1px solid rgba(255,255,255,0.7);
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.6);
     }
   }
 }
