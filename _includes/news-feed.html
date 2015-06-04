@@ -13,6 +13,9 @@
 		    			<h3 class="title">
 		    				<em class="comment-count">6</em> {{ item.title }}
 		    			</h3>
+			    		<p class="byline">
+			    			<time datetime="{{ item.date | date: '%y-%m-%d' }}">{{ item.date | date: '%B %d, %Y' }}</time>
+			    		</p>
 		    			<p class="description">
 							{{ item.description | truncate: 160 }} <strong>Read more…</strong>
 						</p>
