@@ -4,10 +4,42 @@
   position: relative;
   overflow: hidden;
   min-height: 1.4em;
+        
+  &:before {
+    top: 0;
+    bottom: 0;
+    display: block;
+    content: ' ';
+    background-color: $colour-base;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1em 0 0 -1em;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    display: block;
+    content: '\1f304';
+    font-family: fontello;
+    z-index: 0;
+    font-size: 2em;
+  }
+
+  &.columns:before {
+    left: 15px;
+    right: 15px;
+  }
 
   .upload-button {
     @include pat-button();
     position: absolute;
+    z-index: 2;
     left: 17px;;
     top: 0.1em;
     max-width: 75%;
@@ -33,6 +65,8 @@
   img {
     width: 100%;
     float: left;
+    position: relative;
+    z-index: 1;
 
     &+.upload-button {
       color: white;

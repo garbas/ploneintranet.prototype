@@ -63,6 +63,12 @@
     }
 
     &.summary-hero {
+      .image-uploader:after {
+        opacity: 0.5;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+      }
 
       textarea,
       .image-uploader {
@@ -95,6 +101,10 @@
       textarea,
       .image-uploader {
         height: 1.5em;
+      }
+
+      .image-uploader:after {
+        opacity: 0;
       }
 
       .focus {
