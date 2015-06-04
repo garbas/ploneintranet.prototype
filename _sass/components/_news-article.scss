@@ -1,16 +1,33 @@
 @charset "UTF-8";
 
 .news-article {
+	position: relative;
 
 	@include screen-size(large) { 
 		width: 80%;
-		margin: 0 auto 4em;
+		margin: 4em auto 4em;
 		background-color: white;
-		padding: 12% 10% 5% 15%;
+		padding: 12% 10% 20% 15%;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		@include clear-fix();
+	}
+
+	.functions {
+		position: absolute;
+		top: -2.2em;
+		left: 2.3%;
+		font-size: 0.8em;
+
+		.back {
+			&:before {
+				font-family: fontello;
+				content: '\e75d';
+				display: inline-block;
+				margin-right: 0.8em;
+			}
+		}
 	}
 
 	.title {
