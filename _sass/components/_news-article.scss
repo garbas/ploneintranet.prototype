@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.news-article {
+
+	@include screen-size(large) { 
+		width: 80%;
+		margin: 0 auto 4em;
+		background-color: white;
+		padding: 12% 10% 5% 15%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		@include clear-fix();
+	}
+
+	.title {
+		// font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.hero {
+
+		@include screen-size(large) { 
+			margin-left: -27%;
+		}
+		// float: left;
+		margin-bottom: 2em;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.summary {
+		color: rgba(0,0,0,0.5);
+
+		.date {
+			font-weight: bold;
+			display: inline-block;
+			padding-right: 0.5em;
+			margin-right: 0.3em;
+			border-right: 1px solid rgba(0,0,0,0.5);
+		}
+	}
+
+	blockquote {
+		font-family: "Times", Georgia, Times New Roman;
+		font-size: 21px;
+		line-height: 30px;
+		word-wrap: break-word;
+		font-weight: 300;
+		color: $colour-accent;
+		float: left;
+		clear: both;
+		padding: 1.5em 0;
+
+		@include screen-size(large) { 
+			width: 32%;
+			margin: 0.4em 1.5em 0 -10%;
+			border-top: 0.5em solid $colour-base;
+		}
+	}
+
+	.main-content {
+
+	}
+}

@@ -4,6 +4,22 @@ application: home
 template: news-item
 ---
 
-<article>
-	{{ content }}
+<article class="news-article pat-rich">
+	<h1 class="title">
+		{{ page.title }}
+	</h1>
+
+	{% if page.image %}
+		<figure class="hero">
+			<img src="/media/{{ page.image }}" alt="" />
+		</figure>
+	{% endif %}
+
+	<p class="summary">
+		<time class="date" datetime="{{ page.date | date: '%y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time> {{ page.description }}
+	</p>
+
+	<div class="main-content">
+		{{ content }}
+	</div>
 </article>
