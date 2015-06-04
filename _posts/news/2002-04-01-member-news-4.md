@@ -10,7 +10,12 @@ image: "lufthansa-operating-result.png"
 description: "Lufthansa Group posts nine-month operating profit of EUR 849 million and confirms projected full-year operating profit of EUR 1 billion.-"
 ---
 
-## Lufthansa Group posts nine-month operating profit of EUR 849 million and confirms projected full-year operating profit of EUR 1 billion • Substantial progress in reducing costs •	Service companies report encouraging results •	Group’s member airlines’ sales and distribution structures to be harmonized •	Economic slowdown affects 2015 profit projections: operating profit for 2015 should be significant improvement on 2014
+## Lufthansa Group posts nine-month operating profit of EUR 849 million and confirms projected full-year operating profit of EUR 1 billion 
+
+- Substantial progress in reducing costs 
+- Service companies report encouraging results 
+- Group’s member airlines’ sales and distribution structures to be harmonized 
+- Economic slowdown affects 2015 profit projections: operating profit for 2015 should be significant improvement on 2014
 
 The Lufthansa Group remains confident of achieving its profit targets for 2014 – despite experiencing a difficult third quarter, and despite strike action eroding EUR 170 million from its earnings results. The Group expects to post an operating profit of around EUR 1 billion for the year, excluding the impact of any further strike action between now and year-end. The projection has been strengthened by favorable results for the first nine months: the Lufthansa Group achieved an operating profit of around EUR 849 million for January-to-September 2014, a EUR 186 million improvement on the same period last year. Adjusted for non-recurring restructuring and project costs, this represents an operating profit of some EUR 1 billion for the first-nine-month period. Third-quarter operating profit amounted to EUR 735 million, up EUR 145 million on the prior-year period.
 

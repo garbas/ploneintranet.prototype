@@ -7,10 +7,10 @@ folderish: false
 parent: root
 category: member-news
 image: "air-canada-landmark-agreement.jpg"
-description: "MONTREAL, Oct. 31, 2014 /CNW Telbec/ - Air Canada welcomes today's confirmation by the Air Canada Pilots Association that its members have ratified a landmark agreement on collective agreement terms for ten years."
+description: "Air Canada welcomes today's confirmation by the Air Canada Pilots Association that its members have ratified a landmark agreement on collective agreement terms for ten years."
 ---
 
-MONTREAL, Oct. 31, 2014 /CNW Telbec/ - Air Canada welcomes today's confirmation by the Air Canada Pilots Association that its members have ratified a landmark agreement on collective agreement terms for ten years.
+Air Canada welcomes today's confirmation by the Air Canada Pilots Association that its members have ratified a landmark agreement on collective agreement terms for ten years.
 
 "This ten-year agreement with the Air Canada Pilots Association is a ground-breaking development which allows us to accelerate the implementation of our business strategy on a win-win basis with our pilots," said Calin Rovinescu, President and CEO of Air Canada. "The new agreement provides greater stability and long term cost certainty as well as a framework for a strong partnership with our pilots. It is also the most tangible indication of the shift in culture underway at Air Canada.
 
