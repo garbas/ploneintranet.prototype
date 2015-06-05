@@ -23,8 +23,11 @@ $glyph-checkbox-active: '\2611';
 $glyph-radio-button: '\f10c';
 $glyph-radio-button-active: '\e702';
 
-// Responsive breakpoints:
+// Responsive breakpoints
 $mobile:768px;
+
+// Grid
+$grid-gutter: 15px;
 
 // Font treatment
 $base-font-size: 18px;
@@ -83,6 +86,7 @@ $base-space: 1em; // Create universal white space (e.g. margin, padding, left)
 @import "components/icon-tabs";
 @import "components/image-uploader";
 @import "components/item-selector";
+@import "components/lib-groups";
 @import "components/link-list";
 @import "components/list-item";
 @import "components/logo";

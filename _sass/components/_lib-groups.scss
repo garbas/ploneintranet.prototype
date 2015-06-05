@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.lib-groups {
+	margin-left: -$grid-gutter;
+	margin-right: -$grid-gutter;
+	position: relative;
+	opacity: 0;
+	transition: opacity 1s;
+
+	&.masonry-ready {
+	  opacity: 1;
+	}
+
+	.grid-sizer,
+	.tile {
+		@include screen-size(large) {
+			width: 33.33333%;
+		}
+
+		@include screen-size(small) {
+			width: 100%;
+		}
+		
+		@include box-sizing();
+		padding: 0 $grid-gutter;
+	}
+
+	.tile {
+		margin-bottom: 1em;
+
+	  	.content {
+	  		// color: white;
+	  		position: relative;
+	  		background-color: white;
+	  		padding: 6%;
+
+	  		h3 {
+			    font-weight: 100;
+			    font-size: 2em;
+			    line-height: 1.2em;
+	  			margin-bottom: 0.5em;
+
+	  			overflow: hidden;
+	  			text-overflow: ellipsis;
+	  		}
+	  	}
+	}
+}
