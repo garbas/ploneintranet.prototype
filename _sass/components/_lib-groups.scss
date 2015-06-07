@@ -36,10 +36,10 @@
 
 	  		h3 {
 			    font-weight: 100;
-			    font-size: 2em;
+			    font-size: 1.7em;
 			    line-height: 1.2em;
 	  			margin-bottom: 0.5em;
-				padding-left: 0.95em;
+				padding-left: 1.15em;
 
 				a {
 					display: block;
@@ -49,12 +49,33 @@
 	  			text-overflow: ellipsis;
 	  		}
 
-	  		ul.menu li a {
-	  			cursor: pointer;
-	  			padding-left: 2em;
+	  		.intro {
+				color: rgba(0,0,0,0.5);
+				font-size: 0.8em;
+				margin-bottom: 1em;
+				line-height: 130%;
+				font-style: italic;
+	  		}
 
-	  			&:before {
-	  				margin-left: -1.6em;
+	  		ul.menu li {
+	  			&.follow-section {
+
+	  				a:after {
+		  				font-family: fontello;
+		  				content: '\e75e';
+		  				float: right;
+		  				margin-right: 0.3em;
+		  				color: rgba(0,0,0,0.3);
+	  				}
+	  			}
+
+	  			a {
+		  			cursor: pointer;
+		  			padding-left: 2em;
+
+		  			&:before {
+		  				margin-left: -1.6em;
+		  			}
 	  			}
 	  		}
 	  	}
