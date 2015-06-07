@@ -39,9 +39,47 @@
 			    font-size: 2em;
 			    line-height: 1.2em;
 	  			margin-bottom: 0.5em;
+				padding-left: 0.95em;
+
+				a {
+					display: block;
+				}
 
 	  			overflow: hidden;
 	  			text-overflow: ellipsis;
+	  		}
+
+	  		ul.menu li a {
+	  			cursor: pointer;
+	  			padding-left: 2em;
+
+	  			&:before {
+	  				margin-left: -1.6em;
+	  			}
+	  		}
+	  	}
+
+	  	&[class*=group-by-] {
+	  		h3:before {
+	  			font-family: fontello;
+	  			display: inline-block;
+	  			margin-right: 0.1em;
+	  			font-size: 0.7em;
+	  			color: rgba(0,0,0,0.5);
+				margin-left: -1.4em;
+				float: left;
+	  		}
+	  	}
+
+	  	&.group-by-tag {
+	  		h3:before {
+	  			content: '\e70c';
+	  		}
+	  	}
+
+	  	&.group-by-section {
+	  		h3:before {
+	  			content: '\e86f';
 	  		}
 	  	}
 	}

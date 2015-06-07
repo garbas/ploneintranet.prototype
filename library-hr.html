@@ -1,0 +1,105 @@
+---
+layout: home
+application: home
+design_title: Library landing page
+---
+
+<nav class="canvas-subnav">
+	<a href="/library.html">All topics</a>
+	<a href="/library-hr.html" class="current">HR</a>
+	<a href="/library.html">Regulations</a>
+	<a href="/library.html">Transportation</a>
+	<a href="/library.html">Lorem ipsum</a>
+</nav>
+
+<article class="pat-rich canvas-intro">
+	<!-- Hide H1 on first level, because it's also already in the sub nav. In case there is no description available on this level, then also don't print the entire article tag. -->
+	<!-- <h1>
+		HR
+	</h1> -->
+	<p class="description">
+		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+	</p>
+</article>
+
+<form class="canvas-toolbar pat-inject pat-autosubmit" action="/workspaces.html#workspaces">
+	<!-- Sorting dropdown is out of scope. -->
+	<label class="bare pat-select">
+		<select>
+			<option>
+				Group by topic
+			</option>
+			<option>
+				Group by tag
+			</option>
+			<option>
+				Group by my tags
+			</option>
+			<option>
+				Group by author
+			</option>
+			<option>
+				Group by publication date
+			</option>
+		</select>
+	</label>
+	<a href="#" data-pat-modal="class: large" title="Create a new workspace" class="icon create pat-modal">Create page or section</a>
+</form>
+
+<div class="lib-groups pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;" id="lib-groups">
+	<div class="grid-sizer"></div>
+	<div class="tile group-by-section">
+		<div class="content">
+			<h3>
+				Valenpedicis palemtuem
+			</h3>
+			<ul class="menu group-by-section">
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="tile group-by-section">
+		<div class="content">
+			<h3>
+				Consectetuer
+			</h3>
+			<ul class="menu group-by-section">
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="tile group-by-section">
+		<div class="content">
+			<h3>
+				Dolor sit amet
+			</h3>
+			<ul class="menu group-by-section">
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+				<li>
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
