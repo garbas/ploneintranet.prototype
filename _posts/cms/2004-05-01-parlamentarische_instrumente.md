@@ -1,5 +1,5 @@
 ---
-layout: cms
+layout: cms-item
 folderish: false
 parent: synode
 section: organisation
