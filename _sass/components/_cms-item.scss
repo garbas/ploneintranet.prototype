@@ -2,10 +2,11 @@
 
 .cms-item {
 	position: relative;
+	font-size: 1.2em;
 
 	@include screen-size(large) { 
 		background-color: white;
-		padding: 12% 10% 20% 15%;
+		padding: 12% 10% 20% 20%;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
