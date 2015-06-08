@@ -1,7 +1,7 @@
 ---
 layout: cms
 folderish: false
-parent: cms
+parent: synodealrat
 section: organisation
 Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 

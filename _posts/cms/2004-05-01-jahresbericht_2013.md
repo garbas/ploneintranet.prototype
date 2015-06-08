@@ -1,12 +1,12 @@
 ---
 layout: cms
 folderish: false
-parent: cms
+parent: rekurskommission
 section: organisation
 Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 
 title: Jahresberichte
-category: Rekurskommission
+category: rekurskommission
 image: ".jpeg"
 description: "Der Jahresbericht 2013 der Rekurskommission wurde von der Synode in der Sitzung vom 26. Juni 2014 abgenommen."
 ---

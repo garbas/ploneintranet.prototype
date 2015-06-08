@@ -1,12 +1,12 @@
 ---
 layout: cms
 folderish: false
-parent: cms
+parent: synodalrat
 section: organisation
 Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 
 title: Ressortverteilung
-category: synodealrat
+category: synodalrat
 image: "ressortverteilung.jpeg"
 description: "Synodalrat"
 ---
