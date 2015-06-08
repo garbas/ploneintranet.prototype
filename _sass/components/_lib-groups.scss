@@ -4,15 +4,19 @@
 	margin-left: -$grid-gutter;
 	margin-right: -$grid-gutter;
 	position: relative;
-	opacity: 0;
 	transition: opacity 1s;
 
-	&.masonry-ready {
+	&.pat-masonry {
+		opacity: 0;
+	}
+
+	&.pat-masonry.masonry-ready {
 	  opacity: 1;
 	}
 
 	.grid-sizer,
-	.tile {
+	.tile, 
+	.sibling-groups {
 		@include screen-size(large) {
 			width: 33.33333%;
 		}
@@ -25,6 +29,23 @@
 		padding: 0 $grid-gutter;
 	}
 
+	.sibling-groups {
+		float: left;
+
+		.tile {
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	.tile.full-page {
+		@include screen-size(large) {
+			width: 66.66666%;
+		}
+
+		float: right;
+	}
+
 	.tile {
 		margin-bottom: 1em;
 
@@ -34,6 +55,10 @@
 	  		background-color: white;
 	  		padding: 6%;
 	  		display: block;
+
+	  		&.cms-item {
+	  			padding: 10%;
+	  		}
 
 	  		.footer {
 	  			.read-more {
