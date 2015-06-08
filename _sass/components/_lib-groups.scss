@@ -33,12 +33,19 @@
 	  		position: relative;
 	  		background-color: white;
 	  		padding: 6%;
+	  		display: block;
+
+	  		.footer {
+	  			.read-more {
+	  				color: $colour-accent;
+	  			}
+	  		}
 
 	  		h3 {
 			    font-weight: 100;
 			    font-size: 1.7em;
 			    line-height: 1.2em;
-	  			margin-bottom: 0.5em;
+	  			margin-bottom: 0.3em;
 				padding-left: 1.15em;
 
 				a {
@@ -49,7 +56,7 @@
 	  			text-overflow: ellipsis;
 	  		}
 
-	  		.intro {
+	  		.description {
 				color: rgba(0,0,0,0.5);
 				font-size: 0.8em;
 				margin-bottom: 1em;
@@ -57,9 +64,17 @@
 				font-style: italic;
 	  		}
 
+	  		.summary {
+				color: rgba(0,0,0,0.5);
+				font-size: 1em;
+				margin-bottom: 1em;
+				line-height: 130%;
+			}
+
 	  		ul.menu li {
 	  			&.follow-section {
 	  				position: relative;
+	  				padding-right: 2em;
 
 	  				a:after {
 		  				font-family: fontello;
@@ -76,6 +91,16 @@
 	  				}
 	  			}
 
+	  			&.follow-page {
+			  		a {
+			  			&:before {
+			  				display: inline-block;
+			  				font-family: fontello;
+			  				content: '\e823';
+			  			}
+			  		}
+	  			}
+
 	  			a {
 		  			cursor: pointer;
 		  			padding-left: 2em;
@@ -88,7 +113,21 @@
 	  		}
 	  	}
 
-	  	&[class*=group-by-] {
+	  	a.content {
+	  		&:hover {
+	  			text-decoration: none;
+	  			cursor: pointer;
+
+	  			.footer {
+	  				.read-more {
+	  					text-decoration: underline;
+	  				}
+	  			}
+	  		}
+	  	}
+
+	  	&[class*=group-by-],
+	  	&.type-page {
 	  		h3:before {
 	  			font-family: fontello;
 	  			display: inline-block;
@@ -97,6 +136,12 @@
 	  			color: rgba(0,0,0,0.5);
 				margin-left: -1.4em;
 				float: left;
+	  		}
+	  	}
+
+	  	&.type-page {
+	  		h3:before {
+	  			content: '\e823';
 	  		}
 	  	}
 
