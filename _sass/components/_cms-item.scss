@@ -3,10 +3,11 @@
 .cms-item {
 	position: relative;
 	font-size: 1.2em;
+	line-height: 150%;
 
 	@include screen-size(large) { 
 		background-color: white;
-		padding: 12% 10% 20% 20%;
+		padding: 18% 10% 20% 20%;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -14,22 +15,6 @@
 		// border: 1px solid #dedede;
 
 		@include clear-fix();
-	}
-
-	.functions {
-		position: absolute;
-		top: -2.2em;
-		left: 2.3%;
-		font-size: 0.8em;
-
-		.back {
-			&:before {
-				font-family: fontello;
-				content: '\e75d';
-				display: inline-block;
-				margin-right: 0.8em;
-			}
-		}
 	}
 
 	.title {
