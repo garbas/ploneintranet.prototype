@@ -1,5 +1,5 @@
 ---
-layout: cms
+layout: cms-item
 folderish: false
 parent: synode
 section: organisation
@@ -7,7 +7,6 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 
 title: Sitzungen
 category: synode
-image: ".jpeg"
 ---
 
 

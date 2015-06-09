@@ -56,9 +56,10 @@
 	  	.content {
 	  		// color: white;
 	  		position: relative;
-	  		background-color: white;
+	  		// background-color: white;
 	  		padding: 6%;
 	  		display: block;
+	  		border: 1px solid silver;
 
 	  		.excerpt {
 	  			margin-bottom: 1em;
@@ -84,7 +85,6 @@
 			    font-size: 1.5em;
 			    line-height: 1.2em;
 	  			margin-bottom: 0.3em;
-				padding-left: 1.25em;
 
 				a {
 					display: block;
@@ -166,23 +166,36 @@
 	  		}
 	  	}
 
-	  	&[class*=group-by-],
-	  	&.type-page {
-	  		h3:before {
-	  			font-family: fontello;
-	  			display: inline-block;
-	  			margin-right: 0.1em;
-	  			font-size: 0.8em;
-	  			color: rgba(0,0,0,0.5);
-				margin-left: -1.4em;
-				float: left;
+	  	&[class*=group-by-] {
+
+	  		.content {
+	  			border-radius: 0.5em;
+	  		
+		  		h3 {
+		  			padding-left: 1.25em;
+
+		  			&:before {
+		  				font-family: fontello;
+			  			display: inline-block;
+			  			margin-right: 0.1em;
+			  			font-size: 0.8em;
+			  			color: rgba(0,0,0,0.5);
+						margin-left: -1.4em;
+						float: left;
+		  			}
+		  		}
 	  		}
 	  	}
 
 	  	&.type-page {
-	  		h3:before {
-	  			content: '\e823';
+	  		.content {
+	  			background-color: white;
+	  			border: 1px solid #dedede;
 	  		}
+	  		
+	  		// h3:before {
+	  		// 	content: '\e823';
+	  		// }
 	  	}
 
 	  	&.group-by-tag {
