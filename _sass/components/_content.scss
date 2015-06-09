@@ -19,5 +19,7 @@
 }
 
 body.application-home #content {
-  background-color: $colour-base-light;
+  @include screen-size(large) { 
+    background-color: $colour-base-light;
+  }
 }
