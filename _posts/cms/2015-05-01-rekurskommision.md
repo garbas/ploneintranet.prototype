@@ -7,8 +7,7 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 
 title: Rekurskommission
 category: Rekurskommission
-image: "Rekurskommission.jpeg"
-description: ""
+image: "rekurskommision.jpeg"
 ---
 
 

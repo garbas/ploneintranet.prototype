@@ -57,23 +57,34 @@ design_title: Library landing page
 			<p class="summary">
 				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
 			</p>
-<!-- 			<div class="excerpt pat-rich">
-				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus ltricies eget, tempor sit amet, ante.</p>
-
-				<p>
-					<img src="http://lorempixel.com/800/400/business/" alt="" />
-				</p>
-
-				<p>
-					…
-				</p>
-			</div> -->
 			<p class="footer">
 				<em class="read-more">Read more…</em>
 			</p>
 		</a>
 	</div>
-	<div class="tile type-page">
+	{% for item in site.posts %}
+		{% if item.layout == 'cms-item' %}
+			<div class="tile type-page">
+				<a href="{{ item.url }}" class="content">
+					<h3>
+						{{ item.title }}
+					</h3>
+					{% if item.image %}
+						<p class="hero">
+							<img src="/media/cms/{{ item.image }}" alt="" />
+						</p>
+					{% endif %}
+					<p class="summary">
+						{{ item.description }}
+					</p>
+					<p class="footer">
+						<em class="read-more">Read more…</em>
+					</p>
+				</a>
+			</div>
+		{% endif %}
+	{% endfor %}
+<!-- 	<div class="tile type-page">
 		<a class="content">
 			<h3>
 				Laborum et dolorum
@@ -98,5 +109,5 @@ design_title: Library landing page
 				<em class="read-more">Read more…</em>
 			</p>
 		</a>
-	</div>
+	</div> -->
 </div>

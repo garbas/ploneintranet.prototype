@@ -7,8 +7,6 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 
 title: Rekursentscheide
 category: rekurskommission
-image: ".jpeg"
-description: "Titel"
 ---
 
 

@@ -8,7 +8,6 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 title: Sitzungen
 category: synode
 image: ".jpeg"
-description: "."
 ---
 
 

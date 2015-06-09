@@ -8,7 +8,6 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 title: Seelsorgerat des Kantons Zürich
 category: generalvikariat
 image: "seelsorgerat.jpeg"
-description: "."
 ---
 
 Der Seelsorgerat des Kantons Zürich (SR) ist ein Beratungsgremium des Generalvikars und seinen Mitarbeitenden in seelsorgerlichen Belangen.

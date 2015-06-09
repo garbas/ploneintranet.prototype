@@ -8,7 +8,6 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 title: Synodalrat
 category: synodalrat
 image: "synodalrat.jpeg"
-description: "."
 ---
 
 *Der Synodalrat ist die Exekutive der Zürcher Katholikinnen und Katholiken. Ihr gehören neun nebenamtliche, von der Synode (Kirchenparlament) gewählte Frauen und Männer an*.

@@ -7,7 +7,6 @@ Note_to_designer: "Taken from http://www.zh.kath.ch/organisation/"
 
 title: Reglemente
 category: rekurskommission
-image: ".jpeg"
 description: ""
 ---
 
