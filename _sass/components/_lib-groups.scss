@@ -37,7 +37,7 @@
 			padding: 0;
 
 			.content {
-				background-color: transparent;
+				border: none;
 			}
 		}
 	}
@@ -114,7 +114,10 @@
 	  		ul.menu li {
 	  			&.follow-section {
 	  				position: relative;
-	  				padding-right: 2em;
+
+	  				a {
+	  					padding-right: 2em;
+	  				}
 
 	  				a:after {
 		  				font-family: fontello;

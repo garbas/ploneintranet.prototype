@@ -12,22 +12,44 @@ design_title: Library landing page
 	<a href="/library.html">Lorem ipsum</a>
 </nav>
 
-<article class="content cms-item pat-rich">
-	<p class="page-function-bar">
-		<!-- The word 'Press release' below is to be replaced with the relevant section name of the respective article. The same is true for the link.  -->
-		<a class="back" href="/library-hr-excepturi-sint-occaecati.html">Excepturi sint occaecati</a>
-		<a href="#" class="share icon-share">Share</a>
-	</p>
+<div class="lib-groups" id="lib-groups">
+	<div class="tile full-page">
+		<article class="content cms-item pat-rich">
+			<p class="page-function-bar">
+				<!-- The word 'Press release' below is to be replaced with the relevant section name of the respective article. The same is true for the link.  -->
+				<a class="back" href="/library-hr-excepturi-sint-occaecati.html">Excepturi sint occaecati</a>
+				<a href="#" class="share icon-share">Share</a>
+			</p>
 
-	<h1 class="title">
-		{{ page.title }}
-	</h1>
+			<h1 class="title">
+				{{ page.title }}
+			</h1>
 
-	<p class="summary">
-		{{ page.description }}
-	</p>
+			<p class="summary">
+				{{ page.description }}
+			</p>
 
-	<div class="main-content">
-		{{ content }}
+			<div class="main-content">
+				{{ content }}
+			</div>
+		</article>
 	</div>
-</article>
+	<aside class="sibling-groups">
+		<div class="tile group-by-section">
+			<div class="content">
+				<h3>
+					Excepturi sint occaecati
+				</h3>
+				<ul class="menu group-by-page">
+					{% for item in site.posts %}
+						{% if item.layout == 'cms-item' %}
+							<li class="follow-page">
+								<a href="{{ item.url }}">{{ item.title }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</aside>
+</div>
