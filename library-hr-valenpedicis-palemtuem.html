@@ -40,15 +40,13 @@ design_title: Library landing page
 				Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum.
 			</p>
 			<ul class="menu group-by-page">
-				<li class="follow-page">
-					<a href="/library-mollitia-animi.html" href="#">Mollitia animi</a>
-				</li>
-				<li class="follow-page">
-					<a href="#">Non provident</a>
-				</li>
-				<li class="follow-page">
-					<a href="#">Praesentium voluptatum deleniti atque</a>
-				</li>
+				{% for item in site.posts %}
+					{% if item.layout == 'cms-item' %}
+						<li class="follow-page">
+							<a href="{{ item.url }}">{{ item.title }}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 		</div>
 	</div>

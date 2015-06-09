@@ -19,3 +19,5 @@ Hirschengraben 66, 8001 Zürich
 Telefon 044 266 12 12, Telefax 044 266 12 13, synodalrat@zh.kath.ch
 
 zuletzt verändert: 18.08.2014 10:04
+
+![Business image](http://lorempixel.com/1000/450/business/)

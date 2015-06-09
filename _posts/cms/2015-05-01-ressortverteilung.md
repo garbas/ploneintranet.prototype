@@ -19,6 +19,8 @@ Sekretariat: Telefon 044 266 12 12, Telefax 044 266 12 13,
 synodalrat@zh.kath.ch
 
 
+![Business image](http://lorempixel.com/1000/450/business/)
+
 ## Dr. Benno Schnüriger
 Dr. Benno Schnüriger - Präsident
 

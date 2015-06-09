@@ -16,6 +16,8 @@ Geschäftsordnung der Rekurskommission der Römisch-katholischen Körperschaft d
 
 Datei öffnen — PDF document, 129Kb
 
+![Business image](http://lorempixel.com/1000/450/business/)
+
 ## Reglement über Organisation und Verfahren der Rekurskommission
 Reglement über Organisation und Verfahren der Rekurskommission der Römisch-katholischen Körperschaft des Kantons Zürich (vom 1. Oktober 2009)
 

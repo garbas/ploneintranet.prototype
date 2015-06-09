@@ -46,22 +46,6 @@ design_title: Library landing page
 
 <div class="lib-groups pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;" id="lib-groups">
 	<div class="grid-sizer"></div>
-	<div class="tile type-page">
-		<a href="library-mollitia-animi.html" class="content">
-			<h3>
-				Mollitia animi
-			</h3>
-			<p class="hero">
-				<img src="http://lorempixel.com/800/400/business/" alt="" />
-			</p>
-			<p class="summary">
-				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-			</p>
-			<p class="footer">
-				<em class="read-more">Read more…</em>
-			</p>
-		</a>
-	</div>
 	{% for item in site.posts %}
 		{% if item.layout == 'cms-item' %}
 			<div class="tile type-page">
@@ -84,30 +68,4 @@ design_title: Library landing page
 			</div>
 		{% endif %}
 	{% endfor %}
-<!-- 	<div class="tile type-page">
-		<a class="content">
-			<h3>
-				Laborum et dolorum
-			</h3>
-			<p class="summary">
-				Cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum.
-			</p>
-			<p class="footer">
-				<em class="read-more">Read more…</em>
-			</p>
-		</a>
-	</div>
-	<div class="tile type-page">
-		<a class="content">
-			<h3>
-				Officia deserunt
-			</h3>
-			<p class="summary">
-				Id est laborum et dolorum fuga. Et harum quidem rerum.
-			</p>
-			<p class="footer">
-				<em class="read-more">Read more…</em>
-			</p>
-		</a>
-	</div> -->
 </div>

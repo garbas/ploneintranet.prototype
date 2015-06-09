@@ -22,6 +22,8 @@ Die Rekurskommission als Judikative hat die Aufgabe einer eigenen *Rechtsmittel-
 
  
 
+![Business image](http://lorempixel.com/1000/450/business/)
+
 ## Kontakt
 
 

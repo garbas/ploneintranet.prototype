@@ -11,6 +11,8 @@ category: rekurskommission
 
 
 
+![Business image](http://lorempixel.com/1000/450/business/)
+
 Entscheid der II. Kammer vom 27. November 2014 betreffend Protokollberichtigung
 
 Entscheid der II. Kammer vom 27. November 2014 betreffend Rekurs in Stimmrechtssachen

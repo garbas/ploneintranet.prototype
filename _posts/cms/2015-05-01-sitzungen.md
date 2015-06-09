@@ -11,31 +11,7 @@ category: synode
 
 
 ## Künftige Synodengeschäfte
-Mehr…
 
-## 2015
-Mehr…
+![Business image](http://lorempixel.com/1000/450/business/)
 
-## 2014
-Mehr…
-
-## 2013
-Mehr…
-
-## 2012
-Mehr…
-
-## 2011
-Mehr…
-
-## 2010
-Mehr…
-
-## 2009
-Mehr…
-
-## 2008
-Mehr…
-
-## Antragsformular für Synoden-Sitzungen
-Mehr…
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
