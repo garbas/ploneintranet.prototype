@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.pat-breadcrumbs {
+  position: relative;
+
+  .button.shift {
+    display: none;
+    position: absolute;
+    left: 0;
+
+    &.shift-right {
+      display: inline-block;
+    }
+  }
+
+  .pat-breadcrumbs-content {
+
+  }
+
+  a {
+    &:before {
+      display: inline-block;
+      // font-family: fontello;
+      content: ':';
+      padding: 0 0.5em;
+    }
+
+    &:first-child:before {
+      display: none;
+    }
+  }
+}
