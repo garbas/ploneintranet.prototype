@@ -35,6 +35,10 @@
 		.tile {
 			width: 100%;
 			padding: 0;
+
+			.content {
+				background-color: transparent;
+			}
 		}
 	}
 
@@ -77,10 +81,10 @@
 
 	  		h3 {
 			    font-weight: 100;
-			    font-size: 1.7em;
+			    font-size: 1.5em;
 			    line-height: 1.2em;
 	  			margin-bottom: 0.3em;
-				padding-left: 1.15em;
+				padding-left: 1.25em;
 
 				a {
 					display: block;
@@ -166,7 +170,7 @@
 	  			font-family: fontello;
 	  			display: inline-block;
 	  			margin-right: 0.1em;
-	  			font-size: 0.7em;
+	  			font-size: 0.8em;
 	  			color: rgba(0,0,0,0.5);
 				margin-left: -1.4em;
 				float: left;
