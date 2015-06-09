@@ -56,6 +56,15 @@
 	  		padding: 6%;
 	  		display: block;
 
+	  		.excerpt {
+	  			margin-bottom: 1em;
+	  			color: black;
+	  		}
+
+	  		img {
+	  			max-width: 100%;
+	  		}
+
 	  		&.cms-item {
 	  			padding: 10%;
 	  		}
