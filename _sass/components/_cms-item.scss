@@ -4,6 +4,7 @@
 	position: relative;
 	font-size: 1.2em;
 	line-height: 150%;
+	padding: 3em 0;
 
 	@include screen-size(large) { 
 		background-color: white;

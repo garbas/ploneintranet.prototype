@@ -5,7 +5,11 @@
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	padding: 1.2% 3%;
+
+	@include screen-size(large) { 
+		padding: 1.2% 3%;
+	}
+
 	font-size: 0.7em;
 	// background-color: lighten($colour-base, 4.5);
 	border-bottom: 1px $colour-base solid;
