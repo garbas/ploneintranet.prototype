@@ -215,7 +215,9 @@
 	  	&.type-page {
 	  		.content {
 	  			background-color: white;
-	  			border: 1px solid #dedede;
+	  			@include screen-size(large) {
+		  			border: 1px solid #dedede;
+		  		}
 	  		}
 	  		
 	  		// h3:before {
