@@ -23,6 +23,20 @@
 		// text-transform: uppercase;
 	}
 
+	.title + .tag-cloud {
+		margin-top: -1.5em;
+		margin-bottom: 1.4em;
+		font-size: 0.7em;
+
+		// li {
+		// 	padding-left: 2em;
+
+		// 	&:before {
+		// 		margin-left: -1em;
+		// 	}
+		// }
+	}
+
 	.hero {
 
 		margin-bottom: 2em;

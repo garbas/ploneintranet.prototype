@@ -4,7 +4,8 @@
 	margin-bottom: 0.7em;
 	line-height: 1.2em;
 
-	li {
+	li,
+	> a {
 		border-radius: 1em;
 		padding: 0em 0.3em 0em 1em;
 		// font-size: 0.8em;
@@ -14,12 +15,19 @@
 		margin-bottom: 0.2em;
 		display: inline-block;
 		line-height: 1.4em;
+
+		&:before {
+			font-family: fontello;
+		    display: inline-block;
+		    margin-right: 0.5em;
+		}
 		
 		&.skill:before {
-			font-family: fontello;
 		    content: "\1f44d";
-		    display: inline-block;
-		    margin-right: 5px;
+		}
+		
+		&.tag:before {
+		    content: "\e70c";
 		}
 
 		.counter {
