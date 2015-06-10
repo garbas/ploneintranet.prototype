@@ -166,6 +166,16 @@
 			  		}
 	  			}
 
+	  			&.follow-tag {
+			  		a {
+			  			&:before {
+			  				display: inline-block;
+			  				font-family: fontello;
+			  				content: '\e70c';
+			  			}
+			  		}
+	  			}
+
 	  			a {
 		  			cursor: pointer;
 		  			padding-left: 2em;
