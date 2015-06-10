@@ -1,0 +1,80 @@
+---
+layout: home
+application: home
+design_title: Library landing page
+---
+
+<nav class="canvas-subnav">
+	<a href="/library.html">All topics</a>
+	<a href="/library-hr.html" class="current">HR</a>
+	<a href="/library.html">Regulations</a>
+	<a href="/library.html">Transportation</a>
+	<a href="/library.html">Lorem ipsum</a>
+</nav>
+
+<article class="pat-rich canvas-intro">
+	<h1 class="icon-tag">
+<!-- 		<nav class="pat-breadcrumbs">
+			<a href="">Mitgliederbeiträge</a>
+			<a href="">Finanzplanung</a>
+		</nav> -->
+		Finanzplanung
+	</h1>
+</article>
+
+<div class="lib-groups pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;" id="lib-groups">
+	<div class="grid-sizer"></div>
+	<div class="tile group-by-tag">
+		<div class="content">
+			<h3>
+				<a href="/library-tag-finanzplanung.html">Mitgliederbeiträge</a>
+			</h3>
+			<ul class="menu group-by-tag">
+				{% for item in site.posts %}
+					{% if item.layout == 'cms-item' %}
+						<li class="follow-page">
+							<a href="{{ item.url }}">{{ item.title }}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="tile group-by-tag">
+		<div class="content">
+			<h3>
+				<a href="#">Hippo</a>
+			</h3>
+			<ul class="menu group-by-tag">
+				<li class="follow-page">
+					<a class="icon-squares" href="#">Quos dolores</a>
+				</li>
+				<li class="follow-page">
+					<a class="icon-squares" href="#">Id est laborum</a>
+				</li>
+				<li class="follow-page">
+					<a class="icon-squares" href="#">Lorem ipsum</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="tile group-by-tag">
+		<div class="content">
+			<h3>
+				<a href="#">Rosa</a>
+			</h3>
+			<ul class="menu group-by-tag">
+				<li class="follow-page">
+					<a class="icon-squares" href="#">At vero</a>
+				</li>
+				<li class="follow-page">
+					<a class="icon-squares" href="#">Deleniti</a>
+				</li>
+				<li class="follow-page">
+					<a class="icon-squares" href="#">Dignissimos</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</div>

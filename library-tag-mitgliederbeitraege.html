@@ -14,7 +14,10 @@ design_title: Library landing page
 
 <article class="pat-rich canvas-intro">
 	<h1 class="icon-tag">
-		Board
+<!-- 		<nav class="pat-breadcrumbs">
+			<a href="">Mitgliederbeiträge</a>
+		</nav> -->
+		Mitgliederbeiträge
 	</h1>
 </article>
 
@@ -23,18 +26,16 @@ design_title: Library landing page
 	<div class="tile group-by-tag">
 		<div class="content">
 			<h3>
-				<a href="library-hr-valenpedicis-palemtuem.html">Lorem ipsum</a>
+				<a href="/library-tag-finanzplanung.html">Finanzplanung</a>
 			</h3>
 			<ul class="menu group-by-tag">
-				<li class="follow-page">
-					<a href="/library-hr-excepturi-sint-occaecati.html" class="icon-squares" href="#">Excepturi</a>
-				</li>
-				<li class="follow-page">
-					<a class="icon-squares" href="#">Non provident</a>
-				</li>
-				<li class="follow-page">
-					<a class="icon-squares" href="#">Praesentium</a>
-				</li>
+				{% for item in site.posts %}
+					{% if item.layout == 'cms-item' %}
+						<li class="follow-page">
+							<a href="{{ item.url }}">{{ item.title }}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 		</div>
 	</div>
