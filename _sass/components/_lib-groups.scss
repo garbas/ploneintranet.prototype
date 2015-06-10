@@ -157,7 +157,7 @@
 	  			}
 
 	  			&.follow-page {
-			  		a {
+			  		a {			  			
 			  			&:before {
 			  				display: inline-block;
 			  				font-family: fontello;
@@ -225,6 +225,7 @@
 	  	&.type-page {
 	  		.content {
 	  			background-color: white;
+				color: black;
 	  			@include screen-size(large) {
 		  			border: 1px solid #dedede;
 		  		}
