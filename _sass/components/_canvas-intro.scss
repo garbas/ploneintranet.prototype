@@ -3,7 +3,9 @@
 .canvas-intro {
 	margin: 0 auto 2em;
 	padding-top: 1em;
-	width: 80%;
+	@include screen-size(large) {
+		width: 80%;
+	}
 
 	* {
 		text-align: center;
