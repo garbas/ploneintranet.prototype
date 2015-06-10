@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.tag-cloud {
+	margin-bottom: 0.7em;
+	line-height: 1.2em;
+
+	li {
+		border-radius: 1em;
+		padding: 0em 0.3em 0em 1em;
+		// font-size: 0.8em;
+		background-color: $colour-accent;
+		color: white;
+		margin-right: 0.3em;
+		margin-bottom: 0.2em;
+		display: inline-block;
+		line-height: 1.4em;
+		
+		&.skill:before {
+			font-family: fontello;
+		    content: "\1f44d";
+		    display: inline-block;
+		    margin-right: 5px;
+		}
+
+		.counter {
+			background-color: rgba(255,255,255,0.8);
+			color: $colour-accent;
+			font-style: normal;
+			border-radius: 0.45em;
+			height: 0.9em;
+			min-width: 0.9em;
+			padding: 0 0.2em;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			display: inline-block;
+			line-height: 0.9em;
+			text-align: center;
+			margin-left: 0.23em;
+  			margin-top: 0.23em;
+			float: right;
+		}
+	}
+}
