@@ -38,6 +38,10 @@
     overflow: hidden;
     line-height: 1em;
 
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     &:before {
       font-family: fontello;
       content: "\e4a1";
