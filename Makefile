@@ -121,7 +121,7 @@ designerhappy: fetchrelease
 jekyll: fetchrelease stamp-bundler
 	$(BUNDLE) exec jekyll build
 
-dev: jekyll
+dev: stamp-bower jekyll
 	# Set up development environment
 	# install a require.js config
 	cp src/bower_components/requirejs/require.js _site/bundles/$(BUNDLENAME)-modular.js
