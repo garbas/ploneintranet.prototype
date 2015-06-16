@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.case-mat {
+	a {
+		color: white;
+
+		&:hover {
+			// text-decoration: n
+		}
+	}
+
+	.case-title {
+		text-align: center;
+		font-size: 3em;
+		font-weight: 200; 
+		margin-bottom: 1em;
+		letter-spacing: 0.1em;
+
+		a {
+			display: block;
+		}
+	}
+
+	font-size: 0.8em;
+	background-color: #DE7F00;
+	margin-bottom: 5em;
+	padding: 4% 3% 3% 3%;
+	color: white;
+	border-radius: 2.8em;
+
+	.summary {
+		margin-bottom: 1em;
+	}
+
+	.stats {
+		.stat {
+			float: left;
+			width: 33%;
+			text-align: center;
+			padding-top: 0.8em;
+
+			.value {
+				display: block;
+				font-weight: bold;
+				font-size: 3em;
+				margin-bottom: 0.5em;
+			}
+
+			.name {
+				display: block;
+			}
+		}
+	}
+
+	.timeline {
+		margin-bottom: 0;
+	}
+}

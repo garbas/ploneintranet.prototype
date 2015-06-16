@@ -1,0 +1,290 @@
+---
+layout: case-manager
+template: case-manager
+case_states_1:
+  - label: Neu
+    action: Ressort zuweisen
+    action_icon: right-hand
+    transition_state: finished
+  - label: In Bearbeitung
+    action: Fertig stellen
+    action_icon: pin
+    transition_state: finished
+    current: current
+  - label: Vollständig
+    action: Einreichen
+    action_icon: right-circle
+    transition_state: unfinished
+  - label: Antrag
+    action: Beschliessen
+    action_icon: hammer
+  - label: Beschlossen
+    action: Abschliessen
+    action_icon: cancel-circle
+  - label: Abgeschlossen
+    action: Archivieren
+    action_icon: archive
+  - label: Archiviert
+case_states_2:
+  - label: Neu
+    action: Ressort zuweisen
+    action_icon: right-hand
+    transition_state: finished
+  - label: In Bearbeitung
+    action: Fertig stellen
+    action_icon: pin
+    transition_state: finished
+    current: current
+  - label: Vollständig
+    action: Einreichen
+    action_icon: right-circle
+    transition_state: finished
+  - label: Antrag
+    action: Beschliessen
+    action_icon: hammer
+    transition_state: finished
+  - label: Beschlossen
+    action: Abschliessen
+    action_icon: cancel-circle
+  - label: Abgeschlossen
+    action: Archivieren
+    action_icon: archive
+  - label: Archiviert
+    transition_state: finished
+case_states_3:
+  - label: Neu
+    action: Ressort zuweisen
+    action_icon: right-hand
+    transition_state: unfinished
+  - label: In Bearbeitung
+    action: Fertig stellen
+    action_icon: pin
+    transition_state: unfinished
+    current: current
+  - label: Vollständig
+    action: Einreichen
+    action_icon: right-circle
+    transition_state: unfinished
+  - label: Antrag
+    action: Beschliessen
+    action_icon: hammer
+  - label: Beschlossen
+    action: Abschliessen
+    action_icon: cancel-circle
+  - label: Abgeschlossen
+    action: Archivieren
+    action_icon: archive
+  - label: Archiviert
+---
+
+<!-- Dear beloved developer, this design is immature and therefor those tedious design and markup changes will inevitably occur. Herewith my apologies :). -->
+
+<div class="case-mat">
+	<article class="summary row">
+		<h2 class="case-title twelve columns">
+			<a href="">Minifest</a>
+		</h2>
+		<p class="description four columns">
+			Nicht budgetierte einmalige Beiträge. Verein DAMP. Finanzielle Unterstützung des MinistrantInnen-Fest vom 7. September 2014 in St. Gallen.
+		</p>
+		<div class="eight columns stats">
+			<p class="stat">
+				<strong class="value">24%</strong> 
+				<em class="name">Tasks finished</em>
+			</p>
+			<p class="stat">
+				<strong class="value">25</strong> 
+				<em class="name">Days running</em>
+			</p>
+			<p class="stat">
+				<strong class="value">12</strong> 
+				<em class="name">Modifications past 7 days</em>
+			</p>
+		</div>
+	</article>
+	<ul class="timeline pat-equaliser" >
+		{% assign count = 0 %}
+		{% for item in page.case_states_1 %}
+			<li class="section {% if item.action %}actioned{% endif %} state-{{ item.transition_state }}" title="{{ item.label }}">
+				<h3 class="section-label">
+					{{ item.label }} {% if item.text %}<a href="/{{ item.text }}#content" class="pat-modal iconified icon-info-circle" data-pat-modal="class: large">Info</a>{% endif %}
+				</h3>
+
+				<ul>
+					{% for node in site.posts  %}
+						{% if node.case_state == item.label %}
+							{% assign count = count | plus: 1 %}
+							<li id="item-{{ count }}" class="step-background {%  if node.image %} illustrated{% endif %} state-{{ node.state }} ">
+								<p class="step-label{% if node.icon %} icon icon-{{ node.icon }}{% endif %}">
+									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" data-pat-inject="history: record">
+										{{ node.title }}
+									</a>
+								</p>
+
+								{% if node.assignee or node.due %}
+									<p class="step-assignee">
+										{% if node.assignee %}
+											{% capture assignee %}/media/avatar-{{ node.assignee }}.jpg{% endcapture %}
+										    {% include patterns/avatar.html link="" img=assignee %}
+										{% endif %}
+										{% if node.due %}
+										    <time class="date" datetime="2017-02-14">{{ node.due }}</time>
+										{% endif %}
+									</p>
+								{% endif %}
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+
+				{% if item.action %}
+					<p class="action {% if item.action_icon %} icon icon-{{ item.action_icon }}{% endif %}">
+					    <a class="link" href="" class="action">
+					    	{{ item.action }}
+					    </a>
+					</p>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div class="case-mat">
+	<article class="summary row">
+		<h2 class="case-title twelve columns">
+			<a href="">Name of case 2</a>
+		</h2>
+		<p class="description four columns">
+			Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+		</p>
+		<div class="eight columns stats">
+			<p class="stat">
+				<strong class="value">43%</strong> 
+				<em class="name">Tasks finished</em>
+			</p>
+			<p class="stat">
+				<strong class="value">40</strong> 
+				<em class="name">Days running</em>
+			</p>
+			<p class="stat">
+				<strong class="value">3</strong> 
+				<em class="name">Modifications past 7 days</em>
+			</p>
+		</div>
+	</article>
+	<ul class="timeline pat-equaliser" >
+		{% assign count = 0 %}
+		{% for item in page.case_states_2 %}
+			<li class="section {% if item.action %}actioned{% endif %} state-{{ item.transition_state }}" title="{{ item.label }}">
+				<h3 class="section-label">
+					{{ item.label }} {% if item.text %}<a href="/{{ item.text }}#content" class="pat-modal iconified icon-info-circle" data-pat-modal="class: large">Info</a>{% endif %}
+				</h3>
+
+				<ul>
+					{% for node in site.posts  %}
+						{% if node.case_state == item.label %}
+							{% assign count = count | plus: 1 %}
+							<li id="item-{{ count }}" class="step-background {%  if node.image %} illustrated{% endif %} state-{{ node.state }} ">
+								<p class="step-label{% if node.icon %} icon icon-{{ node.icon }}{% endif %}">
+									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" data-pat-inject="history: record">
+										{{ node.title }}
+									</a>
+								</p>
+
+								{% if node.assignee or node.due %}
+									<p class="step-assignee">
+										{% if node.assignee %}
+											{% capture assignee %}/media/avatar-{{ node.assignee }}.jpg{% endcapture %}
+										    {% include patterns/avatar.html link="" img=assignee %}
+										{% endif %}
+										{% if node.due %}
+										    <time class="date" datetime="2017-02-14">{{ node.due }}</time>
+										{% endif %}
+									</p>
+								{% endif %}
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+
+				{% if item.action %}
+					<p class="action {% if item.action_icon %} icon icon-{{ item.action_icon }}{% endif %}">
+					    <a class="link" href="" class="action">
+					    	{{ item.action }}
+					    </a>
+					</p>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<div class="case-mat">
+	<article class="summary row">
+		<h2 class="case-title twelve columns">
+			<a href="">Another case</a>
+		</h2>
+		<p class="description four columns">
+			"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+		</p>
+		<div class="eight columns stats">
+			<p class="stat">
+				<strong class="value">2%</strong> 
+				<em class="name">Tasks finished</em>
+			</p>
+			<p class="stat">
+				<strong class="value">5</strong> 
+				<em class="name">Days running</em>
+			</p>
+			<p class="stat">
+				<strong class="value">4</strong> 
+				<em class="name">Modifications past 7 days</em>
+			</p>
+		</div>
+	</article>
+	<ul class="timeline pat-equaliser" >
+		{% assign count = 0 %}
+		{% for item in page.case_states_3 %}
+			<li class="section {% if item.action %}actioned{% endif %} state-{{ item.transition_state }}" title="{{ item.label }}">
+				<h3 class="section-label">
+					{{ item.label }} {% if item.text %}<a href="/{{ item.text }}#content" class="pat-modal iconified icon-info-circle" data-pat-modal="class: large">Info</a>{% endif %}
+				</h3>
+
+				<ul>
+					{% for node in site.posts  %}
+						{% if node.case_state == item.label %}
+							{% assign count = count | plus: 1 %}
+							<li id="item-{{ count }}" class="step-background {%  if node.image %} illustrated{% endif %} state-{{ node.state }} ">
+								<p class="step-label{% if node.icon %} icon icon-{{ node.icon }}{% endif %}">
+									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" data-pat-inject="history: record">
+										{{ node.title }}
+									</a>
+								</p>
+
+								{% if node.assignee or node.due %}
+									<p class="step-assignee">
+										{% if node.assignee %}
+											{% capture assignee %}/media/avatar-{{ node.assignee }}.jpg{% endcapture %}
+										    {% include patterns/avatar.html link="" img=assignee %}
+										{% endif %}
+										{% if node.due %}
+										    <time class="date" datetime="2017-02-14">{{ node.due }}</time>
+										{% endif %}
+									</p>
+								{% endif %}
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+
+				{% if item.action %}
+					<p class="action {% if item.action_icon %} icon icon-{{ item.action_icon }}{% endif %}">
+					    <a class="link" href="" class="action">
+					    	{{ item.action }}
+					    </a>
+					</p>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>

@@ -1,0 +1,31 @@
+---
+layout: shell
+template: generic
+application: case-manager
+---
+
+<div class="application-case-manager" id="content">
+    <div id="document-body">
+		<div id="document-content" class="cases-overview">
+			{{ content }}
+		</div>
+    </div>
+    <aside class="sidebar left" id="sidebar-news-cms">
+	    <div id="sidebar-content" class="mode-follow">
+	        <form id="case-filters" class="pat-inject" data-pat-inject="target: body::after" data-pat-collapsible="store: local">
+	        	<fieldset class="vertical">
+	        		<label>
+	        			<select>
+	        				<option>Only cases that I manage</option>
+	        				<option>All cases that I'm involved with</option>
+	        				<option>All cases that I have access to</option>
+	        			</select>
+	        		</label>
+	        	</fieldset>
+	            More filters will be designed here.
+	  		</form>
+	    </div>
+    </aside>
+</div>
+
+{% include global-header.html %}
