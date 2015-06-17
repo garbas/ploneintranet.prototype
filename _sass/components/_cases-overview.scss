@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.cases-overview {
+	.case-filters {
+		@include screen-size(large) { 
+			padding-right: 5%;
+			padding-top: 3%;
+		}
+	}
+}

@@ -2,100 +2,103 @@
 layout: shell
 template: generic
 application: case-manager
+sidebar: closed
 ---
 
 <div class="application-case-manager" id="content">
     <div id="document-body">
 		<div id="document-content" class="cases-overview">
-			{{ content }}
+			<div class="row">
+				<aside class="four columns pat-bumper case-filters">
+			        <form class="pat-inject pat-autosubmit" action="/apps/case-manager/index.html#document-content">
+			        	<fieldset class="vertical">
+			        		<label>
+			        			Role filter
+			        			<select>
+			        				<option>Only cases that I manage</option>
+			        				<option>All cases that I'm involved with</option>
+			        				<option>All cases that I have access to</option>
+			        			</select>
+			        		</label>
+			        		<label>
+			        			Department
+			        			<select>
+			        				<option>All departments</option>
+			        				<option>Lorem ipsum</option>
+			        				<option>Dolor sit</option>
+			        			</select>
+			        		</label>
+			        		<label>
+			        			Applicant
+			        			<select>
+			        				<option>Any applicant</option>
+			        				<option>Liz Baker</option>
+			        				<option>John Doe</option>
+			        			</select>
+			        		</label>
+			        		<label>
+			        			Assigned user
+			        			<select>
+			        				<option>Any user</option>
+			        				<option>Liz Baker</option>
+			        				<option>John Doe</option>
+			        			</select>
+			        		</label>
+			        		<label>
+			        			Type of case
+			        			<select>
+			        				<option>All case types</option>
+			        				<option>This</option>
+			        				<option>And that</option>
+			        			</select>
+			        		</label>
+
+			        		<label>
+			        			Assigned to event
+			        			<select>
+			        				<option>Any or no event assigned</option>
+			        				<option>Event so and so</option>
+			        				<option>Another event</option>
+			        			</select>
+			        		</label>
+
+			        		<!-- For all date ranges applies, that if no end date is filled in, the end date is today. If no earliest date is filled in, then it will search infinitely far back into the past. -->
+
+		        			<fieldset class="group row date-range">
+		        				<label class="six columns">
+		        					Earliest creation date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+		        				</label>
+		        				<label class="six columns">
+		        					Latest creation date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+		        				</label>
+		        			</fieldset>
+
+		        			<fieldset class="group row date-range">
+		        				<label class="six columns">
+		        					Earliest modification date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+		        				</label>
+		        				<label class="six columns">
+		        					Latest modification date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+		        				</label>
+		        			</fieldset>
+
+		        			<fieldset class="group row date-range">
+		        				<label class="six columns">
+		        					Earliest deadline <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+		        				</label>
+		        				<label class="six columns">
+		        					Latest deadline <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+		        				</label>
+		        			</fieldset>
+			        	</fieldset>
+			  		</form>
+				</aside>
+				<div class="eight columns">
+					{{ content }}
+				</div>
+			</div>
 		</div>
     </div>
-    <aside class="sidebar left" id="sidebar-news-cms">
-	    <div id="sidebar-content" class="mode-follow">
-	        <form id="case-filters" class="pat-inject pat-autosubmit" action="/apps/case-manager/index.html#document-content">
-	        	<fieldset class="vertical">
-	        		<label>
-	        			Role filter
-	        			<select>
-	        				<option>Only cases that I manage</option>
-	        				<option>All cases that I'm involved with</option>
-	        				<option>All cases that I have access to</option>
-	        			</select>
-	        		</label>
-	        		<label>
-	        			Department
-	        			<select>
-	        				<option>All departments</option>
-	        				<option>Lorem ipsum</option>
-	        				<option>Dolor sit</option>
-	        			</select>
-	        		</label>
-	        		<label>
-	        			Applicant
-	        			<select>
-	        				<option>Any applicant</option>
-	        				<option>Liz Baker</option>
-	        				<option>John Doe</option>
-	        			</select>
-	        		</label>
-	        		<label>
-	        			Assigned user
-	        			<select>
-	        				<option>Any user</option>
-	        				<option>Liz Baker</option>
-	        				<option>John Doe</option>
-	        			</select>
-	        		</label>
-	        		<label>
-	        			Type of case
-	        			<select>
-	        				<option>All case types</option>
-	        				<option>This</option>
-	        				<option>And that</option>
-	        			</select>
-	        		</label>
-
-	        		<label>
-	        			Assigned to event
-	        			<select>
-	        				<option>Any or no event assigned</option>
-	        				<option>Event so and so</option>
-	        				<option>Another event</option>
-	        			</select>
-	        		</label>
-
-	        		<!-- For all date ranges applies, that if no end date is filled in, the end date is today. If no earliest date is filled in, then it will search infinitely far back into the past. -->
-
-        			<fieldset class="group row date-range">
-        				<label class="six columns">
-        					Earliest creation date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        				<label class="six columns">
-        					Latest creation date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        			</fieldset>
-
-        			<fieldset class="group row date-range">
-        				<label class="six columns">
-        					Earliest modification date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        				<label class="six columns">
-        					Latest modification date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        			</fieldset>
-
-        			<fieldset class="group row date-range">
-        				<label class="six columns">
-        					Earliest deadline <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        				<label class="six columns">
-        					Latest deadline <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        			</fieldset>
-	        	</fieldset>
-	  		</form>
-	    </div>
-    </aside>
 </div>
 
 {% include global-header.html %}
