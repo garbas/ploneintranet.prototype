@@ -40,6 +40,7 @@
         "photoswipe":                             "bower_components/photoswipe/dist/photoswipe",
         "photoswipe-ui":                          "bower_components/photoswipe/dist/photoswipe-ui-default",
         "photoswipe-template":                    "bower_components/patternslib/src/pat/gallery/template",
+        "pikaday":                                "bower_components/pikaday/pikaday",
         "prefixfree":                             "bower_components/prefixfree/prefixfree.min",
         "rangy":                                  "bower_components/rangy/rangy-core",
         "rangy-cssclassapplier":                  "bower_components/rangy/rangy-cssclassapplier",
@@ -145,9 +146,7 @@
         "outlayer":             "bower_components/outlayer",
 
         "mockup-parser":            "bower_components/mockup-core/js/parser",
-        "mockup-patterns-base":     "bower_components/mockup-core/js/pattern",
-        "pikaday":                  "bower_components/pikaday/pikaday",
-        "pikaday.jquery":           "bower_components/pikaday/plugins/pikaday.jquery"
+        "mockup-patterns-base":     "bower_components/mockup-core/js/pattern"
     },
 
     "shim": {
