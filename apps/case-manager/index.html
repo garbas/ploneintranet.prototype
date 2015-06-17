@@ -82,7 +82,7 @@ case_states_3:
 <div class="case-mat">
 	<article class="summary row">
 		<h2 class="case-title twelve columns">
-			<a href="">Minifest</a>
+			<a target="case" href="">Minifest</a>
 		</h2>
 		<p class="description four columns">
 			Nicht budgetierte einmalige Beiträge. Verein DAMP. Finanzielle Unterstützung des MinistrantInnen-Fest vom 7. September 2014 in St. Gallen.
@@ -116,7 +116,7 @@ case_states_3:
 							{% assign count = count | plus: 1 %}
 							<li id="item-{{ count }}" class="step-background {%  if node.image %} illustrated{% endif %} state-{{ node.state }} ">
 								<p class="step-label{% if node.icon %} icon icon-{{ node.icon }}{% endif %}">
-									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" data-pat-inject="history: record">
+									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" target="task" data-pat-inject="history: record">
 										{{ node.title }}
 									</a>
 								</p>
@@ -152,7 +152,7 @@ case_states_3:
 <div class="case-mat">
 	<article class="summary row">
 		<h2 class="case-title twelve columns">
-			<a href="">Name of case 2</a>
+			<a href="" target="case">Name of case 2</a>
 		</h2>
 		<p class="description four columns">
 			Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
@@ -186,7 +186,7 @@ case_states_3:
 							{% assign count = count | plus: 1 %}
 							<li id="item-{{ count }}" class="step-background {%  if node.image %} illustrated{% endif %} state-{{ node.state }} ">
 								<p class="step-label{% if node.icon %} icon icon-{{ node.icon }}{% endif %}">
-									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" data-pat-inject="history: record">
+									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" target="task" data-pat-inject="history: record">
 										{{ node.title }}
 									</a>
 								</p>
@@ -222,7 +222,7 @@ case_states_3:
 <div class="case-mat">
 	<article class="summary row">
 		<h2 class="case-title twelve columns">
-			<a href="">Another case</a>
+			<a href="" target="case">Another case</a>
 		</h2>
 		<p class="description four columns">
 			"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
@@ -256,7 +256,7 @@ case_states_3:
 							{% assign count = count | plus: 1 %}
 							<li id="item-{{ count }}" class="step-background {%  if node.image %} illustrated{% endif %} state-{{ node.state }} ">
 								<p class="step-label{% if node.icon %} icon icon-{{ node.icon }}{% endif %}">
-									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" data-pat-inject="history: record">
+									<a href="{{ node.url }}#workspace-tickets" class="link" title="{{ node.title }}" target="task" data-pat-inject="history: record">
 										{{ node.title }}
 									</a>
 								</p>
