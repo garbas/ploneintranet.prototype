@@ -203,54 +203,9 @@
                         <label>
                             Related event 
                             <!-- Even though the 'words' property is used in the example below, in the dev version the AJAX/JSON variant should be applied. -->
-                            <input placeholder="Type the name of an event" type="text" class="pat-autosuggest" data-pat-autosuggest="allow-new-words: false; max-selection-size: 1; words: Apples, Oranges, Pears, Bananas" />
+                            <input type="text" class="pat-autosuggest" data-pat-autosuggest="placeholder: Type the name of an event; allow-new-words: false; max-selection-size: 1; words: Apples, Oranges, Pears, Bananas" />
                             <em class="pat-message notice">You may select an event on the agenda of which this case will appear.</em>
                         </label>                        
-
-						<label>
-							Antragsteller <input type="text" />
-						</label>
-
-						<br>
-
-						<label>
-							Adresse <textarea name="" id="" cols="80" rows="4"></textarea>
-						</label>
-
-						<br>
-
-						<label>
-							Verantwortlicher <input type="text" />
-						</label>
-
-						<br>
-
-						<label>
-							Geschäftstyp
-							<select name="" id="">
-								<option value="motion">Motion</option>
-								<option value="petition">Petition</option>
-								<option value="request">Request</option>
-								<option value="interpellation">Interpellation</option>
-								<option value="written_request">Written request</option>
-							</select>
-						</label>
-
-                        <br>
-
-                        <label>
-                            Ressort
-                            <select name="" id="">
-                                <option value="kanzlei">Kanzlei</option>
-                                <option value="kommunikation">Kommunikation</option>
-                                <option value="sozialesbildungmedien">Soziales, Bildung und Medien</option>
-                                <option value="spezialseelsorge">Spezialseelsorge</option>
-                                <option value="migrantenseelsorge">Migrantenseelsorge</option>
-                                <option value="Personal">Personal</option>
-                                <option value="Finanzen">Finanzen</option>
-                                <option value="Zentrale Dienste">Zentrale Dienste</option>
-                            </select>
-                        </label>
 
 					</fieldset>
 				{% endif %}
