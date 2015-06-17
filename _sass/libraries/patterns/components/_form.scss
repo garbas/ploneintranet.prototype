@@ -385,7 +385,8 @@ fieldset {
   }
 
   .legend,
-  > label {
+  > label,
+  .group > label {
     font-weight: bold;
     display: block;
   }

@@ -54,28 +54,24 @@ application: case-manager
 	        				<option>And that</option>
 	        			</select>
 	        		</label>
-	        		<fieldset class="group">
-	        			<legend>Creation date</legend>
-	        			<div class="row">
-	        				<label class="six columns">
-	        					From <input class="pat-date-picker" type="date" size="8"/>
-	        				</label>
-	        				<label class="six columns">
-	        					Until <input class="pat-date-picker" type="date" size="8"/>
-	        				</label>
-	        			</div>
-	        		</fieldset>
-	        		<fieldset class="group">
-	        			<legend>Modification date</legend>
-	        			<div class="row">
-	        				<label class="six columns">
-	        					From <input class="pat-date-picker" type="date" size="8"/>
-	        				</label>
-	        				<label class="six columns">
-	        					Until <input class="pat-date-picker" type="date" size="8"/>
-	        				</label>
-	        			</div>
-	        		</fieldset>
+
+        			<fieldset class="group row date-range">
+        				<label class="six columns">
+        					Earliest creation date <input class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        				<label class="six columns">
+        					Latest creation date <input class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        			</fieldset>
+
+        			<fieldset class="group row date-range">
+        				<label class="six columns">
+        					Earliest modification date <input class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        				<label class="six columns">
+        					Latest modification date <input class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        			</fieldset>
 	        		<label>
 	        			Assigned to event
 	        			<select>
@@ -84,17 +80,15 @@ application: case-manager
 	        				<option>Another event</option>
 	        			</select>
 	        		</label>
-	        		<fieldset class="group">
-	        			<legend>Deadline</legend>
-	        			<div class="row">
-	        				<label class="six columns">
-	        					From <input class="pat-date-picker" type="date" size="8"/>
-	        				</label>
-	        				<label class="six columns">
-	        					Until <input class="pat-date-picker" type="date" size="8"/>
-	        				</label>
-	        			</div>
-	        		</fieldset>
+
+        			<fieldset class="group row date-range">
+        				<label class="six columns">
+        					Earliest deadline <input class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        				<label class="six columns">
+        					Latest deadline <input class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        			</fieldset>
 	        	</fieldset>
 	  		</form>
 	    </div>
