@@ -15,14 +15,87 @@ application: case-manager
 	        <form id="case-filters" class="pat-inject" data-pat-inject="target: body::after" data-pat-collapsible="store: local">
 	        	<fieldset class="vertical">
 	        		<label>
+	        			Role filter
 	        			<select>
 	        				<option>Only cases that I manage</option>
 	        				<option>All cases that I'm involved with</option>
 	        				<option>All cases that I have access to</option>
 	        			</select>
 	        		</label>
+	        		<label>
+	        			Departement
+	        			<select>
+	        				<option>All departments</option>
+	        				<option>Lorem ipsum</option>
+	        				<option>Dolor sit</option>
+	        			</select>
+	        		</label>
+	        		<label>
+	        			Applicants
+	        			<select>
+	        				<option>Any applicant</option>
+	        				<option>Liz Baker</option>
+	        				<option>John Doe</option>
+	        			</select>
+	        		</label>
+	        		<label>
+	        			Assigned user
+	        			<select>
+	        				<option>Any user</option>
+	        				<option>Liz Baker</option>
+	        				<option>John Doe</option>
+	        			</select>
+	        		</label>
+	        		<label>
+	        			Type of case
+	        			<select>
+	        				<option>All case types</option>
+	        				<option>This</option>
+	        				<option>And that</option>
+	        			</select>
+	        		</label>
+	        		<fieldset class="group">
+	        			<legend>Creation date</legend>
+	        			<div class="row">
+	        				<label class="six columns">
+	        					From <input class="pat-date-picker" type="date" size="8"/>
+	        				</label>
+	        				<label class="six columns">
+	        					Until <input class="pat-date-picker" type="date" size="8"/>
+	        				</label>
+	        			</div>
+	        		</fieldset>
+	        		<fieldset class="group">
+	        			<legend>Modification date</legend>
+	        			<div class="row">
+	        				<label class="six columns">
+	        					From <input class="pat-date-picker" type="date" size="8"/>
+	        				</label>
+	        				<label class="six columns">
+	        					Until <input class="pat-date-picker" type="date" size="8"/>
+	        				</label>
+	        			</div>
+	        		</fieldset>
+	        		<label>
+	        			Assigned to event
+	        			<select>
+	        				<option>Any or no event assigned</option>
+	        				<option>Event so and so</option>
+	        				<option>Another event</option>
+	        			</select>
+	        		</label>
+	        		<fieldset class="group">
+	        			<legend>Deadline</legend>
+	        			<div class="row">
+	        				<label class="six columns">
+	        					From <input class="pat-date-picker" type="date" size="8"/>
+	        				</label>
+	        				<label class="six columns">
+	        					Until <input class="pat-date-picker" type="date" size="8"/>
+	        				</label>
+	        			</div>
+	        		</fieldset>
 	        	</fieldset>
-	            More filters will be designed here.
 	  		</form>
 	    </div>
     </aside>
