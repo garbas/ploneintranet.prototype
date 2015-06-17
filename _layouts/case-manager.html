@@ -55,23 +55,6 @@ application: case-manager
 	        			</select>
 	        		</label>
 
-        			<fieldset class="group row date-range">
-        				<label class="six columns">
-        					Earliest creation date <input class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        				<label class="six columns">
-        					Latest creation date <input class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        			</fieldset>
-
-        			<fieldset class="group row date-range">
-        				<label class="six columns">
-        					Earliest modification date <input class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        				<label class="six columns">
-        					Latest modification date <input class="pat-date-picker" type="date" size="8"/>
-        				</label>
-        			</fieldset>
 	        		<label>
 	        			Assigned to event
 	        			<select>
@@ -83,10 +66,28 @@ application: case-manager
 
         			<fieldset class="group row date-range">
         				<label class="six columns">
-        					Earliest deadline <input class="pat-date-picker" type="date" size="8"/>
+        					Earliest creation date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
         				</label>
         				<label class="six columns">
-        					Latest deadline <input class="pat-date-picker" type="date" size="8"/>
+        					Latest creation date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        			</fieldset>
+
+        			<fieldset class="group row date-range">
+        				<label class="six columns">
+        					Earliest modification date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        				<label class="six columns">
+        					Latest modification date <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        			</fieldset>
+
+        			<fieldset class="group row date-range">
+        				<label class="six columns">
+        					Earliest deadline <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
+        				</label>
+        				<label class="six columns">
+        					Latest deadline <input placeholder="YYYY-MM-DD" class="pat-date-picker" type="date" size="8"/>
         				</label>
         			</fieldset>
 	        	</fieldset>
