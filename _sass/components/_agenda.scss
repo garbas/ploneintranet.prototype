@@ -7,7 +7,7 @@ fieldset.agenda {
 		.agenda-item {
 			// list-style: decimal;
 			counter-increment: agenda;   
-			padding: 0.2em 0 0.2em 0.5em;
+			padding: 0.2em 0 0.2em 0.6em;
 			position: relative;
 			border-top: solid 0.2em rgba(0,0,0,0);
 			border-bottom: solid 0.2em rgba(0,0,0,0);
@@ -23,6 +23,9 @@ fieldset.agenda {
 
 			input {
 				margin: -0.2em 0 -0.2em -0.5em;
+				width: calc(100% - 0.4em);
+				box-sizing: inherit;
+				padding: 0.2em 0.5em;
 			}
 
 			&:before,
@@ -33,7 +36,7 @@ fieldset.agenda {
 				color: white;
 				display: block;
 				position: absolute;
-				left: -1.8em;
+				left: -1.6em;
 				top: 0;
 				width: 1.8em;
 				height: 1.6765em;
