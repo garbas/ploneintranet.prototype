@@ -272,7 +272,7 @@
           background-color: whitesmoke;
         }
         &[data-option='Closed'] {
-          color: $colour-success;
+          color: darken($colour-success, 40%);
         }
         &[data-option='Open'] {
           background-color: $colour-warning;
@@ -280,9 +280,31 @@
         }
       }
     }
+
+    .last-saved {
+      float: right;
+      font-size: 0.8em;
+      margin-top: 0.1em;
+
+      &.injecting:before {
+        display: none;
+      }
+
+      .saved-tag {
+        font-style: normal;
+        border: none;
+        background: $colour-base;
+
+          -webkit-animation: fadeInDown 0.6s linear;
+          animation: fadeInDown 0.6s linear;
+
+        .modification-date {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
-
 
 #document-body div.metadata .select2-container input {
   padding: 0;

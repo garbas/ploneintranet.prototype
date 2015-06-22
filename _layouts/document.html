@@ -23,7 +23,7 @@ workspace_module: docs
                 <a href="#" class="icon-external iconified pat-modal" title="Edit this document in an external editor">
                     Edit externally
                 </a>
-                <a href="#share-panel" class="icon-export iconified pat-modal" title="Share this document">
+                <a href="#sharing-menu" class="icon-export iconified pat-tooltip" data-pat-tooltip="source: ajax" title="Share this document">
                     Share
                 </a>
                 <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>
@@ -127,6 +127,26 @@ workspace_module: docs
         {% endfor %}
     </div>
     {% include update-social.html id="my-comments" visibility="false" inject="target: #comments-document-comments" action="/feedback/comment-well-said.html#comment-trail" %}
+</div>
+
+<div id="sharing-menu" hidden>
+    <ul class="menu">
+        <li>
+            <a href="#share-panel" class="icon-export pat-modal">Share on timeline</a>
+        </li>
+        <li>
+            <a href="#" class="icon-file-word">Download as Microsoft Word</a>
+        </li>
+        <li>
+            <a href="#" class="icon-file-pdf">Download as PDF</a>
+        </li>
+        <li>
+            <a href="#" class="icon-link">Generate an anoymous share link</a>
+        </li>
+        <li>
+            <a class="icon-print">Print</a>
+        </li>
+    </ul>
 </div>
 
 <div id="share-panel" hidden>
