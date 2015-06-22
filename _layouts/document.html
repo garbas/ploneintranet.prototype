@@ -4,7 +4,7 @@ template: generic
 workspace_module: docs
 ---
 
-<form class="document pat-inject" action="{{ page.url }}#document-form" id="document-form">
+<form class="document pat-inject pat-autosubmit" action="{{ page.url }}#last-saved" id="document-form">
     <div class="metadata pat-bumper">
         <div class="meta-bar">
             <h1 class="doc-title" id="document-title">
@@ -40,8 +40,10 @@ workspace_module: docs
                         </select>
                     </label>
                 </fieldset>
+                <p class="last-saved" id="last-saved">
+                    <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" datetime="2015-01-20T08:00Z">9:23</time></button>
+                </p>
                 <!-- {% include application-toolbar.html %} -->
-                <button type="submit" class="icon-floppy" title="Save this document">Save</button>
                 {% for item in page.document_controls %}
                     {% include toolbar-control.html %}
                 {% endfor %}
