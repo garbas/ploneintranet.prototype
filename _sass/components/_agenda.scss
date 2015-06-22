@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+fieldset.agenda {
+	.items-list {
+		counter-reset: agenda; 
+
+		.agenda-item {
+			// list-style: decimal;
+			counter-increment: agenda;   
+			padding: 0.2em 0 0.2em 0.5em;
+			position: relative;
+			border-top: solid 0.2em rgba(0,0,0,0);
+			border-bottom: solid 0.2em rgba(0,0,0,0);
+			margin: -0.2em 0 0 1.6em;
+
+			&.drop-target-above {
+				border-top-color: $colour-accent;
+			}
+
+			&.drop-target-below {
+				border-bottom-color: $colour-accent;	
+			}
+
+			input {
+				margin: -0.2em 0 -0.2em -0.5em;
+			}
+
+			&:before,
+			.handle {
+				content: counter(agenda);
+				line-height: 1.7em;
+				text-align: center;
+				color: white;
+				display: block;
+				position: absolute;
+				left: -1.8em;
+				top: 0;
+				width: 1.8em;
+				height: 1.6765em;
+				background: $colour-accent;
+				border-top-left-radius: 0.2em;
+				border-bottom-left-radius: 0.2em;
+			}
+
+			.button-cluster {
+				display: none;
+			}
+
+			.handle {
+				display: none;
+				line-height: 1.9em;
+				text-indent: -10em;
+				background: $colour-accent;
+
+				&:before {
+					content: "\e876";
+					display: block;
+					font-family: fontello;
+					text-indent: 0.1em;
+					top: 0;
+					left: 0;
+					width: 100%;
+					line-height: 2.28em;
+					text-align: center;
+					font-size: 0.8em;
+				}
+			}
+
+			&:hover {
+				.handle {
+					display: block;
+					cursor: move;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.button-bar {
+		// margin-left: 1.3em;
+	}
+}

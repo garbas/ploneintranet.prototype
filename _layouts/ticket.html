@@ -61,28 +61,33 @@ workspace_module: tickets
                 <br>
                 <fieldset class="group agenda">
                     <legend>Agenda</legend>
-                    <ol class="pat-sortable pat-clone" data-pat-clone="template: #agenda-item-template" data-pat-sortable="selector: .sortable">
+                    <ol class="pat-sortable pat-clone items-list" data-pat-clone="template: #agenda-item-template" data-pat-sortable="selector: .sortable">
 
-                        <li class="sortable">
-                           Name of item <span class="button-cluster"><button class="sortable-button-up" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down" type="submit" name="item_1_down" value="item_1_down">down</button></span>
+                        <li class="agenda-item sortable">
+                           Some connected case <span class="button-cluster"><button class="sortable-button-up small pat-button" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down small pat-button" type="submit" name="item_1_down" value="item_1_down">down</button></span>
                         </li>
 
-                        <li class="sortable">
-                           Name of item <span class="button-cluster"><button class="sortable-button-up" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down" type="submit" name="item_2_down" value="item_2_down">down</button></span>
+                        <li class="agenda-item sortable">
+                           Another connected case <span class="button-cluster"><button class="sortable-button-up small pat-button" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down small pat-button" type="submit" name="item_2_down" value="item_2_down">down</button></span>
                         </li>
 
-                        <li class="sortable">
-                           Name of item <span class="button-cluster"><button class="sortable-button-up" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down" type="submit" name="item_3_down" value="item_3_down">down</button></span>
+                        <li class="agenda-item sortable">
+                           <input type="text" placeholder="Name of agenda item" /> <span class="button-cluster"><button class="sortable-button-up small pat-button" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down small pat-button" type="submit" name="item_3_down" value="item_3_down">down</button></span>
                         </li>
 
-                        <li hidden class="sortable">
-                           <input type="text" /> <span class="button-cluster"><button class="sortable-button-up" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down" type="submit" name="item_3_down" value="item_3_down">down</button></span>
+                        <li class="agenda-item sortable">
+                           Another connected case <span class="button-cluster"><button class="sortable-button-up small pat-button" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down small pat-button" type="submit" name="item_2_down" value="item_2_down">down</button></span>
+                        </li>
+
+
+                        <li hidden class="agenda-item sortable" id="agenda-item-template">
+                           <input type="text" placeholder="Name of agenda item" /> <span class="button-cluster"><button class="sortable-button-up small pat-button" type="submit" name="up" value="up">Up</button> <button class="sortable-button-down small pat-button" type="submit" name="item_3_down" value="item_3_down">down</button></span>
                         </li>
 
                     </ol>
 
                     <p class="button-bar">
-                        <button class="add-item icon-plus-circle" id="add-agenda-item">Add agenda item</button>
+                        <button class="add-item icon-plus-circle small add-clone" type="button" id="add-agenda-item">Add agenda item</button>
                     </p>
 
                     <input type="hidden" class="sortable-amount" name="pat-sortable-amount" value="1" />

@@ -180,7 +180,9 @@ button {
   &.float-before {
     margin-right: 5px;
   }
-  button, a.button {
+  button, 
+  a.button,
+  .pat-button {
     margin: 0;
     border-radius: 0;
     border-left-style: none;

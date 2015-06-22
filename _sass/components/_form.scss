@@ -14,7 +14,8 @@ form {
       > .assignee,
       > .initiator,
       > .description,
-      > .stage {
+      > .stage,
+      > .agenda {
         padding-left: 4.5rem;
         position: relative;
         margin-bottom: 2em;
@@ -72,6 +73,10 @@ form {
 
       .attachments:before {
         content: "\1f4ce";
+      }
+
+      .agenda:before {
+        content: "\2630";
       }
 
 
