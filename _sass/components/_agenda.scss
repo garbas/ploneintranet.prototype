@@ -13,6 +13,12 @@ fieldset.agenda {
 			border-bottom: solid 0.2em rgba(0,0,0,0);
 			margin: -0.2em 0 0 1.6em;
 
+			.summary {
+				font-size: 0.8em;
+				color: #666;
+				line-height: 130%;
+			}
+
 			&.drop-target-above {
 				border-top-color: $colour-accent;
 			}
