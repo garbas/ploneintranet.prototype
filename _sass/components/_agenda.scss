@@ -49,7 +49,8 @@ fieldset.agenda {
 				display: none;
 			}
 
-			.handle {
+			.handle,
+			.sortable-handle {
 				display: none;
 				line-height: 1.9em;
 				text-indent: -10em;
@@ -70,7 +71,8 @@ fieldset.agenda {
 			}
 
 			&:hover {
-				.handle {
+				.handle,
+				.sortable-handle {
 					display: block;
 					cursor: move;
 
