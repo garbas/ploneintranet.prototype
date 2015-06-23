@@ -147,7 +147,7 @@ aside.sidebar.left {
       .contextual.buttons {
         position: absolute;
         left: 0;
-        right: 7.5em;
+        right: 10em;
 
         // Hide throbber
         &.injecting:before {
@@ -376,6 +376,8 @@ aside.portlets {
       .quick-functions .toggle-sidebar-size {
         &:before {
             content: "\e746";
+            color: $colour-accent;
+            border-color: $colour-accent;
         }
       }
     }
