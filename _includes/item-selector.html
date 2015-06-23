@@ -260,6 +260,20 @@
                                         <dfn class="byline">{{ doc.description }}</dfn>
                                     {% endif %}
                                 </a>
+                                <div class="additional-meta-data">
+                                    <a href="/guido-stevens/" class="author meta-column" title="Author of this document">
+                                        {{ doc.document_creator }}
+                                    </a>
+                                    <time class="modification-date meta-column" title="Date and time of the latest modification">
+                                        <!-- {{ doc.date | date: '%B %d, %Y' }} -->
+                                        {{ doc.date }}
+                                    </time>
+                                    <nav class="tag-cloud tags meta-column">
+                                        <!-- <a href="/library-tag-mitgliederbeitraege.html" class="tag">Mitgliederbeiträge</a>  -->
+                                        <a href="#" class="tag">Finanzplanung</a>
+                                        <a href="#" class="tag">Statuten</a>
+                                    </nav>
+                                </div>
                             </label>
                         {% else %}
                             <!-- Each group has a class 'group'. The following class — which is prefixed by 'type-' is dynanmic. If the grouping of the items selector is on date for instance, the class becomes 'type-date'. If the grouping is by user, then it's 'type-user' and the user avatar is there as an image. In case the grouping is by document type, then each group gets the icon of the document type it represents. For intance the group with PowerPoint files gets 'type-powerpoint' and a rich document gets 'type-rich'. The same type-* class names are supported as for a document.

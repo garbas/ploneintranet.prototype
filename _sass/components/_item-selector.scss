@@ -142,21 +142,58 @@
             -webkit-user-select: none;
             user-select: none;
             padding: 0;
+            overflow: hidden;
 
             .label {
                 display: none;
             }
 
+            .additional-meta-data {
+                position: absolute;
+                width: 70%;
+                right: -100%;
+                top: 0;
+                opacity: 0;
+                -moz-transition: all 1s;
+                -webkit-transition: all 1s;
+                transition: all 1s;
+            }
+
+            .meta-column {
+                width: 0%;
+                overflow: hidden;
+                -moz-transition: width 1s;
+                -webkit-transition: width 1s;
+                transition: width 1s;
+                float: right;
+                padding: 1.3em 0.5em 0.2em;
+                margin: 0;
+                @include box-sizing();
+            }
+
+            // &.has-no-description .meta-column {
+            //     padding-top: 1.1em;
+            //     padding-bottom: 1.1em;
+
+            //     &.tag-cloud {
+            //         padding-bottom: 0.2em;
+            //     }
+            // }
+
             .follow {
                 display: block;
+                width: 100%;
                 color: $colour-primary;
                 padding: 0.5em 1.5em 0.5em 3.6em;
                 position: relative;
                 z-index: -1;
                 border-left: 2.25em solid #efefef;
-                -moz-transition: 0.4s border;
-                -webkit-transition: 0.4s border;
-                transition: 0.4s border;
+                -moz-transition: 0.4s all;
+                -webkit-transition: 0.4s all;
+                transition: 0.4s all;
+                float: left;
+
+                @include box-sizing();
                 // min-height: 2.8em;
 
                 &:hover {
@@ -216,7 +253,7 @@
                 }
             }
 
-            &.has-no-description a {
+            &.has-no-description a.follow {
                 padding-top: 1.1em;
                 padding-bottom: 1.1em;
             }
@@ -401,6 +438,28 @@
     .item-selector {
         .more-menu {
             margin: -1em;
+        }
+    }
+}
+
+.sidebar-large {
+    .search-result .item  {
+
+        .additional-meta-data {
+            right: 0%;
+            opacity: 1;
+        }
+
+        .follow {
+           width: 30%;
+        }
+
+        .meta-column {
+            width: 30%;
+
+            &.tag-cloud {
+                width: 40%;
+            }
         }
     }
 }
