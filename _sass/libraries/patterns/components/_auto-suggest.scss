@@ -45,7 +45,7 @@ Version: 3.4.3 Timestamp: Tue Sep 17 06:47:14 PDT 2013
     padding: 0 0 0 8px;
     overflow: hidden;
     position: relative;
-    border: 1px solid #aaa;
+    // border: 1px solid #aaa;
     white-space: nowrap;
     line-height: 2em;
     color: #444;
@@ -58,7 +58,8 @@ Version: 3.4.3 Timestamp: Tue Sep 17 06:47:14 PDT 2013
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #fff;
+    
+    background-color: rgba(0,0,0,0.09);
     // background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
     // background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%);
     // background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
@@ -235,7 +236,10 @@ Version: 3.4.3 Timestamp: Tue Sep 17 06:47:14 PDT 2013
 
 .select2-container-active {
   .select2-choice, .select2-choices {
-    border: 1px solid #5897fb;
+    // border: 1px solid #5897fb;
+
+    background-color: rgba(0,0,0,0.09);
+
     @include box-sizing();
     outline: none;
     // -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -415,9 +419,10 @@ disabled look for disabled choices in the results dropdown
   height: auto !important;
   /*height: 1%;*/
   margin: 0;
-  padding: 0;
+  padding: 0.05em;
   position: relative;
-  border: 1px solid #aaa;
+  // border: 1px solid #aaa;
+  background-color: rgba(0,0,0,0.09);
   cursor: text;
   overflow: hidden;
   width: 100%;
@@ -432,7 +437,7 @@ disabled look for disabled choices in the results dropdown
     /*min-height: 26px;*/
   }
   &.select2-container-active .select2-choices {
-    border: 1px solid #5897fb;
+    // border: 1px solid #5897fb;
     outline: none;
     // -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
