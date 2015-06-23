@@ -245,6 +245,15 @@ aside.sidebar.left {
           position: relative;
       }
 
+      .toggle-sidebar-size {
+          &:before {
+              content: "\e744";
+          }
+
+          z-index: 0;
+          position: relative;
+      }
+
       .more-menu-trigger {
 
           &.collapsible-open {
@@ -358,4 +367,17 @@ aside.portlets {
     right: 100%;
     border-right-color: rgba(255,255,255,0);
   } 
+
+  .sidebar-left-open.sidebar-large {
+
+    aside.sidebar.left {
+      right: 0%;
+
+      .quick-functions .toggle-sidebar-size {
+        &:before {
+            content: "\e746";
+        }
+      }
+    }
+  }
 }

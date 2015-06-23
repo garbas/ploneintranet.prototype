@@ -31,6 +31,7 @@
 
             <div class="quick-functions">
                 <a class="{{ include.id }}-toggle-select more-menu-trigger">Functions</a>
+                <a class="toggle-sidebar-size pat-toggle" data-pat-toggle="selector: body; value: sidebar-normal sidebar-large" title="expand/reduce sidebar">Expand sidebar</a>
                 <a title="Create new document" href="/panel-create-document.html#document-content" class="create-document pat-modal icon-doc-text" data-pat-modal="class: large">Create document</a>
                 {% if include.toggle == 'true' %}
                     <a class="pat-toggle toggle-select" data-pat-toggle="selector: #{{ include.id }}; value: mode-select mode-follow">Select</a>
@@ -49,6 +50,7 @@
                 {% if include.controls contains 'pull-menu' %}
                     <a title="Show functions" class="{{ include.id }}-toggle-select more-menu-trigger">Functions</a>
                 {% endif %}
+                <a class="toggle-sidebar-size pat-toggle" data-pat-toggle="selector: body; value: sidebar-normal sidebar-large" title="expand/reduce sidebar">Expand sidebar</a>
                 <a class="toggle-select-mode pat-toggle {{ include.id }}-toggle-select" data-pat-toggle="selector: #{{ include.id }}; value: mode-select mode-follow">Select</a>
             </div>
         </div>
