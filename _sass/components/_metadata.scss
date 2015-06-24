@@ -285,7 +285,7 @@
       }
     }
 
-    .last-saved {
+    .saving-badge {
       float: right;
       font-size: 0.8em;
       margin-top: 0.1em;
@@ -305,6 +305,14 @@
         .modification-date {
           font-weight: bold;
         }
+      }
+
+      .locked-tag {
+        @include pat-button();
+        font-weight: bold;
+        border: none;
+        background: $colour-warning;
+        box-shadow: none;
       }
     }
   }

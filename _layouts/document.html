@@ -4,7 +4,7 @@ template: generic
 workspace_module: docs
 ---
 
-<form class="document pat-inject pat-autosubmit" action="{{ page.url }}#last-saved" id="document-form">
+<form class="document pat-inject pat-autosubmit" action="{{ page.url }}#saving-badge" id="document-form">
     <div class="metadata pat-bumper">
         <div class="meta-bar">
             <h1 class="doc-title" id="document-title">
@@ -20,7 +20,7 @@ workspace_module: docs
                 <a href="" class="icon-copy iconified" title="Copy this document">
                     Copy
                 </a>
-                <a href="#" class="icon-external iconified pat-modal" title="Edit this document in an external editor">
+                <a {% unless page.saved_state == 'locked' %}href="#"{% endunless %} class="icon-external iconified pat-modal {% if page.saved_state == 'locked' %}disabled{% endif %}" title="Edit this document in an external editor">
                     Edit externally
                 </a>
                 <a href="#sharing-menu" class="icon-export iconified pat-tooltip" data-pat-tooltip="source: ajax" title="Share this document">
@@ -40,8 +40,12 @@ workspace_module: docs
                         </select>
                     </label>
                 </fieldset>
-                <p class="last-saved" id="last-saved">
-                    <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" datetime="2015-01-20T08:00Z">9:23</time></button>
+                <p class="saving-badge {% if page.saved_state == 'locked' %}locked{% endif %}" id="saving-badge">
+                    {% if page.saved_state == 'locked' %}
+                        <a class="locked-tag" title="This item was locked by Guido Stevens 10 minutes ago.">Locked</a>
+                    {% else %}
+                        <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" datetime="2015-01-20T08:00Z">9:23</time></button>
+                    {% endif %}
                 </p>
                 <!-- {% include application-toolbar.html %} -->
                 {% for item in page.document_controls %}
