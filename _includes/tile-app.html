@@ -1,4 +1,4 @@
-<div class="tile app {% if include.description %}has-description{% endif %} app-{{ include.appid }}">
+<div class="tile app {% if include.description %}has-description{% endif %} app-{{ include.appid }} {{ include.class }}">
     <a href="/apps/{{ include.appid }}/" class="link">
     	<img class="icon" src="/apps/{{ include.appid }}/icon.svg" alt="" />
         <h3>{{ include.title }}</h3>

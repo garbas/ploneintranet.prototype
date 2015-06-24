@@ -8,10 +8,10 @@ design_description: The homepage of the intranet with the apps tab active.
 <div class="row tiles apps pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;">
 	<div class="grid-sizer"></div>
 	{% include tile-app.html title="News publisher" appid="news" %}
-	{% include tile-app.html title="Contacts" appid="contacts" %}
-	{% include tile-app.html title="Calendar" appid="calendar" %}
+	{% include tile-app.html title="Contacts" appid="contacts" class="disabled" %}
+	{% include tile-app.html title="Calendar" appid="calendar" class="disabled" %}
 	{% include tile-app.html title="Case manager" appid="case-manager" %}
-	{% include tile-app.html title="Slide bank" appid="slide-bank" %}
-	{% include tile-app.html title="Image bank" appid="image-bank" %}
-	{% include tile-app.html title="App market" appid="app-market" %}
+	{% include tile-app.html title="Slide bank" appid="slide-bank" class="disabled" %}
+	{% include tile-app.html title="Image bank" appid="image-bank" class="disabled" %}
+	{% include tile-app.html title="App market" appid="app-market" class="disabled" %}
 </div>
