@@ -53,6 +53,31 @@ form {
     }
   }
 
+  input[type=search] {
+
+
+    &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-search-cancel-button {
+        &:hover {
+            color: $colour-accent;
+        }
+        &::after {
+            content: '\e803';
+            font-family: fontello;
+            // right: $base-space / 2;
+            // position: absolute;
+            // top: 50%;
+            line-height: 1;
+            // == $base-font-size, not $base-line-height, to vertically align
+            margin-top: -.5em;
+        }
+    }
+    
+  }
+
   input[type=range] {
       /*removes default webkit styles*/
       -webkit-appearance: none;
