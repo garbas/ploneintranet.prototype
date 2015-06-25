@@ -5,7 +5,7 @@ design_title: Intranet homepage — Apps
 design_description: The homepage of the intranet with the apps tab active.
 ---
 
-<div class="row tiles apps pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;">
+<div class="row tiles apps pat-masonry" id="apps-listing" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;">
 	<div class="grid-sizer"></div>
 	{% include tile-app.html title="News publisher" appid="news" %}
 	{% include tile-app.html title="Contacts" appid="contacts" class="disabled" %}

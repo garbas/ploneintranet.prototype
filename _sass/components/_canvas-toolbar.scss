@@ -4,11 +4,21 @@
 	margin-bottom: 1em;
 	@include clear-fix();
 
+	input[type="search"] {
+		float: right;
+		border-radius: 1em;
+	}
+
+	.icons {
+		float: right;
+		margin-left: 2em;
+	}
+
 	.icon {
 		font-family: fontello;
 		text-indent: -100em;
-		width: 2.5em;
-		height: 2.5em;
+		width: 2em;
+		height: 2em;
 		position: relative;
 		color: gray;
 		cursor: default;
@@ -17,7 +27,7 @@
 		&:before {
 			font-family: fontello;
 			text-indent: 0;
-			line-height: 2.5em;
+			line-height: 2em;
 			text-align: center;
 			position: absolute;
 			margin: 0;
@@ -27,7 +37,7 @@
 			height: 100%;
 			border: 1px gray solid;
 			border-radius: 50%;
-		background: white;
+			background: white;
 			display: inline-block;
 
 			-moz-box-sizing: border-box;

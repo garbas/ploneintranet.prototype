@@ -6,6 +6,7 @@ design_description: The homepage of the intranet with the workspaces tab active.
 ---
 
 <form class="canvas-toolbar pat-inject pat-autosubmit" action="/workspaces.html#workspaces">
+
 	<!-- Sorting dropdown is out of scope. -->
 	<label class="bare pat-select">
 		<select>
@@ -17,7 +18,14 @@ design_description: The homepage of the intranet with the workspaces tab active.
 			</option>
 		</select>
 	</label>
-	<a href="/feedback/panel-create-workspace.html#document-content" data-pat-modal="class: large" title="Create a new workspace" class="icon create pat-modal">Create workspace</a>
+
+	<div class="icons">
+		<a href="/feedback/panel-create-workspace.html#document-content" data-pat-modal="class: large" title="Create a new workspace" class="icon create pat-modal">Create workspace</a>
+	</div>
+
+	<!-- Search is out of scope? -->
+	<input type="search" placeholder="Search workspaces" />
+	
 </form>
 
 <div class="row tiles workspaces pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .tile;" id="workspaces">
