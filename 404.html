@@ -11,20 +11,23 @@ sidebar: closed
 			<article class="pat-rich error-page error-404">
 				<h1>This page does not seem to exist…</h1>
 				<p>
-					We apologize for the inconvenience, but the page you were trying to access is not at this address. You can use the links below to help you find what you are looking for.
+					We apologize for the inconvenience, but the page you were trying to access is not at this address. <strong>You might have been looking for…</strong>
 				</p>
+				<!-- Exclude both the "You might have been …" paragraph and the list below it when there are no suggestion to be shown. -->
+				<ul class="page-not-found-list">
+					<li>
+                    	<a href="#" class="icon-doc-text">Protocol of the board end of year meeting 2015</a>
+                    </li>
+					<li>
+                    	<a href="#" class="icon-file-word">Projection material</a>
+                    </li>
+					<li>
+                    	<a href="#" class="icon-file-image">Napkin sketch</a>
+                    </li>
+                </ul>
 				<!-- <p class="byline">
 					If you are certain you have the correct web address but are encountering an error, please contact the <a href="#">Intranet administration</a>.
 				</p> -->
-				<!-- Exclude both the "You might have been …" paragraph and the list below it when there are no suggestion to be shown. -->
-				<p>
-					<strong>You might have been looking for…</strong>
-				</p>
-				<ul class="page-not-found-list">
-					<li>
-                    	<a href="https://plone5.veit-schiele.de/news/new-resource-registry-control-panel" class="contenttype-news-item state-published">Protocol of the board end of year meeting 2015</a>
-                    </li>
-                </ul>
 			</article>
 		</div>
 	</div>
