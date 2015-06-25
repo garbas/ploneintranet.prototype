@@ -8,7 +8,7 @@ form {
       > .organiser,
       > .options,
       > .date-time,
-      > .timezone,
+      // > .timezone,
       > .invitees,
       > .attachments,
       > .assignee,
@@ -58,14 +58,14 @@ form {
         content: "\e82f";
       }
 
-      .timezone {
-        padding-left: 0;
+      // .timezone {
+      //   padding-left: 0;
 
-        &:before {
-          content: "\e830";
-          left: -4.5rem;
-        }
-      }
+      //   &:before {
+      //     content: "\e830";
+      //     left: -4.5rem;
+      //   }
+      // }
 
       .invitiees:before {
         content: "\1f465";
