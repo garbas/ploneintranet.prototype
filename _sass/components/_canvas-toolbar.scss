@@ -7,6 +7,8 @@
 	input[type="search"] {
 		float: right;
 		border-radius: 1em;
+		background: white;
+		border: 1px silver solid;
 	}
 
 	.icons {
@@ -22,7 +24,7 @@
 		position: relative;
 		color: gray;
 		cursor: default;
-		margin-top: -0.5em;
+		margin-top: -0.3em;
 
 		&:before {
 			font-family: fontello;
@@ -35,7 +37,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			border: 1px gray solid;
+			border: 1px silver solid;
 			border-radius: 50%;
 			background: white;
 			display: inline-block;
