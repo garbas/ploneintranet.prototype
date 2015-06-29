@@ -22,6 +22,11 @@
         position: relative;
         min-width: 6em;
 
+        > ul {
+            position: relative;
+            z-index: 1;
+        }
+
         &:after {
             content: ' ';
             display: block;
@@ -29,6 +34,7 @@
             height: 0.8em;
             margin-top: 0.45em;
             position: absolute;
+            z-index: 0;
             left: 0;
             right: 0;
             margin-left: -2em;
