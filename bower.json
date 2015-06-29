@@ -36,7 +36,7 @@
     "dropzone": "~3.10.2",
     "requirejs-text": "~2.0.12",
     "underscore": "~1.8.2",
-    "pat-raptor": "0.0.2"
+    "pat-raptor": "master"
   },
   "resolutions": {
     "jquery": "1.11.1",
