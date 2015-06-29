@@ -15,3 +15,5 @@ exclude:
   - config.codekit
   - config.rb
   - vendor
+  - src/bower_components
+  - node_modules
