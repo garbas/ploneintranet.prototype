@@ -11,18 +11,12 @@ sidebar: closed
 			<aside class="four columns portlets sidebar">
 				<figure class="user-portrait">
 					<img src="{{ page.image_url }}" class="pat-avatar" alt="Image of {{ page.title }}" />
-					{% if page.title == "Liz Baker" %}
-						<figcaption>
-							<textarea name="status-message" id="" cols="30" rows="3" class="status-message">{{ page.status }}</textarea>
-						</figcaption>
-					{% else %}
-						<figcaption class="status-message">
-							<h1>{{ page.title }}</h1>
-							<p>
-								{{ page.status }}
-							</p>
-						</figcaption>
-					{% endif %}
+					<figcaption class="status-message">
+						<h1>{{ page.title }}</h1>
+						<!-- <p>
+							{{ page.status }}
+						</p> -->
+					</figcaption>
 				</figure>
 				{% unless page.title == "Liz Baker" %}
 					<div class="portlet follow" id="portlet-follow">
