@@ -32,12 +32,9 @@ form {
     appearance: none;
     font-family: $body-font-family;
     display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing();
     padding: 0.2em 0.5em;
     margin: -0.2em 0;
-    box-sizing: border-box;
     background-color: rgba(0,0,0,0.09);
     border: none;
     color: inherit;

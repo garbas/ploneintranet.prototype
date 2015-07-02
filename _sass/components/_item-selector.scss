@@ -103,6 +103,9 @@
                 line-height: 2;
                 margin: 0;
                 padding-left: 1.4em;
+                @-moz-document url-prefix() {
+                    padding-left: 2.2em;
+                }
                 position: relative;
                 width: 100%;
                 background-color: rgba(0,0,0,0.08);
