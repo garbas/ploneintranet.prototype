@@ -133,6 +133,12 @@
 
     .search-result {
 
+        > fieldset {
+            @-moz-document url-prefix() {
+              display: table-cell;
+            }
+        }
+
         .item {
             border-top: 1px solid rgba(0,0,0,0.2);
             border-bottom: 1px solid rgba(0,0,0,0.2);
