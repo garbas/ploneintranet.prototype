@@ -2,7 +2,7 @@
 layout: search
 ---
 
-<div class="row pat-equaliser">
+<div class="row">
 	<div class="three columns filters">
 		<fieldset class="vertical pat-subform pat-inject" data-pat-inject="source: #listing; target: #listing;">
 			<!-- The hidden input below always gets the same value as the searchbox it self in each result. This is needed to make sure when the filters are changed within their subform, they are posted to the server also together with the search term. -->
@@ -88,7 +88,7 @@ layout: search
 			Did you mean <strong><a href="#">Mini</a></strong>?
 		</p>
 
-		<dl class="search-results">
+		<dl class="search-results" id="result-listing">
 			<!-- One hard coded example of a post as a search result: -->
 			<dt class="title user-post">
 				<a href=""><span class="author">Joan Baker</span> <em class="action">posted</em> <time>9 minutes ago</time></a>
@@ -173,6 +173,13 @@ layout: search
 					</dd>
 				{% endif %}
 			{% endfor %}
+			<dd id="load-more-results">
+				<!-- The link below is what would basically be the 'Next' link when you have pagination. Batches of 10 results or so would be nice. -->
+
+				<!-- This is an example for infinate scrolling with a list (DL or UL or OL), which is a little bit different from non list cases. In non list cases, the link tag is replaced by the injection, but a link tag may not be placed directly into a list tag. Therefor the DD is replaced instead. In case of OL/UL an extra LI tag is added. -->
+
+				<a href="/search-results.html#result-listing" class="pat-inject" data-pat-inject="trigger: autoload-visible; source: #result-listing; target: #load-more-results::element">Loading more…</a>
+			</dd>
 		</dl>
 	</div>
 </div>
