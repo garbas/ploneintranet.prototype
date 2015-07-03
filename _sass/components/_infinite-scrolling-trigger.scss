@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.infinite-scrolling-trigger {
+	display: block;
+	background: rgba(0,0,0,0.0);
+	border: 3px silver dashed;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	padding: 4.5em 4% 1em;
+	margin-bottom: 2em;
+	position: relative;
+	border-radius: 1em;
+  	color: rgba(0,0,0,0.6);
+
+	&.injecting:before {
+		top: 1em;
+	}
+}
