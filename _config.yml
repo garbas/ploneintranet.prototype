@@ -7,6 +7,7 @@ markdown: kramdown
 permalink: /:title
 colour-1: #efefef
 colour-1-contrast: #666
+org_id: plone-intranet
 sass:
   style: :compressed
 exclude: 
