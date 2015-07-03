@@ -126,8 +126,14 @@ design_description: The homepage of the intranet that contains a concatinated so
 					</select>
 				</label>
 			</form>
-			<div class="activities">
+			<div class="activities" id="posts-batch">
 				{% include activity-stream.html src="activity-stream-social" %}
+
+				<!-- The link below is what would basically be the 'Next' link when you have pagination. Batches of 10 results or so would be nice, perhaps a few more for the first batch so that the user never has to wait too much, assuming that what he needs is mostly present in the first few scrolls. Another approach to this could be to always include the mutations of the current day in the first batch with a ceiling of 50 posts or so. -->
+
+				<!-- In this example, the next batch is a full page with all the portlets, navigation etc on it. Although this degrades the nicest, it's defendable to choose for  results that contains only div#posts-batch.activities and its content for performance reasons.  -->
+
+				<a href="/dashboard.html#posts-batch" class="pat-inject infinite-scrolling-trigger" data-pat-inject="trigger: autoload-visible; source: #posts-batch; target: self::element">Loading more posts…</a>
 			</div>
 		</div>
 	</div>
