@@ -18,8 +18,8 @@
 
 		<style type="text/css">
 			#global-header {
-    			background-color: {{ site.colour-1 }};
-    			color: {{ site.colour-1-contrast }};
+    			background-color: {{ site.colour_1 }};
+    			color: {{ site.colour_1_contrast }};
 			}			
 
 			#global-header .icon,
@@ -30,11 +30,15 @@
 			#global-header form.search:hover,
 			#hamburger:before,
 			nav.breadcrumbs a  {
-			    color: {{ site.colour-1-contrast }};
+			    color: {{ site.colour_1_contrast }};
 			}
 
 			nav.breadcrumbs a:first-child:before {
-				background-color: {{ site.colour-1-contrast }};
+				background-color: {{ site.colour_1_contrast }};
+			}
+
+			#content {
+				outline: {{ site.colour_1_separation_line }} solid 1px;
 			}
 		</style>
 	</body>

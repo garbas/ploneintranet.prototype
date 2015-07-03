@@ -1,13 +1,18 @@
-title: Patterns
+title: Plone Intranet
 author: Cornelis G. A. Kolbach
-baseurl: http://demo.ploneintranet.net
+baseurl: /
 domain: demo.ploneintranet.net
 media: /media
 markdown: kramdown
 permalink: /:title
-colour-1: #efefef
-colour-1-contrast: #666
-org_id: plone-intranet
+# org_id: plone-intranet
+# colour_1: #efefef
+# colour_1_contrast: #666
+# colour_1_separation_line: "#eb5b4e"
+org_id: rkz
+colour_1: "#eb5b4e"
+colour_1_contrast: "#fff"
+colour_1_separation_line: "#fff"
 sass:
   style: :compressed
 exclude: 
