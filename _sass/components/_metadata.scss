@@ -56,7 +56,6 @@
     margin-bottom: 0;
     display: block;
 
-    input[type="text"],
     textarea {
       background: none;
       padding: 0.1em 0;
@@ -64,6 +63,13 @@
       display: block;
       width: 100%;
       resize:none;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      padding: 0 0.5em;
+      margin: 0;
     }
 
     &.summary-hero {
