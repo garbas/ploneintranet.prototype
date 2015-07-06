@@ -9,18 +9,20 @@
 $colour-base: #efefef !default;
 $colour-base-light: #f1f1f1 !default;
 $colour-primary: black !default;
+$colour-header: #869EBF !default;
 $colour-header-elements: #666 !default;
+$colour-separation-lines: silver !default;
 $colour-post: #e4f2f8 !default;
 $colour-alert: red !default;
-$colour-workspace-default: #869EBF !default;
+$colour-workspace-default: #666 !default;
 $colour-accent: #0081be !default;
 $colour-success: #CBF08B !default;
 
 // Branding
 
-// @import "brands/plone-intranet";
+@import "brands/plone-intranet";
 // @import "brands/ikath";
-@import "brands/rkz";
+// @import "brands/rkz";
 
 // Glyphs
 

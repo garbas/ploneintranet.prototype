@@ -5,8 +5,8 @@ domain: demo.ploneintranet.net
 media: /media
 markdown: kramdown
 permalink: /:title
-# org_id: plone-intranet
-org_id: rkz
+org_id: plone-intranet
+# org_id: rkz
 # org_id: ikath
 sass:
   style: :compressed

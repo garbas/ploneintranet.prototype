@@ -5,7 +5,7 @@
   line-height: 3;
   height: 2.95em;
   overflow: hidden;
-  border-bottom: silver 1px solid;
+  border-bottom: $colour-separation-lines 1px solid;
   margin-bottom: 2em;
   // background-color: white;
   transition: line-height .5s, opacity .5s, height .5s, font-size .5s;
@@ -49,8 +49,17 @@
   &.portal-tabs {
     z-index: 2;
     margin-bottom: 3em;
-    background-color: white;
+    background-color: $colour-header;
     border-bottom: none;
+    border-bottom: $colour-separation-lines;
+
+    a {
+      color: $colour-header-elements;
+
+      &.current:after {
+        border-bottom-color: $colour-header-elements;
+      }
+    }
 
     a.current:after {
       bottom: 2px;
