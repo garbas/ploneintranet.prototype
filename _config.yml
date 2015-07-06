@@ -6,17 +6,8 @@ media: /media
 markdown: kramdown
 permalink: /:title
 # org_id: plone-intranet
-# colour_1: #efefef
-# colour_1_contrast: #666
-# colour_1_separation_line: "#eb5b4e"
-# org_id: rkz
-# colour_1: "#eb5b4e"
-# colour_1_contrast: "#fff"
-# colour_1_separation_line: "#fff"
-org_id: ikath
-# colour_1: "#009FE3"
-# colour_1_contrast: "#fff"
-# colour_1_separation_line: "#fff"
+org_id: rkz
+# org_id: ikath
 sass:
   style: :compressed
 exclude: 
