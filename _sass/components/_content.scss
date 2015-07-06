@@ -23,3 +23,7 @@ body.application-home #content {
     background-color: $colour-base-light;
   }
 }
+
+body.gh-expanded:not(.application-home) #content {
+   top: 86px;
+}

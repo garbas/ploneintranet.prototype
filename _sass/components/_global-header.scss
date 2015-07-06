@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.gh-expanded:not(.application-home) {
+    #global-header {
+        height: 86px;
+    }
+}
+
 #global-header {
     height: 32px;
     background-color: $colour-base;
@@ -12,56 +18,56 @@
     padding-right: 3.1em;
     z-index: 0;
 
+    &:after {
+        border-bottom: 1px white solid;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: ' ';
+        display: block;
+    }
+
+    -moz-transition: height 0.2s;
+    -webkit-transition: height 0.2s;
+    transition: height 0.2s;
+
+    .portal-tabs {
+        position: absolute;
+        top: 32px;
+        left: 0;
+        right: 0;
+    }
+
     @include screen-size(small) {
         zoom: 1.5;
         background-color: darken($colour-base, 10%);
     }
-}
 
-.application-portal #global-header {
-    float: right;
-    left: auto;
-    width: auto;
-    background-color: transparent;
-    top: 13px;
-}
+    .icon {
+        float: right;
+        height: 2em;
+        color: $colour-header-elements;
+        line-height: 2em;
+        font-size: 1em;
+        margin-left: 1em;
+        padding: 0;
+        width: 1.3em;
+        text-shadow: none;
 
-#global-header .icon {
-    float: right;
-    height: 2em;
-    color: $colour-header-elements;
-    line-height: 2em;
-    font-size: 1em;
-    margin-left: 1em;
-    padding: 0;
-    width: 1.3em;
-    text-shadow: none;
-
-    &#notification-link:before {
-        font-size: 1.2em;
-        line-height: 1.5em;
+        &#notification-link:before {
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
     }
-}
 
-.application-portal #global-header .icon {
-    color: $colour-header-elements;
-}
-
-#global-header form.search {
-    color: $colour-header-elements;
-}
-
-.application-portal #global-header form.search {
-    color: $colour-header-elements;
-}
-
-#global-header {
     .icon:hover, 
     form.search:hover {
         text-decoration: none;
         color: $colour-header-elements;
         cursor: default;
     }
+
     .icon sup.counter {
         font-size: 0.6em;
         width: 1.2em;
@@ -74,5 +80,15 @@
         text-align: center;
         color: white;
         border-radius: 50%;
+    }
+}
+
+#global-header form.search {
+    color: $colour-header-elements;
+}
+
+.application-home #global-header {
+    &:after {
+        display: none;
     }
 }

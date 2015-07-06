@@ -13,7 +13,7 @@
 				<link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico" />
 		<![endif]-->
 	</head>
-	<body class="sidebar-normal sidebar-left-{% if page.sidebar == 'closed' %}closed{% else %}open{% endif %} focus-listing {% if page.sidebar_controls %}toolbar{% endif %} {{ page.template }} application-{{ page.application }} {% if page.workspace_name %}ws-{{ page.workspace_id }}{% endif %}">
+	<body class="sidebar-normal gh-collapsed sidebar-left-{% if page.sidebar == 'closed' %}closed{% else %}open{% endif %} focus-listing {% if page.sidebar_controls %}toolbar{% endif %} {{ page.template }} application-{{ page.application }} {% if page.workspace_name %}ws-{{ page.workspace_id }}{% endif %}">
 		{{ content }}
 
 		<style type="text/css">
@@ -49,8 +49,8 @@
 				background-color: {{ site.colour_1_contrast }};
 			}
 
-			/*#content {
-				outline: {{ site.colour_1_separation_line }} solid 1px;
+/*			.tabs.portal-tabs {
+				border-bottom: {{ site.colour_1_separation_line }} solid 1px;
 			}*/
 		</style>
 	</body>

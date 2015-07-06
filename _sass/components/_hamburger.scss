@@ -12,13 +12,19 @@
 
 	&:before {
 		text-indent: 0;
-		content: "\2630";
+		content: "\e877";
 		font-family: fontello;
 		position: absolute;
 		left: 10px;
 		top: 0;
-		font-size: 1.5em;
-		line-height: 1.25em;
+		  font-size: 1em;
+		  line-height: 1.8em;
 		color: $colour-header-elements;
+	}
+}
+
+.gh-expanded #hamburger {
+	&:before {
+		content: "\e878";
 	}
 }
