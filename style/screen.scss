@@ -3,4 +3,37 @@
 
 // meta
 @import "settings";
-@import "brands/ikath";
+
+// Branding
+
+#global-header,
+.tabs.portal-tabs {
+	background-color: $colour-1;
+}	
+
+.tabs.portal-tabs {
+	color: $colour-1-contrast;
+}
+
+.tabs.portal-tabs a {
+		color: $colour-1-contrast;
+}	
+
+.tabs.portal-tabs a.current:after {
+	border-bottom-color: $colour-1-contrast;
+}
+
+#global-header .icon,
+.application-portal #global-header .icon,
+#global-header form.search,
+.application-portal #global-header form.search,
+#global-header .icon:hover, 
+#global-header form.search:hover,
+#hamburger:before,
+nav.breadcrumbs a  {
+    color: $colour-1-contrast;
+}
+
+nav.breadcrumbs a:first-child:before {
+	background-color: $colour-1-contrast;
+}
