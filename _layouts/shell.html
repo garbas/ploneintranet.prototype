@@ -17,10 +17,22 @@
 		{{ content }}
 
 		<style type="text/css">
-			#global-header {
+			#global-header,
+			.tabs.portal-tabs {
     			background-color: {{ site.colour_1 }};
+			}	
+
+			.tabs.portal-tabs {
     			color: {{ site.colour_1_contrast }};
-			}			
+			}
+
+			.tabs.portal-tabs a {
+    				color: {{ site.colour_1_contrast }};
+			}	
+
+	    	.tabs.portal-tabs a.current:after {
+				border-bottom-color: {{ site.colour_1_contrast }};
+			}
 
 			#global-header .icon,
 			.application-portal #global-header .icon,
@@ -37,9 +49,9 @@
 				background-color: {{ site.colour_1_contrast }};
 			}
 
-			#content {
+			/*#content {
 				outline: {{ site.colour_1_separation_line }} solid 1px;
-			}
+			}*/
 		</style>
 	</body>
 </html>

@@ -10,7 +10,7 @@
     overflow: auto;
     transition: all 0.2s;
     z-index: 6;
-    outline: solid silver 1px;
+    // outline: solid silver 1px;
   }
   @include screen-size(small) {
     padding-top: 5em;
