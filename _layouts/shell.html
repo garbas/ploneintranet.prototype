@@ -15,43 +15,5 @@
 	</head>
 	<body class="sidebar-normal gh-collapsed sidebar-left-{% if page.sidebar == 'closed' %}closed{% else %}open{% endif %} focus-listing {% if page.sidebar_controls %}toolbar{% endif %} {{ page.template }} application-{{ page.application }} {% if page.workspace_name %}ws-{{ page.workspace_id }}{% endif %}">
 		{{ content }}
-
-		<style type="text/css">
-			#global-header,
-			.tabs.portal-tabs {
-    			background-color: {{ site.colour_1 }};
-			}	
-
-			.tabs.portal-tabs {
-    			color: {{ site.colour_1_contrast }};
-			}
-
-			.tabs.portal-tabs a {
-    				color: {{ site.colour_1_contrast }};
-			}	
-
-	    	.tabs.portal-tabs a.current:after {
-				border-bottom-color: {{ site.colour_1_contrast }};
-			}
-
-			#global-header .icon,
-			.application-portal #global-header .icon,
-			#global-header form.search,
-			.application-portal #global-header form.search,
-			#global-header .icon:hover, 
-			#global-header form.search:hover,
-			#hamburger:before,
-			nav.breadcrumbs a  {
-			    color: {{ site.colour_1_contrast }};
-			}
-
-			nav.breadcrumbs a:first-child:before {
-				background-color: {{ site.colour_1_contrast }};
-			}
-
-/*			.tabs.portal-tabs {
-				border-bottom: {{ site.colour_1_separation_line }} solid 1px;
-			}*/
-		</style>
 	</body>
 </html>
