@@ -7,15 +7,12 @@
 .logo#site-logo {
 	float: left;
 	margin-right: 14px;
-	height: 19px;
+	line-height: 1.95em;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: $colour-header-elements;
 
 	@include screen-size(small) {
 		display: none;
 	}
-}
-
-.logo#site-logo img {
-	height: 100%;
-	margin-top: 6px;
-	// opacity: 0.6;
 }

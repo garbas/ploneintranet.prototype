@@ -1,9 +1,30 @@
 @charset "UTF-8";
 
-$colour-1: #eb5b4e;
-$colour-1-contrast: #fff;
+$colour-header-elements: #fff;
 
-$colour-accent: $colour-1;
+$colour-header: #eb5b4e;
+$colour-header-elements: #FFF;
+$colour-separation-lines: #FFF;
+$colour-accent: #eb5b4e;
 $colour-workspace-default: #666;
 
-$colour-header-elements: #fff;
+#site-logo {
+	text-indent: -2000px;
+	overflow: hidden;
+	width: 400px;
+	height: 24px;
+	background: no-repeat url(/media/logos/rkz-long.svg);
+	margin-top: 2px;
+	width: 47px;
+}
+
+.login-panel {
+	.logo {
+		overflow: hidden;
+		text-indent: -2000px;
+		height: 8em;
+		background: no-repeat url(/media/logos/plone-intranet-square.svg);
+		background-size: 8em;
+    	background-position: center; 
+	}
+}

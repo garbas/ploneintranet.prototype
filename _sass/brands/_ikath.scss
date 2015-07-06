@@ -1,7 +1,29 @@
 @charset "UTF-8";
 
-$colour-1: #009FE3;
-$colour-1-contrast: #fff;
-
-$colour-accent: $colour-1;
+$colour-header: #009FE3;
+$colour-header-elements: #FFF;
+$colour-separation-lines: #FFF;
+$colour-accent: #009FE3;
 $colour-workspace-default: #666;
+
+#site-logo {
+	text-indent: -2000px;
+	overflow: hidden;
+	width: 400px;
+	height: 24px;
+	background: no-repeat url(/media/logos/ikath-long.svg);
+	background-size: fill;
+	margin-top: 5px;
+	width: 90px;
+}
+
+.login-panel {
+	.logo {
+		overflow: hidden;
+		text-indent: -2000px;
+		height: 8em;
+		background: no-repeat url(/media/logos/plone-intranet-square.svg);
+		background-size: 8em;
+    	background-position: center; 
+	}
+}
