@@ -24,7 +24,17 @@
 }
 
 .gh-expanded #hamburger {
+
 	&:before {
 		content: "\e878";
+	}
+}
+
+.application-home #hamburger {
+
+	&:before {
+		content: "\e878";
+		opacity: 0.5;
+		pointer-events: none;
 	}
 }
