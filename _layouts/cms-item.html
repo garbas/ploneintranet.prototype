@@ -32,6 +32,12 @@ design_title: Library landing page
 				<a href="#" class="tag">Statuten</a>
 			</nav>
 
+			{% if page.image %}
+				<figure class="hero">
+					<img src="/media/cms/{{ page.image }}" alt="" />
+				</figure>
+			{% endif %}
+
 			<p class="summary">
 				{{ page.description }}
 			</p>
