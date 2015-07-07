@@ -18,12 +18,6 @@ $colour-workspace-default: #666 !default;
 $colour-accent: #0081be !default;
 $colour-success: #CBF08B !default;
 
-// Branding
-
-// @import "brands/plone-intranet";
-// @import "brands/ikath";
-@import "brands/rkz";
-
 // Glyphs
 
 $glyph-checkbox: '\f096';
@@ -51,6 +45,12 @@ $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 
 $base-space: 1em; // Create universal white space (e.g. margin, padding, left)
+
+// Branding
+
+// @import "brands/plone-intranet";
+@import "brands/ikath";
+// @import "brands/rkz";
 
 @function blacken($color, $percent) {
     @return mix(black, $color, $percent);
