@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#dashboard {
+	position: relative;
+
+	.portlet {
+		@include box-sizing();
+		padding: 0 15px;
+		width: 33.33333%;
+	
+		&.span-2 {
+			width: 66.66666%;
+		}
+
+		&.span-3 {
+			width: 100%;
+		}
+	}
+}
