@@ -1,28 +1,27 @@
 ---
-layout: home
-application: home
-design_title: Intranet homepage
-design_description: General news page.
+layout: shell
+title: Login
+application: login
+design_title: Login
 ---
 
-<div class="pat-modal login-panel">
-	<h1>Login</h1>
-	<form action="dashboard.html">
-		<h2 class="logo">
-			{{ site.title }}
-		</h2>
-		<fieldset class="vertical">
-			<label>
-				<input type="text" name="__ac_name" id="__ac_name" placeholder="E-mail address">
-			</label>
-			<br/>
-			<label>
-				<input type="password" id="__ac_password" name="__ac_password" placeholder="Password">
-			</label>
-			<br/>
-			<p class="button-bar">
-				<button type="submit">Login</button>
-			</p>
-		</fieldset>
-	</form>
-</div>
+<form action="dashboard.html" id="login-panel">
+	<fieldset class="vertical panel">
+		<figure class="splash">
+			<img src="/media/logos/plone-intranet-square-dp.svg" />
+		</figure>
+		<label>
+			<input type="text" name="__ac_name" id="__ac_name" placeholder="E-mail address">
+		</label>
+		<br/>
+		<label>
+			<input type="password" id="__ac_password" name="__ac_password" placeholder="Password">
+		</label>
+		<p class="colofon">
+			<a href="forgot-password.html">I forgot my password</a>  |  <a href="where-am-i.html">Where am I?</a>
+		</p>
+		<p class="button-bar">
+			<button type="submit">Login</button>
+		</p>
+	</fieldset>
+</form>
