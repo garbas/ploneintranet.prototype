@@ -5,7 +5,30 @@ design_title: Intranet homepage
 design_description: The homepage of the intranet that contains a concatinated social feed.
 ---
 
-<div class="row">
+<form class="canvas-toolbar pat-inject pat-autosubmit" action="/dashboard.html#dashboard">
+
+	<!-- Sorting dropdown is out of scope. -->
+	<label class="bare pat-select">
+		<select>
+			<option value="activity">
+				Activity centric view
+			</option>
+			<option value="task">
+				Task centric view
+			</option>
+			<option value="custom">
+				My view (Customisable)
+			</option>
+		</select>
+	</label>
+
+	<div class="icons">
+		<a href="/feedback/panel-edit-dashboard#document-content" data-pat-modal="class: large" title="Create a new workspace" class="icon edit pat-modal">Edit dashboard</a>
+	</div>
+	
+</form>
+
+<div class="row" id="dashboard">
 	<div class="four columns">
 		<aside class="item portlets">
 			<div class="news portlet" id="portlet-news">
