@@ -1,6 +1,7 @@
 ---
 layout: home
 application: home
+title: Dashboard
 design_title: Intranet homepage
 design_description: The homepage of the intranet that contains a concatinated social feed.
 ---
@@ -93,14 +94,8 @@ design_description: The homepage of the intranet that contains a concatinated so
 				{% endif %}
 			{% endfor %}
 		</ul>
-	
-	<!-- <p class="portlet-footer">
-		<a href="#">All workspace activities…</a>
-	</p> -->
 	</div>
-
 	<div class="portlet" id="portlet-activity-stream">
-		<h2 class="portlet-title">Activities</h2>
 		{% include update-social.html placeholder="Post a message…" id="post-box" action="/feedback/post-well-done.html" inject="source: #activity-stream; target: #activity-stream .activities::before && #new-post-box" %}
 
 		<div id="activity-stream" class="activity-stream">
