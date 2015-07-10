@@ -4,6 +4,10 @@
 	margin-bottom: 1em;
 	@include clear-fix();
 
+	.pat-select {
+		margin-right: 1em;
+	}
+
 	input[type="search"] {
 		float: right;
 		border-radius: 1em;
