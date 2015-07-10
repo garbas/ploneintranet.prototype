@@ -62,5 +62,13 @@
 				content: "\E825";
 			}
 		}
+
+		&.edit {
+			float: right;
+
+			&:before {
+				content: "\270e";
+			}
+		}
 	}
 }
