@@ -124,7 +124,7 @@ workspace_module: docs
 <div class="comments" id="comments-document-comments">
     {% if page.comments %}        
         <p class="comment-sentinel pat-bumper" data-pat-bumper="side: bottom;">
-            <a href="#comments-document-comments">There are {{ page.comments.size }} comments to this document {% if  %}1 share{% endif %}</a>
+            <a href="#comments-document-comments">There are {{ page.comments.size }} comments to this document {% if page.share_1 %}and 1 share{% endif %}</a>
         </p>
     {% endif %}
 
