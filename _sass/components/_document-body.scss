@@ -48,8 +48,12 @@
   #comments-document-comments {
     // padding: 6%;
 
-    #comment-trail {
-      margin-bottom: 3em;
+    .comment-trail {
+      margin-bottom: 2.5em;
+    }
+
+    .update-social {
+      margin: 0 3.6em 4.5em;
     }
 
     textarea {

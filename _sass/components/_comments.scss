@@ -29,6 +29,28 @@
   margin: 0 0 1em 0;
   // padding: 1em;
 
+  .document-comments-header {
+    padding: 0 0 0 3.5em;
+    position: relative;
+    margin-bottom: 0.3em;
+
+    br {
+      display: none;
+    }
+
+    .pat-avatar {
+      position: absolute;
+      left: 0;
+      width: 2.8em;
+      height: 2.8em;
+    }
+
+    .byline { 
+      color: gray;
+      margin-bottom: 0.5em;
+    }
+  } 
+
   &#comments-document-comments {
     padding: 6%;
   }
