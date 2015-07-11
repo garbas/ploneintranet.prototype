@@ -22,13 +22,21 @@
 	}
 
 	.panel {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 400px;
-		margin-left: -200px;
-		height: 300px;
-		margin-top: -230px;
+
+        @include screen-size(large) { 
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 400px;
+			margin-left: -200px;
+			height: 300px;
+			margin-top: -230px;
+        }
+
+        @include screen-size(small) { 
+        	width: 90%;
+        	margin: 6% auto;
+        }
 
 		.colofon {
 			color: rgba(255,255,255,0.4);
