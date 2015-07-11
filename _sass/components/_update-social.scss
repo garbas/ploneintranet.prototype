@@ -42,10 +42,11 @@
     textarea {
         position: relative;
         z-index: 1;
+        -webkit-text-fill-color: transparent;
     }
 
     .content-mirror {
-        color: transparent;
+        color: black;
         font-family: inherit;
         cursor: default;
         text-align: start;
