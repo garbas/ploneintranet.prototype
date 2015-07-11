@@ -15,8 +15,8 @@
 			</h4>
 		</a>
 		<p class="byline">
-			<em class="action">{{ item.activity }}</em> <time>{{ item.datestamp }}</time> |
-            <label class="visibility pat-select bare">
+			<em class="action">{{ item.activity }}</em>  <time>{{ item.datestamp }}</time> {% if item.workspace %}in <a href="/open-market-committee/">{{ item.workspace }}</a>{% endif %} <!-- | -->
+            <!-- <label class="visibility pat-select bare">
                 <select>
                     <optgroup>
                         <option>
@@ -38,7 +38,7 @@
                         </option>
                     </optgroup>
                 </select>
-            </label> <br/>
+            </label> --> <br/>
 			<a href="#" class="iconified icon-cog">Options</a>
 		</p>
 	</div>

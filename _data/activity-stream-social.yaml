@@ -1,5 +1,6 @@
 - userid: charlotte-holzer
   activity: published
+  workspace: Open Market Committee
   datestamp: just now
   likes: 0
   shares: 0
@@ -7,7 +8,8 @@
   preview: '/media/budget-proposal.png'
 
 - userid: guido-stevens
-  activity: created
+  activity: published
+  workspace: Open Market Committee
   datestamp: just now
   likes: 0
   shares: 0
