@@ -1,5 +1,7 @@
 .post .comments {
-  margin: 0 -1em -1em;
+  @include screen-size(large) { 
+    margin: 0 -1em -1em;
+  }
 }
 
 .document-listing .comments {
