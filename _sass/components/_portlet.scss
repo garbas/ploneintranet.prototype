@@ -2,7 +2,9 @@
 
 .portlet {
 	@include screen-size(small) {
-		display: none;
+		&:not(#portlet-activity-stream) {
+			display: none;
+		}
 	}
 
 	margin-bottom: 2rem;

@@ -5,27 +5,33 @@
 
 	.portlet {
 		@include box-sizing();
-		padding: 0 15px;
-		width: 33.33333%;
+		padding: 0 15px;		
+		@include screen-size(large) {
+			width: 33.33333%;
+		}
 	
 		&.span-2 {
-			width: 66.66666%;
+			@include screen-size(large) {
+				width: 66.66666%;
+			}
 		}
 
 		&.span-3 {
 			width: 100%;
 		}
 
-		&.stamp {
-			position: absolute;
-			top: 0;
+		@include screen-size(large) {
+			&.stamp {
+				position: absolute;
+				top: 0;
 
-			&.right {
-				right: 0;
-			}
+				&.right {
+					right: 0;
+				}
 
-			&.left {
-				left: 0;
+				&.left {
+					left: 0;
+				}
 			}
 		}
 	}

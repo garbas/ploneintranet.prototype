@@ -4,6 +4,12 @@
 	margin-bottom: 1em;
 	@include clear-fix();
 
+	&#dashboard-toolbar {
+		@include screen-size(small) {
+			display: none;
+		}
+	}
+
 	.pat-select {
 		margin-right: 1em;
 	}

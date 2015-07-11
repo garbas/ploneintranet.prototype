@@ -1,14 +1,21 @@
 @charset "UTF-8";
 
 .post {
-  border: solid 1px #dedede;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing();
   background-color: white;
-  padding: 1em;
-  border-top-left-radius: 2.2em;
   // margin-bottom: 2em;
+
+  @include screen-size(large) { 
+    border-top-left-radius: 2.2em;
+    border: solid 1px #dedede;
+    padding: 1em;
+  }
+
+  @include screen-size(small) { 
+    border-top: solid 1px #dedede;
+    border-bottom: solid 1px #dedede;
+    padding: 2em 0 3em;
+  }
 
   .post {
     font-size: 0.8em;

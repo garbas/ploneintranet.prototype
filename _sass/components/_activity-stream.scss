@@ -4,7 +4,12 @@
   margin: 0 auto;
 
   .item {
-    margin-bottom: 30px;
+    @include screen-size(large) { 
+      margin-bottom: 1.5em;
+    }
+    @include screen-size(small) { 
+      margin-bottom: -1px;
+    }
   }
 
   &.pat-packery {
