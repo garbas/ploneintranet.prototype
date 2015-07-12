@@ -40,8 +40,19 @@
     }
 
     @include screen-size(small) {
-        zoom: 1.5;
+        height: 45px;
+        // zoom: 1.5;
+        font-size: 26px;
+        // line-height: 32px; 
         // background-color: darken($colour-base, 10%);
+
+        form.search label::before {
+            font-size: 26px;
+        }
+
+        .icon {
+            font-size: 20px;
+        }
     }
 
     .icon {
