@@ -26,7 +26,7 @@ design_title: Settings form People
 				        <a href="/feedback/workspace-settings-advanced.html" class="pat-inject" data-pat-inject="target: #workspace-settings > .tabs-content; source: #workspace-settings > .tabs-content">Advanced</a>
 				    </nav>
 					<div class="tabs-content">
-					    {% include item-selector.html action="/feedback/batch-change-roles.html" autosubmit="false" inject="target: #content; source: #content" feedback="/feedback/batch-change-roles.html" mode="users" toggle="true" listitems="follow" buttons="batch-operations add-members" controls="pull-menu" title="Members" labels="true" id="member-list" %}
+					    {% include item-selector.html action="/feedback/batch-change-roles.html" autosubmit="false" inject="target: body::after; source: #content" feedback="/feedback/batch-change-roles.html" mode="users" toggle="true" listitems="follow" buttons="batch-operations add-members" controls="pull-menu" title="Members" labels="true" id="member-list" %}
 					</div>
 				</div>
 			</div>
