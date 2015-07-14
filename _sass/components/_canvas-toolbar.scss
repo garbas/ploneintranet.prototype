@@ -11,7 +11,14 @@
 	}
 
 	.pat-select {
-		margin-right: 1em;
+	    @include screen-size(large) { 
+	      margin-right: 1em;
+	    }
+	    @include screen-size(small) { 
+	      // display: block;
+	      // margin-bottom: 1em;
+	      display: none;
+	    }
 	}
 
 	input[type="search"] {
@@ -19,11 +26,20 @@
 		border-radius: 1em;
 		background: white;
 		border: 1px silver solid;
+	    @include screen-size(small) { 
+	      width: 100%;
+	      margin-bottom: 1.5em;
+	      margin-top: 0.5em;
+	    }
 	}
 
 	.icons {
 		float: right;
 		margin-left: 2em;
+
+		@include screen-size(small) { 
+	      display: none;
+	    }
 	}
 
 	.icon {

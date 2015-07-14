@@ -18,6 +18,10 @@
     padding-right: 4em;
     z-index: 0;
 
+    @include screen-size(small) { 
+        padding-right: 3.5em;
+    }
+
     &:after {
         border-bottom: 1px white solid;
         position: absolute;
