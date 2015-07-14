@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-#hamburger {
+#hamburger-desktop,
+#hamburger-mobile {
 	float: left;
 	height: 19px;
 	width: 19px;
@@ -17,20 +18,38 @@
 		position: absolute;
 		left: 10px;
 		top: 0;
-		  font-size: 1em;
-		  line-height: 1.8em;
+		font-size: 1em;
+		line-height: 1.8em;
 		color: $colour-header-elements;
 	}
 }
 
-.gh-expanded #hamburger {
+#hamburger-mobile {
+	&:before {
+		content: "\e878";
+	}
+}
+
+@include screen-size(large) { 
+	#hamburger-mobile {
+		display: none;
+	}
+}
+
+@include screen-size(small) { 
+	#hamburger-desktop {
+		display: none;
+	}
+}
+
+.gh-expanded #hamburger-desktop {
 
 	&:before {
 		content: "\e878";
 	}
 }
 
-.application-home #hamburger {
+.application-home #hamburger-desktop {
 
 	&:before {
 		content: "\e878";

@@ -1,11 +1,11 @@
 <header id="global-header">
 
-    <a id="hamburger" class="hamburger-menu pat-toggle" data-pat-toggle="selector: body; value: gh-expanded gh-collapsed; store: local">Toggle menu</a>
+    <a id="hamburger-desktop" class="hamburger-menu pat-toggle" data-pat-toggle="selector: body; value: gh-expanded gh-collapsed; store: local">Toggle menu</a>
+    <a href="/dashboard.html#portal-tabs" id="hamburger-mobile" class="hamburger-menu pat-tooltip" data-pat-tooltip="position-list: tl; class: hamburger-menu; source: ajax">Menu</a>
 
     <a id="site-logo" href="/dashboard.html" class="logo">{{ site.title }}</a>
 
     <nav class="breadcrumbs">
-
         {% if page.application != 'workspace' %}
             <a class="current" href="#">{{ page.application_name }}</a>
         {% endif %}
@@ -40,5 +40,5 @@
         <button name="submit" tabindex="-1" type="submit" value="submit">Search</button>
     </form>
 
-    {% include portal-tabs.html %}
+    {% include portal-tabs.html id="portal-tabs" %}
 </header>

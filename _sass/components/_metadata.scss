@@ -223,6 +223,7 @@
         display: inline-block;
         line-height: 1.5em;
         float: left;
+        cursor: default;
 
         &.collapsible-open {
           color: $colour-accent;
@@ -295,6 +296,7 @@
       float: right;
       font-size: 0.8em;
       margin-top: 0.1em;
+      margin-left: 0.5em;
 
       &.injecting:before {
         display: none;
