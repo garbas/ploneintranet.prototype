@@ -12,6 +12,8 @@
   filter: none !important;
   outline: none !important;
   width: 1.3em;
+  cursor: default;
+
   &:active {
     box-shadow: none;
   }

@@ -10,5 +10,6 @@ pinned: true
 tile_size: 2.
 document_creator: Alexander Pilz
 document_creator_id: pilz
+description: Lorem ipsum dolor sit amet consectetuer.
 ---
 

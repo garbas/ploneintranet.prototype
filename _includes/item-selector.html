@@ -226,6 +226,16 @@
                 {% endfor %}
 
             {% elsif include.mode == "docs" %}
+                {% if page.folderish == true %}
+                    <div class="folder-intro">
+                        <h4 class="folder-title">{{ page.title }} <a href="/panel-rename-folder.html#document-content" class="icon-pencil iconified pat-modal" data-pat-modal="class: large">Edit name/description</a></h4>
+                        {% if page.description %}
+                            <p class="folder-description">
+                                {{ page.description }}
+                            </p>
+                        {% endif %}
+                    </div>
+                {% endif %}
 
                 {% for doc in site.posts %}
                     {% if doc.parent == include.title and (doc.layout == 'news' or doc.layout == 'document'  or doc.layout == 'folder') %}
