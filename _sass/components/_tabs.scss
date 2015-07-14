@@ -5,7 +5,7 @@
   line-height: 3;
   height: 2.95em;
   overflow: hidden;
-  border-bottom: $colour-separation-lines 1px solid;
+  border-bottom: $colour-accent 1px solid;
   margin-bottom: 2em;
   // background-color: white;
   transition: line-height .5s, opacity .5s, height .5s, font-size .5s;
@@ -52,6 +52,10 @@
     background-color: $colour-header;
     border-bottom: none;
     border-bottom: $colour-separation-lines;
+
+    .title {
+      display: none;
+    }
 
     a {
       color: $colour-header-elements;
