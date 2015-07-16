@@ -1,0 +1,31 @@
+---
+layout: generic
+application_name: feedback
+design_title: Contacts portlet search feedback
+design_description: "Feedback for the search results when 'Cor' input"
+---
+<!-- Update search results with dummy results, using keyword "Cor..." -->
+{% capture include_id %}mention{% endcapture %} <!-- this attribute should be unique to the instance of the item-selector -->
+
+<div id="contact-search-items">
+    <div class="item-selector mode-follow">
+        <form class="search-result users">
+            <fieldset class="checklist pat-checklist">
+                {% for user in site.posts %}
+                    {% assign lower_title = user.title | downcase %}
+                    {% if user.layout == 'user' and lower_title contains 'cor' %}
+                        <label class="item user">
+                            <input name="" type="checkbox" />
+                            <a href="{{ user.id }}" class="follow">
+                                <img src="{{ user.image_url }}" alt="" class="avatar" />
+                                <strong class="title">{{ user.title }}</strong>
+                                <br>
+                                <dfn class="byline">{{ user.user_role }}</dfn>
+                            </a>
+                        </label>
+                    {% endif %}
+                {% endfor %}
+            </fieldset>
+        </form>
+    </div>
+</div>

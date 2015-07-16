@@ -184,7 +184,7 @@
                     {% if user.layout == 'user' %}
                         <label class="item user {% if user.status %}has-description{% else %}has-no-description{% endif %} {% if user.role and include.labels == 'true' %}has-label{% endif %}">
                             <input name="" type="checkbox" />
-                            <a class="follow pat-inject" href="{{ user.url }}" data-pat-inject="source: #document-body; target: #document-body">
+                            <a class="follow {% if include.followinject %}pat-inject{% endif %}" href="{{ user.url }}" data-pat-inject="{{ include.followinject }}">
                                 <img src="{{user.image_url}}" alt="" class="avatar" />
                                 <strong class="title">{{ user.title }}</strong>
                                 {% if user.status %}
