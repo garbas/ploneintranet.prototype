@@ -23,7 +23,7 @@ workspace_module: tickets
                 <a href="#sharing-menu" class="icon-export iconified pat-tooltip" data-pat-tooltip="source: ajax" title="Share this document">
                     Share
                 </a>
-                <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a>
+                <!-- <a class="icon-info-circle meta-data-toggle iconified" title="Show extra metadata fields">Toggle extra metadata</a> -->
                 <fieldset class="pat-subform pat-autosubmit pat-inject" data-pat-inject="target: #document-content::before; url: /feedback/banner-notifications.html; source: #ticket-open-closed::element;">
                     <label class="pat-select bare" title="Change the workflow state">
                         <select>
@@ -41,17 +41,9 @@ workspace_module: tickets
                 {% endfor %}
             </div>
         </div>
-        <fieldset class="pat-collapsible closed meta-extra" data-pat-collapsible="trigger: .meta-data-toggle" id="meta-extra">
-            <fieldset class="bar description">
-                <textarea name="description" rows="8" title="Description" placeholder="Description"></textarea>
-             </fieldset>
-        </fieldset>
     </div>
     <div id="document-content">
         <div class="document ticket-details">
-            <article>
-            	{{content}}
-            </article>
             <fieldset class="vertical fancy">
                 <label class="description">
                     Description <textarea placeholder="Enter a description of the task" rows="6">{{ page.description }}</textarea>
