@@ -45,7 +45,7 @@
                     {% for ticket in site.posts  %}
                         {% if ticket.workspace_name == workspace.workspace_name and ticket.case_state == item.label %}
                             <label>
-                                <input type="checkbox" {% if ticket.state == 'closed' or item.transition_state == 'finished' %}checked{% endif %} /> <a title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}#workspace-tickets">{{ ticket.title }}</a>
+                                <input type="checkbox" {% if ticket.state == 'closed' or item.transition_state == 'finished' %}checked{% endif %} /> <a title="{{ ticket.excerpt | strip_html }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ticket.url}}#workspace-tickets">{{ ticket.title }}</a>
                             </label>
                         {% endif %}
                     {% endfor %}
@@ -63,7 +63,7 @@
                 {% for ticket in site.posts  %}
                     {% if ticket.workspace_name == workspace.workspace_name and ticket.case_state == 'unassigned' %}
                         <label>
-                            <input type="checkbox" /> <a class="pat-inject" title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}" data-pat-inject="source: #document-body; target: #document-body; history: record">{{ ticket.title }}</a>
+                            <input type="checkbox" /> <a class="pat-inject follow pat-switch" title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="source: #document-body; target: #document-body; history: record">{{ ticket.title }}</a>
                         </label>
                     {% endif %}
                 {% endfor %}
@@ -77,7 +77,7 @@
                             <br/>
                         {% endif %}
                         <label>
-                            <input type="checkbox" /> <a title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}">{{ ticket.title }}</a>
+                            <input type="checkbox" /> <a title="{{ ticket.excerpt | strip_html }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ticket.url}}">{{ ticket.title }}</a>
                         </label>
                     {% endif %}
                     {% assign count = count | plus: 1 %}
@@ -92,6 +92,7 @@
     <div id="workspace-events">
         <div class="button-bar functions" id="{{ include.id }}-functions">
             <div class="quick-functions">
+                <a class="toggle-sidebar-size pat-toggle" data-pat-toggle="selector: body; value: sidebar-normal sidebar-large" title="expand/reduce sidebar">Expand sidebar</a>
                 <a title="Create new document" href="/panel-create-event.html#document-content" class="create-document pat-modal icon-doc-text" data-pat-modal="class: large">Create event</a>
             </div>
         </div>
@@ -105,7 +106,7 @@
                         {% if item.layout == 'event' and item.workspace_name == page.workspace_name %}
                             <li class="cal-event all-day cal-cat-baggage-handling">
                                 <h4 class="title">
-                                    <a class="pat-inject" href="{{ item.url }}#document-body">{{ item.title }}</a>
+                                    <a class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ item.url }}#document-body">{{ item.title }}</a>
                                 </h4>
                                 <p class="description">
                                     {{ item.description }}
