@@ -86,6 +86,7 @@ require.config({
         "pat-content-mirror":        "bower_components/pat-content-mirror/src/pat-content-mirror",
         "pat-colour-picket":         "bower_components/patternslib/src/pat/colour-picker/colour-picker",
         "pat-date-picker":           "bower_components/patternslib/src/pat/date-picker/date-picker",
+        "pat-display-time":          "bower_components/pat-display-time/src/pat-display-time",
         "pat-depends":               "bower_components/patternslib/src/pat/depends/depends",
         "pat-equaliser":             "bower_components/patternslib/src/pat/equaliser/equaliser",
         "pat-expandable":            "bower_components/patternslib/src/pat/expandable-tree/expandable-tree",
