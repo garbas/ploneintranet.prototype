@@ -31,6 +31,7 @@
     "tinysort": "git://github.com/Sjeiti/TinySort.git",
     "patternslib": "master",
     "pat-content-mirror": "git://github.com/ploneintranet/pat-content-mirror.git",
+    "pat-display-time": "git://github.com/ploneintranet/pat-display-time.git",
     "pat-upload": "master",
     "pat-resourcepolling": "git://github.com/ploneintranet/pat-resourcepolling.git",
     "dropzone": "~3.10.2",
