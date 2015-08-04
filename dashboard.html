@@ -89,6 +89,37 @@ design_description: The homepage of the intranet that contains a concatinated so
 		</div>
 	</div>
 
+	<div class="library portlet" id="portlet-library">
+		<h2 class="portlet-title">
+			<a href="/library.html">Library</a>
+		</h2>
+		<ul class="links">
+
+			<li>
+				<a href="">Lib item so and so</a>
+			</li>
+			<li>
+				<a href="">Another lib item</a>
+			</li>
+			{% assign libcount = 1 %}
+			{% for item in site.posts  %}
+				{% if item.layout == 'workspace-landing' and libcount <= 5 % %}
+					<li class="library-item" title="{{ item.description }}">
+						<a href="{{ item.url }}" class="link">
+							<h4 class="title">
+								{{ item.title }}
+							</h4>
+							<p class="description">
+								{{ item.description }}
+							</p>
+						</a>
+					</li>
+					{% assign libcount = libcount | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+
 	<div class="contacts portlet" id="portlet-contacts">
 		<h2 class="portlet-title">Contacts</h2>
 		<form class="search-box pat-inject pat-autosubmit" action="/feedback/feedback-portlet-contacts.html#contact-search-items">
