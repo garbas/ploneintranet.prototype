@@ -4,6 +4,7 @@ folderish: false
 parent: open-market-committee
 title: "The Gerald Aylmer seminar 2015: Secret histories"
 section: Events
+location: The Institute of Historical Research, Senate House, London.
 category: open-market-committee
 start: 2015-01-31 10:00 GMT+2
 end: 2015-01-31 13:00 GMT+2

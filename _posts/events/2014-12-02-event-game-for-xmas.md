@@ -3,7 +3,8 @@ layout: event
 folderish: false
 parent: open-market-committee
 title: "A Game for Christmas: Football on the Western Front, December 1914?"
-section: Events
+section: Royal Albert Hall
+location: 
 category: open-market-committee
 start: 2014-12-02 10:00 GMT+2
 end: 2014-12-02 16:00 GMT+2

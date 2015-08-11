@@ -50,6 +50,37 @@ design_description: The homepage of the intranet that contains a concatinated so
 			</label>
 		</fieldset>
 	</div>
+	<div class="workspaces portlet" id="portlet-events">
+		<h2 class="portlet-title">Upcoming events</h2>
+		<ul class="event-list">
+			{% assign count = 1 %}
+			{% for event in site.posts  %}
+				{% if event.layout == 'event' and count <= 4 % %}
+					<li class="event" title="{{ event.title }}: {{ event.description }}">
+						<a href="{{ event.url }}" class="link">
+							<h4 class="title"><time><!-- I would like to have only the starting time, or in case of an all day event 'All day' in the time tag. Not the date. In case of a multi day event, I would suggest to display a format similar to: "12-10-2015 - 14-10-2015: Event title" -->{{ event.start }}</time> — {{ event.title }}</h4>
+							{% if event.location %}
+								<p class="byline">
+									{{ event.location }}
+								</p>
+							{% endif %}
+							<p class="date">	
+								<time class="calendar-medium pat-auto-scale">
+									<strong class="day">16</strong>
+									<strong class="month char-count-8">September</strong>
+									<strong class="year">2015</strong>
+								</time>
+							</p>
+							<p class="description">
+								{{ event.description }}
+							</p>
+						</a>
+					</li>
+					{% assign count = count | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
 	<div class="workspaces portlet" id="portlet-workspaces">
 		<h2 class="portlet-title"><a href="/workspaces.html">Workspaces</a></h2>
 		<ul class="links">

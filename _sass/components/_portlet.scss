@@ -58,5 +58,58 @@
 			}
 		}
 	}
+
+	&#portlet-events {
+		.event {
+			@include clear-fix();
+			margin-bottom: 1em;
+			position: relative;
+			min-height: 4.5em;
+
+			a {
+				color: black;				
+
+				.date {
+					float: left;
+					width: 24%;
+					position: absolute;
+					top: 0.3em;
+					left: 0;
+
+					time {
+						background-color: white;
+						outline: rgb(223, 223, 223) 1px solid;
+					}
+				}
+				.title,
+				.byline,
+				.description {
+					float: right;
+					width: 70%;
+					font-size: 0.8em;
+					line-height: 1.3em;
+				}
+
+				.byline {
+					margin-bottom: 0.5em;
+					font-style: italic;
+					font-weight: bold;
+				}
+
+				.title {
+					font-weight: bold;
+					color: $colour-accent;
+					margin-bottom: 0.4em;
+					font-size: 1em;
+				}
+
+				&:hover {
+					.title {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
 }
 

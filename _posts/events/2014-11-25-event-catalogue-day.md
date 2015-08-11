@@ -4,6 +4,7 @@ folderish: false
 parent: open-market-committee
 title: Catalogue Day
 section: Events
+location: Large meeting room
 category: open-market-committee
 start: 2014-11-25 10:00 GMT+2
 end: 2014-11-25 16:00 GMT+2
