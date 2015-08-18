@@ -29,3 +29,9 @@ $colour-workspace-default: #666;
     	background-position: center; 
 	}
 }
+
+/* improve contrast for description for visually impaired users. Cornae, 
+   check with me for details if you object */
+.tiles .tile .link p {
+    opacity: 0.9 !important;
+}
