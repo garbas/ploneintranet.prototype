@@ -40,6 +40,32 @@ aside.sidebar.left {
     margin-bottom: 1em;
   }
 
+  .event-list {
+    .event {
+      padding-left: 80px;
+      min-height: 80px;
+
+      .date {
+        width: 60px;
+        -moz-transform: scale(0.62);
+        -webkit-transform: scale(0.62);
+        transform: scale(0.62);
+        -moz-transform-origin: top left;
+        -webkit-transform-origin: top left;
+        transform-origin: top left;
+      }
+
+      .title,
+      .byline,
+      .description {
+        float: none;
+        width: auto;
+        font-size: 0.8em;
+        line-height: 1.3em;
+      }
+    }
+  }
+
   .mode-follow {
     .pat-collapsible.object-list {
 
