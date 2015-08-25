@@ -98,83 +98,90 @@
         </div>
 
         <div class="content">
-            <div class="pat-collapsible" data-pat-collapsible="store: local" id="upcoming-events">
-                <h3>Upcoming events</h3>
-                <ul class="event-list">
-                {% for event in site.posts  %}
-                    {% if event.layout == 'event' %}
-                        <li class="event" title="{{ event.title }}: {{ event.description }}">
-                            <a href="{{ event.url }}" class="link">
-                                <h4 class="title"><time><!-- I would like to have only the starting time, or in case of an all day event 'All day' in the time tag. Not the date. -->{{ event.start }}</time> — {{ event.title }}</h4>
-                                {% if event.location %}
-                                    <p class="byline">
-                                        {{ event.location }}
-                                    </p>
-                                {% endif %}
-                                <p class="date">    
-                                    <time class="calendar-medium">
-                                        <strong class="day">16</strong>
-                                        <strong class="month char-count-8">September</strong>
-                                        <strong class="year">2015</strong>
-                                    </time>
+            <h3>Upcoming events</h3>
+            <ul class="event-list">
+            {% for event in site.posts  %}
+                {% if event.layout == 'event' %}
+                    <li class="event" title="{{ event.title }}: {{ event.description }}">
+                        <a href="{{ event.url }}" class="link">
+                            <h4 class="title"><time><!-- I would like to have only the starting time, or in case of an all day event 'All day' in the time tag. Not the date. -->{{ event.start }}</time> — {{ event.title }}</h4>
+                            {% if event.location %}
+                                <p class="byline">
+                                    {{ event.location }}
                                 </p>
-                                <p class="description">
-                                    {{ event.description }}
-                                </p>
-                            </a>
+                            {% endif %}
+                            <p class="date">    
+                                <time class="calendar-medium">
+                                    <strong class="day">16</strong>
+                                    <strong class="month char-count-8">September</strong>
+                                    <strong class="year">2015</strong>
+                                </time>
+                            </p>
+                            <p class="description">
+                                {{ event.description }}
+                            </p>
+                        </a>
+                    </li>
+                    {% assign count = count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+                
+            <!-- <ul class="cal-events">
+                {% for item in site.posts  %}
+                    {% if item.layout == 'event' and item.workspace_name == page.workspace_name %}
+                        <li class="cal-event all-day cal-cat-baggage-handling">
+                            <h4 class="title">
+                                <a class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ item.url }}#document-body">{{ item.title }}</a>
+                            </h4>
+                            <p class="description">
+                                {{ item.description }}
+                            </p>
+
+                            <ul class="details">
+                                <li>Starts <time class="start" datetime="2013-09-05">{{ item.start }}</time></li>
+
+                                <li>Location <span class="location">{{ item.location }}</span></li>
+                            </ul>
+
+                            <form action="">
+                                <button class="iconified icon-trash" type="submit">Delete event</button>
+                            </form>
                         </li>
-                        {% assign count = count | plus: 1 %}
                     {% endif %}
                 {% endfor %}
-                </ul>
-                    
-                <!-- <ul class="cal-events">
-                    {% for item in site.posts  %}
-                        {% if item.layout == 'event' and item.workspace_name == page.workspace_name %}
-                            <li class="cal-event all-day cal-cat-baggage-handling">
-                                <h4 class="title">
-                                    <a class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ item.url }}#document-body">{{ item.title }}</a>
-                                </h4>
-                                <p class="description">
-                                    {{ item.description }}
+            </ul> -->
+      
+            <h3>Older events</h3>
+
+            <ul class="event-list">
+            {% for event in site.posts  %}
+                {% if event.layout == 'event' %}
+                    <li class="event" title="{{ event.title }}: {{ event.description }}">
+                        <a href="{{ event.url }}" class="link">
+                            <h4 class="title"><time><!-- I would like to have only the starting time, or in case of an all day event 'All day' in the time tag. Not the date. -->{{ event.start }}</time> — {{ event.title }}</h4>
+                            {% if event.location %}
+                                <p class="byline">
+                                    {{ event.location }}
                                 </p>
-
-                                <ul class="details">
-                                    <li>Starts <time class="start" datetime="2013-09-05">{{ item.start }}</time></li>
-
-                                    <li>Location <span class="location">{{ item.location }}</span></li>
-                                </ul>
-
-                                <form action="">
-                                    <button class="iconified icon-trash" type="submit">Delete event</button>
-                                </form>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul> -->
-            </div>
-
-            <div class="pat-collapsible closed" data-pat-collapsible="store: local" id="older-events">
-                <h3>Older events</h3>
-
-                <ul class="cal-events">
-                    <li class="cal-event all-day cal-cat-baggage-handling">
-                        <h4 class="title"><a class="pat-modal external" href="project-calendar-detail.html#content">Report Deadline: Focus on Baggage</a></h4>
-
-                        <p class="description">The new Report on "Focus on Baggage" goes out today.</p>
-
-                        <ul class="details">
-                            <li>Starts <time class="start" datetime="2013-09-05">5 September 2013</time></li>
-
-                            <li>Location <span class="location">Star HQ, Germany</span></li>
-                        </ul>
-
-                        <form action="">
-                            <button class="iconified icon-trash" type="submit">Delete event</button>
-                        </form>
+                            {% endif %}
+                            <p class="date">    
+                                <time class="calendar-medium">
+                                    <strong class="day">16</strong>
+                                    <strong class="month char-count-8">September</strong>
+                                    <strong class="year">2015</strong>
+                                </time>
+                            </p>
+                            <p class="description">
+                                {{ event.description }}
+                            </p>
+                        </a>
                     </li>
-                </ul>
-            </div>
+                    {% assign count = count | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+     
         </div>
     </div>
 
