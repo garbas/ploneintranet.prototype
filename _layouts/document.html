@@ -4,7 +4,7 @@ template: generic
 workspace_module: docs
 ---
 
-<form class="document pat-inject pat-autosubmit" data-pat-autosubmit="delay: 1000ms" action="{{ page.url }}#saving-badge" id="document-form">
+<form class="document pat-inject pat-autosubmit" data-pat-inject="source: #selector-items; target: #selector-items && source: saving-badge; target: #saving-badge" data-pat-autosubmit="delay: 1000ms" action="{{ page.url }}#saving-badge" id="document-form">
     <div class="metadata pat-bumper">
         <div class="meta-bar">
             <h1 class="doc-title" id="document-title">
