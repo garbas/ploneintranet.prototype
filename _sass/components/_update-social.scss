@@ -17,9 +17,10 @@
         padding-right: 2em;
         padding-left: 1em;
         padding-top: 0.4em;
+        padding-bottom: 0.4em;
         line-height: 1.5em;
         float: left;
-        height: 2.3em;
+        // height: 2.3em;
         border: none;
 
         @include screen-size(large) { 
@@ -40,7 +41,11 @@
     }
 
     textarea {
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         z-index: 1;
         -webkit-text-fill-color: transparent;
     }
@@ -52,10 +57,13 @@
         text-align: start;
         white-space: pre-wrap;
         vertical-align: text-bottom;
-        overflow: hidden;
+        overflow: visible;
         width: 100%;
         box-sizing: border-box;
-        margin-bottom: -100%;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        // margin-bottom: -100%;
         .text .placeholder {
             font-style: normal;
             color: gray
@@ -70,14 +78,20 @@
     }
 
     &.status-active .content-mirror {
-      overflow: auto;
+      // overflow: auto;
     }
 
     &.status-active textarea,
     &.status-attach textarea,
     &.status-active .content-mirror,
     &.status-attach .content-mirror {
-      height: 5.5em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    &.status-active textarea,
+    &.status-attach textarea {
+      bottom: 2.6em;
     }
 
     .icon-attach {
@@ -192,9 +206,9 @@
       padding: 0 0.5em;
       overflow: hidden;
       margin: 0;
-      // -webkit-transition: all 0.4s;
-      // -moz-transition: all 0.4s;
-      // transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      transition: all 0.4s;
 
       label.visibility {
         color: #666;
