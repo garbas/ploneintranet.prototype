@@ -77,16 +77,18 @@
         }
     }
 
-    &.status-active .content-mirror {
-      // overflow: auto;
-    }
-
     &.status-active textarea,
     &.status-attach textarea,
     &.status-active .content-mirror,
     &.status-attach .content-mirror {
       padding-top: 1em;
       padding-bottom: 1em;
+    }
+
+    &.status-active .content-mirror,
+    &.status-attach .content-mirror {
+      // overflow: auto;
+      padding-bottom: 2.5em;
     }
 
     &.status-active textarea,
