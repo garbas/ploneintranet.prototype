@@ -29,8 +29,9 @@
 			left: 50%;
 			width: 400px;
 			margin-left: -200px;
-			height: 300px;
-			margin-top: -230px;
+  			-moz-transform: translateY(-50%);
+  			-webkit-transform: translateY(-50%);
+  			transform: translateY(-50%);
         }
 
         @include screen-size(small) { 

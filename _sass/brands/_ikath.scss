@@ -19,19 +19,24 @@ $colour-workspace-default: #666;
 }
 */
 
-.login-panel {
-	.logo {
-		overflow: hidden;
-		text-indent: -2000px;
-		height: 8em;
-		background: no-repeat url(/media/logos/plone-intranet-square.svg);
-		background-size: 8em;
-    	background-position: center; 
+#login-panel {
+	background-color: $colour-accent !important;
+
+	.panel {
+		
+		.splash {
+			overflow: hidden;
+			text-indent: -2000px;
+			height: 6em;
+			background: no-repeat url(/media/logos/ikath-long.svg) !important;
+			-moz-background-size: 6em;
+			-webkit-background-size: 6em;
+			background-size: 80% !important;
+	    	background-position: center !important; 
+
+	    	img {
+	    		display: none !important;
+	    	}
+		}
 	}
 }
-
-// improve contrast for description for visually impaired users. Cornae, 
-//    check with me for details if you object
-// .tiles .tile .link p {
-//     opacity: 0.9 !important;
-// }

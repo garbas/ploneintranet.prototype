@@ -6,13 +6,13 @@ $colour-separation-lines: #FFF;
 $colour-accent: #869EBF;
 $colour-workspace-default: #828282;
 
-.login-panel {
-	.logo {
+#login-panel {
+	.splash {
 		overflow: hidden;
 		text-indent: -2000px;
-		height: 8em;
-		background: no-repeat url(/media/logos/plone-intranet-square.svg);
+		height: 10.5em;
+		// background: no-repeat url(/media/logos/plone-intranet-square.svg);
 		background-size: 8em;
-    	background-position: center; 
+    	background-position: center;
 	}
 }
