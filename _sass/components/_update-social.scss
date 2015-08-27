@@ -47,7 +47,12 @@
         bottom: 0;
         left: 0;
         z-index: 1;
+        height: 100%; // Needed for Firefox
+        -moz-transition: padding 0.5s;
+        -webkit-transition: padding 0.5s;
+        transition: padding 0.5s;
         -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
     }
 
     .content-mirror {
@@ -211,6 +216,8 @@
       -webkit-transition: all 0.4s;
       -moz-transition: all 0.4s;
       transition: all 0.4s;
+      z-index: 2;
+      position: relative;
 
       label.visibility {
         color: #666;
