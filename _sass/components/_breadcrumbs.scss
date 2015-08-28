@@ -38,6 +38,12 @@ nav.breadcrumbs {
     &.has-siblings:after {
       right: -43px;
     }
+    &.current {
+      width: 30em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
     &.current:after {
       display: none;
     }

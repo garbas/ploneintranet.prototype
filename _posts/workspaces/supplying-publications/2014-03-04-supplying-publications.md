@@ -1,9 +1,8 @@
 ---
 layout: workspace-landing
-title: Supplying publications to MEPs
-workspace_name: Supplying publications to MEPs
-description: "UK Members of the European Parliament (MEPs) are eligible to
-receive up to two copies of any qualifying UK Official publication."
+title: "This is an example for an overly long title containing log words like Antidisestablishmentarianism which is typically used by organisations in the german speaking parts of europe, partly because of cultural reasons, partly because the concept of descriptions is not yet fully adopted."
+workspace_name: "This is an example for an overly long title containing log words like Antidisestablishmentarianism which is typically used by organisations in the german speaking parts of europe, partly because of cultural reasons, partly because the concept of descriptions is not yet fully adopted."
+description: "And therefore we need to employ means of cropping and hyphenation."
 application: workspace
 mutations:
   - verb: changed start date of
