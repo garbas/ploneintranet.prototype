@@ -48,8 +48,8 @@ $base-space: 1em; // Create universal white space (e.g. margin, padding, left)
 
 // Branding
 
-// @import "brands/plone-intranet";
-@import "brands/ikath";
+@import "brands/plone-intranet";
+// @import "brands/ikath";
 // @import "brands/rkz";
 
 @function blacken($color, $percent) {
