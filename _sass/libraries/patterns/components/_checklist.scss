@@ -38,6 +38,7 @@ label.pat-checklist {
 	label {
 		display: block;
 		@include checkbox();
+		@include clear-fix();
 	}
 
 	&.cloud {

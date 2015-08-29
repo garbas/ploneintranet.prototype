@@ -38,6 +38,7 @@
         {% if workspace.type == 'case' %}
             <!-- <h3>Case Tasks</h3> -->
             {% for item in workspace.case_states %}
+                <!-- ID of each fieldset.object-list must be unique. An ID is required to store the open/closed state in the local storage. The number in it may be generated. -->
                 <fieldset id="milestone-{{ item.label | replace: ' ' '-' }}" class="object-list tasks pat-checklist pat-collapsible closed" data-pat-collapsible="store: local">
                     <h4 class="section-label state-{{ item.transition_state }}">
                         {{ item.label }} {% if item.text %}<a href="/{{ item.text }}#content" class="pat-modal iconified icon-info-circle" data-pat-modal="class: large">Info</a>{% endif %}
@@ -45,7 +46,24 @@
                     {% for ticket in site.posts  %}
                         {% if ticket.workspace_name == workspace.workspace_name and ticket.case_state == item.label %}
                             <label>
-                                <input type="checkbox" {% if ticket.state == 'closed' or item.transition_state == 'finished' %}checked{% endif %} /> <a title="{{ ticket.excerpt | strip_html }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ticket.url}}#workspace-tickets">{{ ticket.title }}</a>
+                                <input type="checkbox" {% if ticket.state == 'closed' or item.transition_state == 'finished' %}checked{% endif %} /> 
+                                <a title="{{ ticket.excerpt | strip_html }}" class="pat-inject follow pat-switch" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="target: #document-body; history: record" href="{{ticket.url}}#workspace-tickets">{{ ticket.title }}</a>
+                                <div class="additional-meta-data">
+                                    <a href="/guido-stevens/" class="assignee meta-column icon-user" title="Assignee">
+                                        John Doe
+                                    </a>
+                                    <time datetime="{{ ticket.due_date }}" class="due-date meta-column icon-clock pat-display-time" data-pat-display-time="from-now: true" title="Due date">
+                                        <!-- {{ item.date | date: '%B %d, %Y' }} -->
+                                        {{ ticket.due_date }}
+                                    </time>
+                                    <!-- Milestone is hidden in this case, because there's already a grouping by milestone. If a grouping based on any of the other metadata would be selected, then that respective metadata column would be hidden instead. -->
+                                    <!-- <a href="" class="milestone meta-column icon-stage" title="Author of this document">
+                                        {{ ticket.milestone }}
+                                    </a> -->
+                                    <a href="/guido-stevens/" class="initiator meta-column icon-manager" title="Initiator of this task">
+                                        {{ ticket.document_creator }}
+                                    </a>
+                                </div>
                             </label>
                         {% endif %}
                     {% endfor %}
@@ -55,7 +73,8 @@
                     </p>
                 </fieldset>
             {% endfor %}
-            <fieldset class="task-list pat-checklist">
+            <!-- ID of each fieldset.object-list must be unique. An ID is required to store the open/closed state in the local storage. The number in it may be generated. -->
+            <fieldset id="group-1" class="tasks pat-checklist pat-collapsible open" data-pat-collapsible="store: local">
                 {% assign state = item.state %}
                 <h4 class="section-label">
                     Unassigned
@@ -63,7 +82,24 @@
                 {% for ticket in site.posts  %}
                     {% if ticket.workspace_name == workspace.workspace_name and ticket.case_state == 'unassigned' %}
                         <label>
-                            <input type="checkbox" /> <a class="pat-inject follow pat-switch" title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="source: #document-body; target: #document-body; history: record">{{ ticket.title }}</a>
+                            <input type="checkbox" /> 
+                            <a class="pat-inject follow pat-switch" title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}" data-pat-switch="body focus-* focus-document && body sidebar-large sidebar-normal" data-pat-inject="source: #document-body; target: #document-body; history: record">{{ ticket.title }}</a>
+                            <div class="additional-meta-data">
+                                <a href="/guido-stevens/" class="assignee meta-column icon-user" title="Assignee">
+                                    John Doe
+                                </a>
+                                <time class="due-date meta-column icon-clock pat-display-time" data-pat-display-time="from-now: true" title="Due date">
+                                    <!-- {{ item.date | date: '%B %d, %Y' }} -->
+                                    {{ ticket.due_date }}
+                                </time>
+                                <!-- Milestone is hidden in this case, because there's already a grouping by milestone. If a grouping based on any of the other metadata would be selected, then that respective metadata column would be hidden instead. -->
+                                <!-- <a href="" class="milestone meta-column icon-stage" title="Author of this document">
+                                    {{ ticket.milestone }}
+                                </a> -->
+                                <a href="/guido-stevens/" class="initiator meta-column icon-manager" title="Initiator of this task">
+                                    {{ ticket.document_creator }}
+                                </a>
+                            </div>
                         </label>
                     {% endif %}
                 {% endfor %}

@@ -3,7 +3,8 @@ layout: ticket
 title: "Hintergrundcheck machen"
 document_type: ticket
 folderish: false
-due_date: 2015-06-01 14:00 GMT+2
+due_date: 2015-06-01 14:00
+due_time_zone: GMT+2
 design_title: Rich page
 design_description: Example of a ticket
 parent: minifest

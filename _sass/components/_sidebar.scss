@@ -98,6 +98,31 @@ aside.sidebar.left {
     }
   }
 
+  .pat-checklist {
+    .additional-meta-data {
+        position: absolute;
+        width: 70%;
+        right: -100%;
+        top: 0;
+        opacity: 0;
+        -moz-transition: all 1s;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+
+    .meta-column {
+        width: 0%;
+        overflow: hidden;
+        -moz-transition: width 1s;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+        float: left;
+        padding: 0 0.5em 0;
+        margin: 0;
+        @include box-sizing();
+    }
+  }
+
   .pat-collapsible.object-list {
     position: relative;
     border: 1px silver solid;
@@ -111,6 +136,10 @@ aside.sidebar.left {
     }
 
     .panel-content {
+      -moz-transition: 0.4s padding;
+      -webkit-transition: 0.4s padding;
+      transition: 0.4s padding;
+
       padding: 1em 4% 0 4%;
     }
 
@@ -123,7 +152,21 @@ aside.sidebar.left {
     }
 
     .follow {
-      display: block;
+        display: block;
+        width: 100%;
+        color: $colour-primary;
+        padding: 0;
+        -moz-transition: 0.4s all;
+        -webkit-transition: 0.4s all;
+        transition: 0.4s all;
+        float: left;
+
+        @include box-sizing();
+        // min-height: 2.8em;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     .collapsible-closed,
@@ -131,6 +174,9 @@ aside.sidebar.left {
       -moz-user-select: none;
       -webkit-user-select: none;
       user-select: none;
+        -moz-transition: 0.4s padding;
+        -webkit-transition: 0.4s padding;
+        transition: 0.4s padding;
 
       padding: 3% 4%;
 
@@ -407,5 +453,55 @@ aside.portlets {
         }
       }
     }
+  }
+}
+
+.sidebar-large aside.sidebar.left  {
+  .pat-collapsible.object-list {
+
+    .panel-content {
+      padding: 1em 2% 0 2%;
+    } 
+
+    .collapsible-closed,
+    .collapsible-open {
+      padding: 1% 2% 0;
+    }
+
+    .collapsible-closed {
+      padding: 1% 2% 1%;
+    }
+  }
+
+  .pat-checklist {
+
+    label {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+      &:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      &:hover {
+        background-color: white;
+      }
+    }
+
+    .additional-meta-data {
+      right: 0%;
+       opacity: 1;
+    }
+
+    .meta-column {
+      width: 30%;
+
+      &.assignee {
+          width: 40%;
+      }
+    }
+
+    .follow {
+       width: 30%;
+    }  
   }
 }

@@ -4,7 +4,8 @@ title: Prepare Christmas get-together
 application: workspace
 document_type: ticket
 folderish: false
-due_date: 2014-12-15 15:00 GMT+2
+due_date: 2014-12-15 15:00
+due_time_zone: GMT+2
 workspace_name: Open Market Committee
 application_name: Workspace
 design_title: Rich page
