@@ -30,207 +30,220 @@ design_description: The homepage of the intranet that contains a concatinated so
 </form>
 
 <div id="dashboard" class="row pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .portlet; stamp: .stamp;">
-	<div class="grid-sizer four columns"></div>	
-
+	<div class="grid-sizer four columns"></div>
 
 	<div class="portlet span-2 stamp right" id="portlet-activity-stream">
-		{% include update-social.html placeholder="Post a message…" id="post-box" action="/feedback/post-well-done.html" inject="source: #activity-stream; target: #activity-stream .activities::before && #new-post-box" %}
+		<div class="content">
+			{% include update-social.html placeholder="Post a message…" id="post-box" action="/feedback/post-well-done.html" inject="source: #activity-stream; target: #activity-stream .activities::before && #new-post-box" %}
 
-		<div id="activity-stream" class="activity-stream">
-			<form action="index.html#activity-stream" class="functions pat-autosubmit pat-inject">
-				<label class="filters item pat-select bare">
-					<select name="filter">
-						<option value="all">All activities</option>
-						<option value="network">Only activities from people I follow</option>
-						<option value="interactions">Interactions with other people</option>
-						<option value="posted">My activities</option>
-						<option value="likes">My likes</option>
-					</select>
-				</label>
-			</form>
-			<div class="activities" id="posts-batch">
-				{% include activity-stream.html src="activity-stream-social" %}
+			<div id="activity-stream" class="activity-stream">
+				<form action="index.html#activity-stream" class="functions pat-autosubmit pat-inject">
+					<label class="filters item pat-select bare">
+						<select name="filter">
+							<option value="all">All activities</option>
+							<option value="network">Only activities from people I follow</option>
+							<option value="interactions">Interactions with other people</option>
+							<option value="posted">My activities</option>
+							<option value="likes">My likes</option>
+						</select>
+					</label>
+				</form>
+				<div class="activities" id="posts-batch">
+					{% include activity-stream.html src="activity-stream-social" %}
 
-				<a href="/dashboard.html#posts-batch" class="pat-inject infinite-scrolling-trigger" data-pat-inject="trigger: autoload-visible; source: #posts-batch; target: self::element">Loading more posts…</a>
+					<a href="/dashboard.html#posts-batch" class="pat-inject infinite-scrolling-trigger" data-pat-inject="trigger: autoload-visible; source: #posts-batch; target: self::element">Loading more posts…</a>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="news portlet span-1" id="portlet-news">
-		<h2 class="portlet-title"><a href="/news.html">News</a></h2>
-		{% assign count = 1 %}
-		<div class="news-block" id="unread-news">
-			{% for item in site.posts %}
-				{% if item.layout == 'news-item' %}
-					{% if count <= 3 %}
-						<article class="item item-{{ count }}">
-							<a href="{{item.url}}">
-								<img class="illustration" src="/media/{{ item.image }}" alt="" />
-								<!-- {% if item.category == 'member-news' %}
-									<img class="logo" src="/media/logos/{{item.code}}.svg" alt="">
-								{% endif %} -->
-							
-				    			<h3 class="title">
-				    				{{ item.title }}
-				    			</h3>
-				    			<p class="description">
-									{{ item.description | truncate: 160 }} <!-- <em>Read more…</em> -->
-				    			</p>
-							</a>
-							<form action="/feedback/news-portlet.html#portlet-news" class="functions pat-inject">
-								<button type="submit" class="icon-ok">Mark read</button>
-							</form>
-						</article>
-					{% endif %}							
-					{% assign count = count | plus: 1 %}
-				{% endif %}
-			{% endfor %}
-			
+		<div class="content">
+			<h2 class="portlet-title"><a href="/news.html">News</a></h2>
+			{% assign count = 1 %}
+			<div class="news-block" id="unread-news">
+				{% for item in site.posts %}
+					{% if item.layout == 'news-item' %}
+						{% if count <= 3 %}
+							<article class="item item-{{ count }}">
+								<a href="{{item.url}}">
+									<img class="illustration" src="/media/{{ item.image }}" alt="" />
+									<!-- {% if item.category == 'member-news' %}
+										<img class="logo" src="/media/logos/{{item.code}}.svg" alt="">
+									{% endif %} -->
+								
+					    			<h3 class="title">
+					    				{{ item.title }}
+					    			</h3>
+					    			<p class="description">
+										{{ item.description | truncate: 160 }} <!-- <em>Read more…</em> -->
+					    			</p>
+								</a>
+								<form action="/feedback/news-portlet.html#portlet-news" class="functions pat-inject">
+									<button type="submit" class="icon-ok">Mark read</button>
+								</form>
+							</article>
+						{% endif %}							
+						{% assign count = count | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+				
+			</div>
 		</div>
 	</div>
 
 	<div class="library portlet span-1" id="portlet-library">
-		<h2 class="portlet-title">
-			<a href="/library.html">Library</a>
-		</h2>
-		<ul class="links">
+		<div class="content">
+			<h2 class="portlet-title">
+				<a href="/library.html">Library</a>
+			</h2>
+			<ul class="links">
 
-			<li>
-				<a href="">Lib item so and so</a>
-			</li>
-			<li>
-				<a href="">Another lib item</a>
-			</li>
-			{% assign libcount = 1 %}
-			{% for item in site.posts  %}
-				{% if item.layout == 'workspace-landing' and libcount <= 5 % %}
-					<li class="library-item" title="{{ item.description }}">
-						<a href="{{ item.url }}" class="link">
-							<h4 class="title">
-								{{ item.title }}
-							</h4>
-							<p class="description">
-								{{ item.description }}
-							</p>
-						</a>
-					</li>
-					{% assign libcount = libcount | plus: 1 %}
-				{% endif %}
-			{% endfor %}
-		</ul>
+				<li>
+					<a href="">Lib item so and so</a>
+				</li>
+				<li>
+					<a href="">Another lib item</a>
+				</li>
+				{% assign libcount = 1 %}
+				{% for item in site.posts  %}
+					{% if item.layout == 'workspace-landing' and libcount <= 5 % %}
+						<li class="library-item" title="{{ item.description }}">
+							<a href="{{ item.url }}" class="link">
+								<h4 class="title">
+									{{ item.title }}
+								</h4>
+								<p class="description">
+									{{ item.description }}
+								</p>
+							</a>
+						</li>
+						{% assign libcount = libcount | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 
 	<div class="contacts portlet span-1" id="portlet-contacts">
-		<h2 class="portlet-title">Contacts</h2>
-		<form class="search-box pat-inject pat-autosubmit" action="/feedback/feedback-portlet-contacts.html#contact-search-items">
-			<fieldset class="vertical">
-	            <label>
-	                <input name="" type="search" placeholder="Search">
-	                <button hidden type="submit">Find users</button>
-	            </label>
-			</fieldset>
-        </form>
-		<div id="contact-search-items">
-			
+		<div class="content">
+			<h2 class="portlet-title">Contacts</h2>
+			<form class="search-box pat-inject pat-autosubmit" action="/feedback/feedback-portlet-contacts.html#contact-search-items">
+				<fieldset class="vertical">
+		            <label>
+		                <input name="" type="search" placeholder="Search">
+		                <button hidden type="submit">Find users</button>
+		            </label>
+				</fieldset>
+	        </form>
+			<div id="contact-search-items">
+				
+			</div>
 		</div>
 	</div>
 
 	<div class="workspaces portlet span-1" id="portlet-events">
-		<h2 class="portlet-title">Upcoming events</h2>
-		<ul class="event-list">
-			{% assign count = 1 %}
-			{% for event in site.posts  %}
-				{% if event.layout == 'event' and count <= 4 % %}
-					<li class="event" title="{{ event.title }}: {{ event.description }}">
-						<a href="{{ event.url }}" class="link">
-							<h4 class="title"><time><!-- I would like to have only the starting time, or in case of an all day event 'All day' in the time tag. Not the date. -->{{ event.start }}</time> — {{ event.title }}</h4>
-							{% if event.location %}
-								<p class="byline">
-									{{ event.location }}
+		<div class="content">
+			<h2 class="portlet-title">Upcoming events</h2>
+			<ul class="event-list">
+				{% assign count = 1 %}
+				{% for event in site.posts  %}
+					{% if event.layout == 'event' and count <= 4 % %}
+						<li class="event" title="{{ event.title }}: {{ event.description }}">
+							<a href="{{ event.url }}" class="link">
+								<h4 class="title"><time><!-- I would like to have only the starting time, or in case of an all day event 'All day' in the time tag. Not the date. -->{{ event.start }}</time> — {{ event.title }}</h4>
+								{% if event.location %}
+									<p class="byline">
+										{{ event.location }}
+									</p>
+								{% endif %}
+								<p class="date">	
+									<time class="calendar-medium pat-auto-scale">
+										<strong class="day">16</strong>
+										<strong class="month char-count-8">September</strong>
+										<strong class="year">2015</strong>
+									</time>
 								</p>
-							{% endif %}
-							<p class="date">	
-								<time class="calendar-medium pat-auto-scale">
-									<strong class="day">16</strong>
-									<strong class="month char-count-8">September</strong>
-									<strong class="year">2015</strong>
-								</time>
-							</p>
-							<p class="description">
-								{{ event.description }}
-							</p>
-						</a>
-					</li>
-					{% assign count = count | plus: 1 %}
-				{% endif %}
-			{% endfor %}
-		</ul>
+								<p class="description">
+									{{ event.description }}
+								</p>
+							</a>
+						</li>
+						{% assign count = count | plus: 1 %}
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 
 	<div class="workspaces portlet span-1" id="portlet-workspaces">
-		<h2 class="portlet-title"><a href="/workspaces.html">Workspaces</a></h2>
-		<ul class="links">
-			{% assign count = 1 %}
-			{% for workspace in site.posts  %}
-				{% if workspace.layout == 'workspace-landing' and count <= 5 % %}
-					<li class="workspace" title="{{ workspace.description }}">
-						<a href="{{ workspace.url }}" class="link">
-							<h4 class="title">{{ workspace.title }}</h4>
-							{% for mutation in workspace.mutations %}
-								<p class="byline">
-									<strong class="subjects">
-										{% assign separator = false %}
-										{% for subject in mutation.subjects  %}
-											{% assign last = false %}
-											{% unless separator == false %}
-												{% if forloop.last == true %}
-													and
-												{% else %}
-													, 
-												{% endif %}
-											{% endunless %}
-											<span class="subject">{{ subject.name }}</span>
-											{% assign separator = true %}
-											{% assign last = true %}
-										{% endfor %}
-									</strong>
-									<span class="verb">
-										{{ mutation.verb }}
-									</span>
-									<strong class="object">
-										{{ mutation.object }}
-									</strong>
-									<time class="datestamp" datetime="2008-02-14" title="5 October 2015, 18:43">{{ mutation.datestamp }}</time>
-									<!-- The date time attribute contains the time in international format (machine readable) and the title attribute contains the absolute date and time of the post. -->
-								</p>
-							{% endfor %}
-						</a>
-					</li>
-				{% assign count = count | plus: 1 %}
-				
-				{% endif %}
-			{% endfor %}
-		</ul>
+		<div class="content">
+			<h2 class="portlet-title"><a href="/workspaces.html">Workspaces</a></h2>
+			<ul class="links">
+				{% assign count = 1 %}
+				{% for workspace in site.posts  %}
+					{% if workspace.layout == 'workspace-landing' and count <= 5 % %}
+						<li class="workspace" title="{{ workspace.description }}">
+							<a href="{{ workspace.url }}" class="link">
+								<h4 class="title">{{ workspace.title }}</h4>
+								{% for mutation in workspace.mutations %}
+									<p class="byline">
+										<strong class="subjects">
+											{% assign separator = false %}
+											{% for subject in mutation.subjects  %}
+												{% assign last = false %}
+												{% unless separator == false %}
+													{% if forloop.last == true %}
+														and
+													{% else %}
+														, 
+													{% endif %}
+												{% endunless %}
+												<span class="subject">{{ subject.name }}</span>
+												{% assign separator = true %}
+												{% assign last = true %}
+											{% endfor %}
+										</strong>
+										<span class="verb">
+											{{ mutation.verb }}
+										</span>
+										<strong class="object">
+											{{ mutation.object }}
+										</strong>
+										<time class="datestamp" datetime="2008-02-14" title="5 October 2015, 18:43">{{ mutation.datestamp }}</time>
+										<!-- The date time attribute contains the time in international format (machine readable) and the title attribute contains the absolute date and time of the post. -->
+									</p>
+								{% endfor %}
+							</a>
+						</li>
+					{% assign count = count | plus: 1 %}
+					
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 
 	<div class="workspaces portlet span-1" id="portlet-tasks">
-		<h2 class="portlet-title">Tasks</h2>
-		<h3>Baggage handling regulations</h3>
-		<fieldset class="task-list pat-checklist">
-			{% for ticket in site.posts  %}
-				{% if ticket.layout == 'ticket' %}
-					<label>
-						<input type="checkbox" /> <a title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}">{{ ticket.title }}</a>
-					</label>
-					<br/>
-				{% endif %}
-			{% endfor %}
-		</fieldset>
-		<h3>Personal tasks</h3>
-		<fieldset class="task-list pat-checklist">
-			<label>
-				<input type="checkbox" /> <a title="" href="">Talk to HR about vacancy</a>
-			</label>
-		</fieldset>
+		<div class="content">
+			<h2 class="portlet-title">Tasks</h2>
+			<h3>Baggage handling regulations</h3>
+			<fieldset class="task-list pat-checklist">
+				{% for ticket in site.posts  %}
+					{% if ticket.layout == 'ticket' %}
+						<label>
+							<input type="checkbox" /> <a title="{{ ticket.excerpt | strip_html }}" href="{{ticket.url}}">{{ ticket.title }}</a>
+						</label>
+						<br/>
+					{% endif %}
+				{% endfor %}
+			</fieldset>
+			<h3>Personal tasks</h3>
+			<fieldset class="task-list pat-checklist">
+				<label>
+					<input type="checkbox" /> <a title="" href="">Talk to HR about vacancy</a>
+				</label>
+			</fieldset>
+		</div>
 	</div>
 </div>
