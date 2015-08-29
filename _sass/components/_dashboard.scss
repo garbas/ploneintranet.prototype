@@ -5,9 +5,15 @@
 
 	.portlet {
 		@include box-sizing();
-		padding: 0 15px;		
+		padding: 0 #{$grid-gutter};		
 		@include screen-size(large) {
 			width: 33.33333%;
+		}
+	
+		&.span-1 {
+			@include screen-size(large) {
+				font-size: 0.8em;
+			}
 		}
 	
 		&.span-2 {

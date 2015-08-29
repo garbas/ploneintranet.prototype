@@ -31,7 +31,7 @@ design_description: The homepage of the intranet that contains a concatinated so
 
 <div id="dashboard" class="row pat-masonry" data-pat-masonry="column-width: .grid-sizer; gutter: 0; item-selector: .portlet;">
 	<div class="grid-sizer four columns"></div>	
-	<div class="workspaces portlet" id="portlet-tasks">
+	<div class="workspaces portlet span-1" id="portlet-tasks">
 		<h3>Baggage handling regulations</h3>
 		<fieldset class="task-list pat-checklist">
 			{% for ticket in site.posts  %}
@@ -50,7 +50,7 @@ design_description: The homepage of the intranet that contains a concatinated so
 			</label>
 		</fieldset>
 	</div>
-	<div class="workspaces portlet" id="portlet-events">
+	<div class="events portlet span-1" id="portlet-events">
 		<h2 class="portlet-title">Upcoming events</h2>
 		<ul class="event-list">
 			{% assign count = 1 %}
@@ -81,7 +81,7 @@ design_description: The homepage of the intranet that contains a concatinated so
 			{% endfor %}
 		</ul>
 	</div>
-	<div class="workspaces portlet" id="portlet-workspaces">
+	<div class="portlet span-1" id="portlet-workspaces">
 		<h2 class="portlet-title"><a href="/workspaces.html">Workspaces</a></h2>
 		<ul class="links">
 			{% assign count = 1 %}
@@ -126,7 +126,7 @@ design_description: The homepage of the intranet that contains a concatinated so
 			{% endfor %}
 		</ul>
 	</div>
-	<div class="portlet" id="portlet-activity-stream">
+	<div class="portlet span-1" id="portlet-activity-stream">
 		{% include update-social.html placeholder="Post a message…" id="post-box" action="/feedback/post-well-done.html" inject="source: #activity-stream; target: #activity-stream .activities::before && #new-post-box" %}
 
 		<div id="activity-stream" class="activity-stream">
