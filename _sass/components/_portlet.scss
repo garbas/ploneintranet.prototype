@@ -21,7 +21,7 @@
 	}
 
 	.link {
-		padding: 0.2em 0;
+		// padding: 0.2em 0;
 		
 		&:hover {
 			text-decoration: none;
@@ -64,13 +64,14 @@
 		}
 	}
 
-	&#portlet-events {
-	}
+	// &#portlet-events {
+	// }
 
-	&#portlet-activity-stream.span-1 {	
-	  .content {
-	    overflow: auto;
-	    max-height: 40em;
-	  }
-	}
+	// &#portlet-activity-stream.span-1,
+	// &#portlet-events.span-1,
+	// &#portlet-tasks.span-1,
+	// &#portlet-news.span-1,
+	// &#portlet-workspaces.span-1,
+	// &#portlet-contacts.span-1 {	
+	// }
 }
