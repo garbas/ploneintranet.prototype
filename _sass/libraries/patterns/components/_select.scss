@@ -18,6 +18,10 @@ label.pat-select.bare {
   color: #666;
   overflow: hidden;
   padding: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+
   &:hover,&.focus { color: black }
 }
 
