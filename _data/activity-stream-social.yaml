@@ -4,8 +4,9 @@
   datestamp: just now
   likes: 0
   shares: 0
-  # text: "This is my draft for the budget proposal."
+  text: "This is my draft for the budget proposal."
   preview: '/media/budget-proposal.png'
+  layout: document
 
 - userid: guido-stevens
   activity: published
@@ -16,13 +17,16 @@
   text: "Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI"
   preview: 'not-generated'
   object_id: 'projection-material'
+  layout: document
 
 - userid: jeff-peters
   activity: posted
+  preview: 'not-possible'
   datestamp: just now
   likes: 3
   shares: 8
   text: "Anyone who cares for a lift to location of tonight's company dinner?"
+  layout: document
 
 - userid: jeff-peters
   activity: posted
@@ -35,6 +39,7 @@
     - userid: adrian-white
       datestamp: 3 minutes ago
       text: "Hear hear!"
+  layout: document
 
 - userid: joan-baker
   activity: posted
@@ -58,6 +63,7 @@
       text: "Rival owner to I harmonics; Not texts tag concepts cache the semantics."
 
 - userid: adrian-white
+  layout: document
   activity: posted
   datestamp: 14 minutes ago
   likes: 9
@@ -77,6 +83,7 @@
       text: "The planning keep deep need its house. By when brothers but in we on. I for ran head from a rather to equation, men's he years purpose on starting meals sovereignty. Not back cache the so sentences control way that into were business, herself not coming stupid cheek, periodic achieves.<br /><br />Everything expected with one their you on line on fortune. I for tone boss not some voice cut word to I in the comment they'd have its of other and salesmen visuals in rationally multitude discovered quickly approved the destined know the on he grammar. At and we human along the into nearby population self-interest her negatives, because at propitiously expectations. Sections. Of suppliers, grateful and I italic, divine the every that our two at people a drew of made he hide with watched tones recommended. From all those fully that avoided the furnished up hologram language weary into that."
 
 - userid: joan-baker
+  layout: image
   activity: posted
   datestamp: 52 minutes ago
   likes: 2

@@ -47,11 +47,34 @@
 			{{ item.text }}
 		</p>
 	</section>
-	{% if item.preview %}
-		<section class="preview {% if item.preview == 'not-generated' %}not-generated{% endif %}">
-			{% if object %}
-				<a href="{{ object.url }}" alt="{{ object.title }}">
-			{% endif %}
+	{% if item.preview and item.layout == 'image' %}
+		<section class="image preview">
+			<figure>
+				{% for node in site.posts %}
+					{% capture nodeid %}{{ node.id | remove: "/" }}{% endcapture %}
+					{% if  nodeid == item.object_id %}
+						{% assign object = node %}
+					{% endif %}
+				{% endfor %}			
+				{% if object %}
+					<a href="{{ object.url }}" alt="{{ object.title }}">
+				{% endif %}
+						<img src="{{ item.preview }}" alt="" />
+				{% if object %}
+					</a>
+				{% endif %}
+			</figure>
+			<p class="overlay">
+				<a href="#" class="icon iconified icon-download" title="Download these images as a ZIP file">Download</a>
+				<a href="#" title="Preview 3 images">
+					<span class="icon iconified icon-eye">Preview</span>
+					<em class="icon page-counter">3x</em>
+				</a>
+			</p>
+		</section>
+	{% endif %}
+	{% if item.preview and item.layout == 'document' %}
+		<section class="document preview {% if item.preview == 'not-generated' %}not-generated{% endif %} {% if item.preview == 'not-possible' %}not-possible{% endif %}">
 			<figure>
 				{% for node in site.posts %}
 					{% capture nodeid %}{{ node.id | remove: "/" }}{% endcapture %}
@@ -59,28 +82,45 @@
 						{% assign object = node %}
 					{% endif %}
 				{% endfor %}
-				{% if item.preview == 'not-generated' %}
+				{% if item.preview == 'not-generated' or item.preview == 'not-possible' %}
 					<figcaption>
-						<strong class="title">{{ object.title }}</strong>
-						<em class="byline">Preview being generated</em>
+						<strong class="title">
+							{% if object %}
+								{{ object.title }} 
+								<span class="functions">
+									<a href="#" class="icon iconified icon-download" title="Download this file">Download</a>
+									<a href="#" class="icon iconified icon-eye" title="Preview this file">Preview</a>
+								</span>
+							{% else %}
+								Lorem ipsum dolor sit amet
+							{% endif %}
+						</strong>
+						<em class="byline">Description goes here</em></a>
 					</figcaption>
 				{% else %}
-					<img src="{{ item.preview }}" alt="" />
-					<!-- In the future we might decide to include a figcaption also for objects with a preview, but for now we'll leave it out. -->
-<!-- 				<figcaption>
-						<strong class="title">{{ object.title }}</strong>
-						<em class="byline">Description goes here</em>
-					</figcaption> -->
+					<a href="{{ object.url }}" alt="{{ object.title }}">
+						<img src="{{ item.preview }}" alt="" />
+					</a>
+					<figcaption>
+						<strong class="title">
+							<a href="{{ object.url }}" alt="{{ object.title }}">
+								{% if object %}{{ object.title }}{% else %}Lorem ipsum dolor sit amet{% endif %} <span class="page-counter icon-docs">3x</span>
+							</a>
+							<span class="functions">
+								<a href="#" class="icon iconified icon-download" title="Download this file">Download</a>
+								<a href="#" class="icon iconified icon-eye" title="Preview this file">Preview</a>
+							</span>
+						</strong>
+						<a href="{{ object.url }}" alt="{{ object.title }}">
+							<em class="byline">Description goes here</em>
+						</a>
+					</figcaption>
 				{% endif %}
 			</figure>
-			{% if object %}
-				</a>
-			{% endif %}
-			<p class="overlay">
+<!-- 			<p class="overlay">
 				<a href="#" class="iconified icon-download">Download</a>
-				<a href="#" class="iconified icon-preview">Preview</a>
-				<em class="page-counter icon-docs">3x</em>
-			</p>
+				<a href="#" class="iconified icon-preview">Preview</a>	
+			</p> -->
 		</section>
 	{% endif %}
 	<div class="functions">
