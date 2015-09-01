@@ -44,6 +44,7 @@ require.config({
         "rangy-serializer":                       "bower_components/raptor-dependencies/rangy/rangy-serializer",
         "rangy-textrange":                        "bower_components/raptor-dependencies/rangy/rangy-textrange",
         "raptor":                                 "bower_components/pat-raptor/lib/raptor",
+        "ploneintranet-image":                    "bower_components/pat-raptor/src/ploneintranet-image",
         "select2":                                "bower_components/select2/select2.min",
         "showdown":                               "bower_components/showdown/src/showdown",
         "showdown-github":                        "bower_components/showdown/src/extensions/github",
