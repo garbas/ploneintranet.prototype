@@ -66,10 +66,16 @@
 			</figure>
 			<p class="overlay">
 				<a href="#" class="icon iconified icon-download" title="Download these images as a ZIP file">Download</a>
-				<a href="#" title="Preview 3 images">
-					<span class="icon iconified icon-eye">Preview</span>
-					<em class="icon page-counter">3x</em>
-				</a>
+				
+				<nav class="pat-gallery">
+					<a href="{{ item.preview }}" title="Preview 3 images">
+						<span class="icon iconified icon-eye">Preview</span>
+						<em class="icon page-counter">3x</em>
+					</a>
+					<a hidden href="http://lorempixel.com/1280/720/sports/" class="icon iconified icon-eye" title="Preview this file">Page 2</a>
+					<a hidden href="http://lorempixel.com/1280/720/food/"  title="Preview this file">Page 3</a>
+					<a hidden href="http://lorempixel.com/1280/720/cats/"  title="Preview this file">Page 4</a>
+				</nav>
 			</p>
 		</section>
 	{% endif %}
@@ -89,7 +95,6 @@
 								{{ object.title }} 
 								<span class="functions">
 									<a href="#" class="icon iconified icon-download" title="Download this file">Download</a>
-									<a href="#" class="icon iconified icon-eye" title="Preview this file">Preview</a>
 								</span>
 							{% else %}
 								Lorem ipsum dolor sit amet
@@ -108,7 +113,12 @@
 							</a>
 							<span class="functions">
 								<a href="#" class="icon iconified icon-download" title="Download this file">Download</a>
-								<a href="#" class="icon iconified icon-eye" title="Preview this file">Preview</a>
+								<nav class="pat-gallery">
+									<a class="icon iconified icon-eye" href="http://lorempixel.com/1280/720/business/" title="Preview this file">Preview</a>
+									<a hidden href="http://lorempixel.com/1280/720/sports/" class="icon iconified icon-eye" title="Preview this file">Page 2</a>
+									<a hidden href="http://lorempixel.com/1280/720/food/"  title="Preview this file">Page 3</a>
+									<a hidden href="http://lorempixel.com/1280/720/cats/"  title="Preview this file">Page 4</a>
+								</nav>
 							</span>
 						</strong>
 						<a href="{{ object.url }}" alt="{{ object.title }}">
