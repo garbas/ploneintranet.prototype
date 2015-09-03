@@ -47,6 +47,10 @@
     height: 49px;
     font-size: 1em;
 
+    hr {
+      display: none;
+    }
+
     border-top: 1px silver solid;
   }
 
@@ -115,10 +119,6 @@
       width: 25%;
       float: left;
       color: rgba(255,255,255,0.6);
-
-      hr {
-        display: none;
-      }
 
       &.current {
         color: white;
