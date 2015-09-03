@@ -7,11 +7,14 @@ workspace_module: docs
 <form class="document pat-inject pat-autosubmit" data-pat-inject="source: #selector-items; target: #selector-items && source: saving-badge; target: #saving-badge" data-pat-autosubmit="delay: 1000ms" action="{{ page.url }}#saving-badge" id="document-form">
     <div class="metadata pat-bumper">
         <div class="meta-bar">
+
+            <!-- Next link should be populated with the link back to the parent. Used for small screen and accessibilty -->
+            <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
+
             <h1 class="doc-title" id="document-title">
                 {{ page.title }}
             </h1>
-            <!-- Next link should be populated with the link back to the parent. Used for small screen and accessibilty -->
-            <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
+            
             <input type="text" placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" value="{{ page.title }}" />
             <div class="quick-functions">
                 <a href="/feedback/panel-delete.html#document-content" class="pat-modal icon-trash iconified" title="Delete this document">
