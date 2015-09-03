@@ -113,6 +113,7 @@
     @include screen-size(small) {
       height: 49px;
       width: 25%;
+      float: left;
       color: rgba(255,255,255,0.6);
 
       &.current {
@@ -130,6 +131,10 @@
         width: 100%;
         line-height: 49px;
         font-size: 26px;
+
+        hr {
+          display: none;
+        }
       }
 
       @include screen-size(large) {
