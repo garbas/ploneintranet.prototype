@@ -166,9 +166,14 @@
 
     @include screen-size(small) {  
       border: none;
+      // text-align: center;
     }
 
     .back-to-parent {
+      line-height: 1.5em;
+      margin-bottom: 2em;
+      max-width: 90%;
+
       @include screen-size(large) {  
         display: none;
       }
@@ -183,7 +188,9 @@
       line-height: 1.5em;
 
       @include screen-size(small) {  
-        display: none;
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
       }
 
       &.pat-content-mirror {
@@ -209,6 +216,12 @@
       }
     }
 
+    input.doc-title {
+      @include screen-size(small) {  
+        display: none;
+      }
+    }
+
     .quick-functions {
       float: right;
       position: relative;
@@ -227,12 +240,27 @@
         }
       }
 
-      @include screen-size(small) {  
+      @include screen-size(small) { 
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+
         .icon-floppy,
         .icon-info-circle,
         .icon-copy,
-        .icon-trash {
+        .icon-trash,
+        .saving-badge,
+        .pat-subform,
+        .icon-external  {
           display: none;
+        }
+
+        .icon-export {
+          display: inline-block;
+          top: -0.15em;
+          font-size: 1.5em;
         }
       }
 
