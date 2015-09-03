@@ -116,6 +116,10 @@
       float: left;
       color: rgba(255,255,255,0.6);
 
+      hr {
+        display: none;
+      }
+
       &.current {
         color: white;
       }
@@ -131,10 +135,6 @@
         width: 100%;
         line-height: 49px;
         font-size: 26px;
-
-        hr {
-          display: none;
-        }
       }
 
       @include screen-size(large) {

@@ -6,13 +6,13 @@
         {% endif %}
     {% endfor %}
     <a href="{{ workspace.url }}#document-body" title="Workspace landing page" class="pat-inject {% if page.workspace_module == 'landing' %}current{% endif %} landing pat-switch" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-closed && selector: body; remove: body focus-*; add: focus-document">{{ workspace.workspace_name }}</a>
-    <a class="settings pat-switch" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open" href="#workspace-settings"
+    <a class="settings pat-switch" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open && body focus-* focus-sidebar" href="#workspace-settings"
     title="Workspace settings">Workspace settings and about</a>
 
     <hr />
 
     {% assign workspace = false %}
-    <a class="documents pat-switch {% if page.workspace_module == 'docs' %}current{% endif %}" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open" href="#workspace-documents" title="Documents">Documents</a>
-    <a class="events pat-switch {% if page.workspace_module == 'events' %}current{% endif %}" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open" href="#workspace-events" title="Events">Events</a>
-    <a class="todos pat-switch {% if page.workspace_module == 'tickets' %}current{% endif %}" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open" href="#workspace-tickets" title="Tasks">Tasks</a>
+    <a class="documents pat-switch {% if page.workspace_module == 'docs' %}current{% endif %}" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open && body focus-* focus-sidebar" href="#workspace-documents" title="Documents">Documents</a>
+    <a class="events pat-switch {% if page.workspace_module == 'events' %}current{% endif %}" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open && body focus-* focus-sidebar" href="#workspace-events" title="Events">Events</a>
+    <a class="todos pat-switch {% if page.workspace_module == 'tickets' %}current{% endif %}" data-pat-switch="selector: body; remove: sidebar-left-*; add: sidebar-left-open && body focus-* focus-sidebar" href="#workspace-tickets" title="Tasks">Tasks</a>
 </nav>
