@@ -13,6 +13,10 @@ body {
 		height: 100%;
 		overflow: hidden;
     }
+
+    &.application-workspace {
+    	overflow: hidden;
+    }
 	padding: 0;
 	margin: 0;
 
