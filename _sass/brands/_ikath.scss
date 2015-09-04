@@ -42,15 +42,15 @@ $colour-workspace-default: #666;
 }
 
 /* Keep the search open */
-#global-header form#global-nav-search input.search, 
+/*#global-header form#global-nav-search input.search, 
 #global-header form#searchGadget_form input.search {
     width: 14em;
     opacity: 1;
     padding-left: 1.5em;
-}
+}*/
 
 /* Make portal tabs on workspace open by default */
-.gh-collapsed #global-header { height: 86px; }
+/*.gh-collapsed #global-header { height: 86px; }
 
 body.gh-collapsed #content { top: 86px; }
 
@@ -58,7 +58,7 @@ body.gh-collapsed #content { top: 86px; }
 	&:before {
 		content: "\e878";
 	}
-}
+}*/
 
 /* Hyphenation for workspace tiles */
 .tiles .tile h3 {
