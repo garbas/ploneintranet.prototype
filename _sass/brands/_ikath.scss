@@ -47,3 +47,13 @@ $colour-workspace-default: #666;
     opacity: 1;
     padding-left: 1.5em;
 }
+
+.gh-collapsed #global-header { height: 86px; }
+
+body.gh-collapsed #content { top: 86px; }
+
+.gh-collapsed #hamburger-desktop {
+	&:before {
+		content: "\e878";
+	}
+}
