@@ -1,6 +1,6 @@
 title: Folio Intranet
 author: Cornelis G. A. Kolbach
-baseurl: /
+baseurl: 
 domain: demo.ploneintranet.net
 media: /media
 markdown: kramdown
