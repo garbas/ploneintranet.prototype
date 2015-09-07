@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.image-selector {
+	@include screen-size(large) { 
+		margin: 0 -10px;
+	}
+
+	// max-width: 100%;
+	font-size: 0;
+
+	.item {
+		font-size: 1em;
+		@include box-sizing();
+		position: relative;
+		vertical-align: baseline;
+	  	// float: left;
+	  	display: inline-block;
+	  	text-align: center;
+	  	margin-bottom: 20px;
+
+	  @include screen-size(large) { 
+	    width: 25%;
+	    padding: 0 10px;
+		height: 80px;
+		text-align: center;
+	  }
+
+	  // @include screen-size(small) { 
+	  //   width: 100%;
+	  // }
+
+	  img {
+	  	display: inline-block;
+	  	max-height: 100%;
+	  }
+
+	  &:before {
+	  	display: none;
+	  }
+
+	  &.checked {
+
+	  	img {
+	  		border: 3px solid white;
+	  		margin: -3px;
+	  		outline: $colour-accent solid 3px;
+	  	}
+	  }
+	}
+}

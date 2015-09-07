@@ -13,6 +13,15 @@ div.pat-modal {
   margin-top: 1em;
   margin-bottom: 1em;
 
+  .filter-bar {
+    margin-bottom: 2em;
+
+    input[type=search] {
+      float: right;
+      width: 14em;
+    }
+  }
+
   .header {
     color: gray;
     padding: 0.5em 1.5em;
