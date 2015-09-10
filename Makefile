@@ -118,21 +118,25 @@ fetchrelease:
 designerhappy: fetchrelease
 	@echo "The latest js bundle has been downloaded to ./bundles. You might want to run jekyll. Designer, you can be happy now."
 
+build: jekyll
 jekyll: fetchrelease stamp-bundler
 	$(BUNDLE) exec jekyll build
 
 dev: stamp-bower jekyll
 	# Set up development environment
-	# install a require.js config
-	cp src/bower_components/requirejs/require.js _site/bundles/$(BUNDLENAME)-modular.js
-	ln -s ../../../src _site/bundles
-	ln -s src/patterns.js _site/main.js
+	rm -rf _site/bundles
+	ln -s ../src _site/bundles
+	rm -f _site/bundles/$(BUNDLENAME).js
+	ln -s bower_components/requirejs/require.js _site/bundles/$(BUNDLENAME).js
+	rm -f _site/main.js
+	cp main.js src/main.js
+	sed -i -e "s|baseUrl: 'src',|baseUrl: '/bundles/',|" src/main.js
 
 ########################################################################
 # For development (i.e. serving files)
 serve: demo-run
 demo-run: stamp-bundler
-	bundle exec jekyll serve --watch --baseurl "" --host 0.0.0.0
+	bundle exec jekyll serve --no-watch --skip-initial-build --host 0.0.0.0
 
 # for demo.ploneintranet.net deployment
 demo-build: stamp-bundler
