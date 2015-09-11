@@ -46,6 +46,7 @@ require.config({
         "raptor":                                 "bower_components/pat-raptor/lib/raptor",
         "pat-raptor-image":                       "bower_components/pat-raptor/src/pat-raptor-image",
         "pat-raptor-link-tooltip":                "bower_components/pat-raptor/src/pat-raptor-link-tooltip",
+        "pat-raptor-isdirty":                     "bower_components/pat-raptor/src/pat-raptor-isdirty",
         "select2":                                "bower_components/select2/select2.min",
         "showdown":                               "bower_components/showdown/src/showdown",
         "showdown-github":                        "bower_components/showdown/src/extensions/github",
