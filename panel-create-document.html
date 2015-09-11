@@ -3,6 +3,7 @@ layout: panel
 title: Create document
 action: "/open-market-committee/#sidebar"
 inject: ""
+validate: ""
 buttons:
   - label: Create
     class: 'icon-ok-circle close-panel'
@@ -32,7 +33,7 @@ design_description: Dialogue box for creating a new document.
     </label>
 </fieldset>
 <fieldset class="vertical">
-    <input type="text" name="title" placeholder="Document title" autofocus />
+    <input type="text" name="title" required="required" placeholder="Document title" autofocus />
     <input type="file" name="image" class="image pat-depends" data-pat-depends="portal_type=Image" />
     <textarea name="description" rows="6" placeholder="Description for search results (Optional)"></textarea>
 </fieldset>
