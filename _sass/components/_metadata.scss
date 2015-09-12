@@ -183,6 +183,7 @@
       @include clear-fix();
       position: relative;
       display: inline-block;
+      float: left;
 
       .doc-title {
         font-size: 1em;
