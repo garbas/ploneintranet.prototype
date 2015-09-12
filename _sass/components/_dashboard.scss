@@ -9,6 +9,12 @@
 		@include screen-size(large) {
 			width: 33.33333%;
 		}
+
+		opacity: 0;
+
+		-moz-transition: opacity 0.5s;
+		-webkit-transition: opacity 0.5s;
+		transition: opacity 0.5s;
 	
 		&.span-1 {
 			@include screen-size(large) {
@@ -48,6 +54,12 @@
 					left: 0;
 				}
 			}
+		}
+	}
+
+	&.masonry-ready {
+		.portlet {
+			opacity: 1;
 		}
 	}
 }
