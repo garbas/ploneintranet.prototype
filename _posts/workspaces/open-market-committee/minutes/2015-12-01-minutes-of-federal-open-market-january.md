@@ -1,6 +1,6 @@
 ---
 layout: document
-title: Policy Directives 
+title: Meeting of the Open Market Committee was held in the offices of the Board of Governors of the Reserve System in Washington, D.C., on Tuesday, January 28, 2015
 description: "The Open Market Committee authorizes and directs the Reserve Bank of New York, to the extent necessary to carry out the most recent domestic policy directive adopted at a meeting of the Committee."
 application: docs
 document_type: presentation
