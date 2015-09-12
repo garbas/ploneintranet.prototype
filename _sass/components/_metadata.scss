@@ -180,8 +180,9 @@
     }
 
     .title-group {
+      @include clear-fix();
       position: relative;
-      float: left;
+      display: inline-block;
 
       .doc-title {
         font-size: 1em;
@@ -191,7 +192,7 @@
         font-weight: bold;
         line-height: 1.5em;
 
-        white-space: pre-wrap;
+        white-space: normal;
 
         @include screen-size(small) {  
           font-size: 1.5em;
@@ -225,10 +226,6 @@
             box-shadow: none;
             -webkit-box-shadow: none;
             outline: none;
-          }
-
-          &:focus {
-            
           }
         }
       }
