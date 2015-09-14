@@ -3,6 +3,15 @@
 #dashboard {
 	position: relative;
 
+	&:before {
+		position: fixed !important;
+		@include throbber();
+	}
+
+	&.masonry-ready:before {
+		display: none;
+	}
+
 	.portlet {
 		@include box-sizing();
 		padding: 0 #{$grid-gutter};		
