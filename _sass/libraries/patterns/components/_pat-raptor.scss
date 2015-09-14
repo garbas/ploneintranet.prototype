@@ -50,10 +50,11 @@
       speak: none;
       display: inline-block;
       text-decoration: inherit;
-      width: 1em;
+      width: 100%;
       text-align: center;
       font-variant: normal;
       text-transform: none;
+      float: left;
     }
 
     &.raptor-ui-tag-menu:before {
@@ -142,6 +143,11 @@
 
     &.raptor-ui-text-block-quote:before {
       content: '\e869';
+    } 
+
+    &.raptor-ui-pat-raptor-image:before {
+      content: '\1f304';
+      font-size: 0.8em;
     } 
   }
   
