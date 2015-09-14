@@ -2,8 +2,16 @@
 
 .application-user {
   #document-body {
+    background-color: white;
+    position: relative;
+
     #document-content {
+      @include container();
       font-size: 1em;
+
+      .document {
+        padding: 10% 0;
+      }
     }
   }
 }
