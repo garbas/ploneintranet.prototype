@@ -7,7 +7,7 @@ layout: generic
         {{ page.title }}
     </h1>
     {% if page.action %}
-        <form action="{{ page.action }}" class="wizard-box {% if page.inject %}pat-inject{% endif %} {% if page.validate %}pat-validate{% endif %}" {% if page.inject %}data-pat-inject="{{page.inject}}"{% endif %}>    
+        <form action="{{ page.action }}" class="wizard-box {% if page.inject %}pat-inject{% endif %} {% if page.validate %}pat-validation{% endif %}" {% if page.inject %}data-pat-inject="{{page.inject}}"{% endif %}>
     {% endif %}
         <div class="panel-body">
             {{ content }}
@@ -18,12 +18,12 @@ layout: generic
                     {% if button.type == 'submit' or button.type == 'button' %}
                         <button type="{{ button.type }}" class="{{ button.class }}">
                             {{ button.label }}
-                        </button>                    
+                        </button>
                     {% endif %}
                 {% endfor %}
             </div>
         {% endif %}
     {% if page.action %}
-        </form>  
-    {% endif %}  
+        </form>
+    {% endif %}
 </div>

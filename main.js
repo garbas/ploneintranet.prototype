@@ -121,7 +121,6 @@ require.config({
         "pat-toggle":                "bower_components/patternslib/src/pat/toggle/toggle",
         "pat-tooltip":               "bower_components/patternslib/src/pat/tooltip/tooltip",
         "pat-upload":                "bower_components/pat-upload/src/pat-upload",
-        "pat-validate":              "bower_components/patternslib/src/pat/validate/validate",
         "pat-validation":            "bower_components/patternslib/src/pat/validation/validation",
         "pat-zoom":                  "bower_components/patternslib/src/pat/zoom/zoom",
         "patterns":                  "patterns",

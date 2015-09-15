@@ -62,7 +62,7 @@ define([
     "pat-content-mirror",
     "pat-upload",
     "pat-url",
-    "pat-validate",
+    "pat-validation",
     "pat-zoom"
 ], function(registry) {
     window.patterns = registry;
