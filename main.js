@@ -20,8 +20,6 @@ require.config({
         "jquery.fullcalendar.dnd":                "bower_components/raptor-dependencies/jquery-ui",
         "jquery.placeholder":                     "bower_components/jquery-placeholder/jquery.placeholder.min",
         "jquery.textchange":                      "bower_components/jquery-textchange/jquery.textchange",
-        "jquery.validation":                      "bower_components/jquery.validation/jquery.validate",
-        "jquery.validation-additional-methods":   "bower_components/jquery.validation/additional-methods",
         "jqueryui":                               "bower_components/raptor-dependencies/jquery-ui",
         "less":                                   "bower_components/less.js/dist/less-1.6.2",
         "logging":                                "bower_components/logging/src/logging",
@@ -56,6 +54,7 @@ require.config({
         "tpl":                                    "bower_components/requirejs-tpl-jcbrand/tpl",
         "text":                                   "bower_components/requirejs-text/text",
         "underscore":                             "bower_components/underscore/underscore",
+        "validate":                               "bower_components/validate/validate",
 
         // Core
         "i18n":                      "bower_components/patternslib/src/core/i18n",
@@ -123,6 +122,7 @@ require.config({
         "pat-tooltip":               "bower_components/patternslib/src/pat/tooltip/tooltip",
         "pat-upload":                "bower_components/pat-upload/src/pat-upload",
         "pat-validate":              "bower_components/patternslib/src/pat/validate/validate",
+        "pat-validation":            "bower_components/patternslib/src/pat/validation/validation",
         "pat-zoom":                  "bower_components/patternslib/src/pat/zoom/zoom",
         "patterns":                  "patterns",
 
