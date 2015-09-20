@@ -1,76 +1,89 @@
 ---
-layout: panel
+layout: generic
 application_name: Image picker
 action: "/"
-title: Image picker
-design_title: Image picker panel
-design_description: "Panel that allows users to pick an image"
-buttons:
-  - label: Insert selected image
-    type: submit
-    class: 'close-panel icon-ok-circle'
-  - label: Cancel
-    type: button
-    class: 'close-panel icon-cancel-circle'
+title: Upload or Select Image
 ---
 
-<fieldset class="filter-bar">
-	<select name="source">
-		<option>This workspace</option>
-		<optgroup label="Image bank">
-			<option>Folder so and so</option>
-			<option>Folder so and so</option>
-			<option>Folder so and so</option>
-		</optgroup>
-	</select>
-	<input type="search" placeholder="Search in 'This Workspace' by keyword" />
-	<!-- The search by keyword function would ideally search images by keyword in title, description, file name or content of image (SVG text). -->
-</fieldset>
 
-<fieldset class="pat-checklist radio image-selector">
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/corporate.png" alt="Description of image." title="Title of image — Description of image" />
-		<!-- Don't print the M-dash in the title attribute value of the above element is no description is available. -->
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/klm-tulips.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/lufthansa-winter.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/new-delhi-skyline.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/cms/leitsätze.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/vision-to-product.png" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/book-and-fly.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/budget-proposal.png" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/cms/seelsorgerat.jpeg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/cms/walk.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-	<label class="item">
-		<input type="radio" name="image" />
-		<img src="/media/avatar-alexander-pilz.jpg" alt="Description of image." title="Title of image — Description of image" />
-	</label>
-</fieldset>
+<div class="header">
+  <button type="button" class="close-panel">Close</button>
+  <h1>Upload or Select Image</h1>
+</div>
+<div>
+  <form action="/" class="wizard-box">
+
+    <div class="panel-body">
+
+      <fieldset class="filter-bar">
+        <select name="source">
+          <option>This workspace</option>
+          <optgroup label="Image bank">
+            <option>Folder so and so</option>
+            <option>Folder so and so</option>
+            <option>Folder so and so</option>
+          </optgroup>
+        </select>
+        <input type="search" placeholder="Search in 'This Workspace' by keyword" />
+      </fieldset>
+
+      <fieldset class="pat-checklist radio image-selector">
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/corporate.png" alt="Description of image." title="Title of image — Description of image" />
+          <!-- Don't print the M-dash in the title attribute value of the above element is no description is available. -->
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/klm-tulips.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/lufthansa-winter.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/new-delhi-skyline.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/cms/leitsätze.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/vision-to-product.png" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/book-and-fly.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/budget-proposal.png" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/cms/seelsorgerat.jpeg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/cms/walk.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+        <label class="item">
+          <input type="radio" name="image" />
+          <img src="/media/avatar-alexander-pilz.jpg" alt="Description of image." title="Title of image — Description of image" />
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="buttons panel-footer">
+      <button type="submit" class="close-panel icon-ok-circle">
+        Insert selected image
+      </button>
+      <button type="button" class="close-panel icon-cancel-circle">
+        Cancel
+      </button>
+    </div>
+
+  </form>
+</div>
