@@ -29,7 +29,7 @@
     "packery": "1.3.2",
     "pat-calendar": "master",
     "tinysort": "git://github.com/Sjeiti/TinySort.git",
-    "patternslib": "https://github.com/Patternslib/Patterns#70331baf6feab81b2e359fb5b08a9fc82f316f2a",
+    "patternslib": "2.0.10",
     "pat-content-mirror": "git://github.com/ploneintranet/pat-content-mirror.git",
     "pat-display-time": "git://github.com/ploneintranet/pat-display-time.git",
     "pat-upload": "master",

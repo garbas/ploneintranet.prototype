@@ -67,6 +67,7 @@ require.config({
         "pat-jquery-ext":            "bower_components/patternslib/src/core/jquery-ext",
         "pat-logger":                "bower_components/patternslib/src/core/logger",
         "pat-parser":                "bower_components/patternslib/src/core/parser",
+        "pat-mockup-parser":         "bower_components/patternslib/src/core/mockup-parser",
         "pat-registry":              "bower_components/patternslib/src/core/registry",
         "pat-remove":                "bower_components/patternslib/src/core/remove",
         "pat-store":                 "bower_components/patternslib/src/core/store",
