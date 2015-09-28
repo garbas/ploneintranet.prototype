@@ -17,8 +17,11 @@
     font-size: 0.8em;
 
     &.sticky-supported {
-      position: -webkit-sticky !important;
-      top: 0.01em !important;
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0.01em !important;
+      }
     }
   }
 
