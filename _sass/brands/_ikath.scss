@@ -87,14 +87,3 @@ body.gh-collapsed #content { top: 86px; }
 		content: "\e878";
 	}
 }*/
-
-/* Hyphenation for workspace tiles */
-.tiles .tile h3 {
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-}
-
