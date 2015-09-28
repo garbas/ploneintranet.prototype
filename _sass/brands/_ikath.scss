@@ -46,7 +46,35 @@ $colour-workspace-default: #666;
 #global-header form#searchGadget_form input.search {
     width: 14em;
     opacity: 1;
-    padding-left: 1.5em;
+    padding-left: 1.5em; 
+    background-color: rgba(255,255,255,0.3);
+	border-radius: 1em;
+
+    &::-webkit-input-placeholder { 
+      color: rgba(0,0,0,0.35); 
+    }
+
+    &::-moz-placeholder { 
+      color: rgba(0,0,0,0.35); 
+    } /* firefox 19+ */
+
+    &:-ms-input-placeholder { 
+      color: rgba(0,0,0,0.35); 
+    } /* ie */
+
+    &input:-moz-placeholder { 
+      color: rgba(0,0,0,0.35); 
+    }
+}
+
+#global-header form#global-nav-search,
+#global-header form#searchGadget_form {
+	label {
+		&:before {
+			color: rgba(0,0,0,0.35); 
+		}
+	}
+
 }
 
 /* Make portal tabs on workspace open by default */
