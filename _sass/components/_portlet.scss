@@ -64,6 +64,12 @@
 		}
 	}
 
+	&#portlet-activity-stream {
+		max-height: 35em;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
 	// &#portlet-events {
 	// }
 
