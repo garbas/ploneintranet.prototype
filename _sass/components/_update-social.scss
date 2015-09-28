@@ -22,6 +22,7 @@
         float: left;
         // height: 2.3em;
         border: none;
+        overflow: hidden;
 
         @include screen-size(large) { 
           background: transparent;
