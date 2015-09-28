@@ -43,8 +43,12 @@ template: generic
                     </label>
                 </fieldset -->
                 <!-- {% include application-toolbar.html %} -->
-                <p class="saving-badge" id="saving-badge">
-                    <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" datetime="2015-01-20T08:00Z">9:23</time></button>
+                <p class="saving-badge {% if page.saved_state == 'locked' %}locked{% endif %}" id="saving-badge">
+                    {% if page.saved_state == 'locked' %}
+                        <a class="locked-tag" title="This item was locked by Guido Stevens 10 minutes ago.">Locked</a>
+                    {% else %}
+                        <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" data-pat-display-time="from-now: true" datetime="2015-01-20T08:00Z">9:23</time></button>
+                    {% endif %}
                 </p>
                 {% for item in page.document_controls %}
                     {% include toolbar-control.html %}

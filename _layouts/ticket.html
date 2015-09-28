@@ -7,12 +7,14 @@ workspace_module: tickets
 <form class="document pat-inject pat-autosubmit" action="{{ page.url }}#saving-badge">
     <div class="metadata pat-bumper" id="meta">
         <div class="meta-bar">
-            <h1 class="doc-title" id="document-title">
-                {{ page.title }}
-            </h1>
             <!-- Next link should be populated with the link back to the parent. Used for small screen and accessibilty -->
             <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
-            <input type="text" placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" value="{{ page.title }}" />
+            <span class="title-group">
+                <h1 class="doc-title" id="document-title">
+                    {{ page.title }}
+                </h1>
+                <textarea placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" >{{ page.title }}</textarea>
+            </span>
             <div class="quick-functions">
                 <a href="#confirm-delete" class="icon-trash iconified" title="Delete this event">
                     Delete
@@ -32,8 +34,12 @@ workspace_module: tickets
                         </select>
                     </label>
                 </fieldset>
-                <p class="saving-badge" id="saving-badge">
-                    <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" datetime="2015-01-20T08:00Z">9:23</time></button>
+                <p class="saving-badge {% if page.saved_state == 'locked' %}locked{% endif %}" id="saving-badge">
+                    {% if page.saved_state == 'locked' %}
+                        <a class="locked-tag" title="This item was locked by Guido Stevens 10 minutes ago.">Locked</a>
+                    {% else %}
+                        <button type="submit" class="saved-tag">Last saved <time class="modification-date pat-display-time" data-pat-display-time="from-now: true" datetime="2015-01-20T08:00Z">9:23</time></button>
+                    {% endif %}
                 </p>
                 <!-- <button type="submit" class="icon-floppy" title="Save this document">Save</button> -->
                 {% for item in page.document_controls %}
