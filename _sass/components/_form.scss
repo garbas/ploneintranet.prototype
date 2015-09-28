@@ -28,10 +28,12 @@ form {
           font-size: 1.6em;
           color: silver;
           font-weight: normal;
+          top: 0;
+          float: left;
 
           position: absolute;
           @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            top: 0.9em;
+            top: 1em;
           }
           left: 0;
         }
@@ -54,6 +56,9 @@ form {
       .options:before {
         content: "\2714";
         line-height: 3.2rem;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            top: 0.8em;
+          }
       }
 
       .date-time {
@@ -79,7 +84,7 @@ form {
       //   }
       // }
 
-      .invitiees:before {
+      .invitees:before {
         content: "\1f465";
       }
 
