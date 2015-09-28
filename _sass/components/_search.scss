@@ -8,8 +8,8 @@ form.search {
       &:before {
         content: "\1f50d";
         position: absolute;
-        top: 0.15em;
-        left: 6px;
+        top: 0.35em;
+        left: 0.5em;
         font: 18px fontello;
         opacity: 1;
       }
@@ -99,7 +99,8 @@ form.search {
     position: relative;
     float: right;
 
-    label {
+    label { 
+      float: left;
 
       input.search {
         background-color: white;
@@ -113,6 +114,16 @@ form.search {
         height: 27px;
         margin-top: 2px;
         padding-left: 0.8em;
+  
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            line-height: 1.2em;
+        }
+
+        &:before {
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+              // top: 0;
+          }
+        }
       }
 
       &.focus input.search {
