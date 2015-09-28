@@ -6,12 +6,14 @@ template: generic
 <form class="document pat-inject pat-autosubmit" action="{{ page.url }}#saving-badge">
     <div class="metadata pat-bumper" id="meta">
         <div class="meta-bar">
-            <h1 class="doc-title" id="document-title">
-                {{ page.title }}
-            </h1>
             <!-- Next link should be populated with the link back to the parent. Used for small screen and accessibilty -->
             <button class="pat-switch back-to-parent icon-left-open" data-pat-switch="body focus-* focus-sidebar">Name of parent goes here</button>
-            <input type="text" placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" value="{{ page.title }}" />
+            <span class="title-group">
+                <h1 class="doc-title" id="document-title">
+                    {{ page.title }}
+                </h1>
+                <textarea placeholder="Document title" class="doc-title pat-content-mirror" data-pat-content-mirror="target: #document-title" >{{ page.title }}</textarea>
+            </span>
             <div class="quick-functions">
                 <a href="#confirm-delete" class="icon-trash iconified" title="Delete this event">
                     Delete
