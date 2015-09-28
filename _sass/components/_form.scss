@@ -30,7 +30,9 @@ form {
           font-weight: normal;
 
           position: absolute;
-          top: 0;
+          @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            top: 0.9em;
+          }
           left: 0;
         }
       }
@@ -54,8 +56,18 @@ form {
         line-height: 3.2rem;
       }
 
-      .date-time:before {
-        content: "\e82f";
+      .date-time {
+        .row {
+          margin: 0 -0.2em;
+
+          .columns {
+            padding: 0 0.2em;
+          }
+        }
+
+        &:before {
+          content: "\e82f";
+        }
       }
 
       // .timezone {
