@@ -19,6 +19,10 @@ $colour-workspace-default: #666;
 }
 */
 
+.tabs.bumped {
+	opacity: 1 !important;
+}
+
 #login-panel {
 	background-color: $colour-accent !important;
 
