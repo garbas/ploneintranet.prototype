@@ -42,7 +42,7 @@ require.config({
         "rangy-serializer":                       "bower_components/raptor-dependencies/rangy/rangy-serializer",
         "rangy-textrange":                        "bower_components/raptor-dependencies/rangy/rangy-textrange",
         "raptor":                                 "bower_components/pat-raptor/lib/raptor",
-        "pat-raptor-image":                       "bower_components/pat-raptor/src/pat-raptor-image",
+        "pat-raptor-imagepicker":                 "bower_components/pat-raptor/src/pat-raptor-imagepicker",
         "pat-raptor-link-tooltip":                "bower_components/pat-raptor/src/pat-raptor-link-tooltip",
         "pat-raptor-isdirty":                     "bower_components/pat-raptor/src/pat-raptor-isdirty",
         "select2":                                "bower_components/select2/select2.min",
